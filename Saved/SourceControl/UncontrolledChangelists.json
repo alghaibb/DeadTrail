@@ -1,0 +1,23 @@
+{
+	"version": 1,
+	"changelists": [
+		{
+			"guid": "00000000000000000000000000000000",
+			"description": "Default Uncontrolled Changelist",
+			"files": [
+				"A:/Unreal Projects/DeadTrail/Content/Characters/Player/Blueprints/BP_DTPlayerCharacter.uasset",
+				"A:/Unreal Projects/DeadTrail/Content/Characters/Player/Input/Actions/IA_Move.uasset",
+				"A:/Unreal Projects/DeadTrail/Content/Characters/Player/Input/Actions/IA_Look.uasset",
+				"A:/Unreal Projects/DeadTrail/Content/Characters/Player/Input/IMC_DTPlayer.uasset",
+				"A:/Unreal Projects/DeadTrail/Content/Characters/Player/Input/Actions/IA_Jump.uasset",
+				"A:/Unreal Projects/DeadTrail/Content/UI/DEV_DTPlayer.uasset",
+				"A:/Unreal Projects/DeadTrail/Content/Maps/DeadTrail_DevMap.umap",
+				"A:/Unreal Projects/DeadTrail/Content/Characters/Player/Input_OLD/Actions/IA_Jump.uasset",
+				"A:/Unreal Projects/DeadTrail/Content/Characters/Player/Input_OLD/Actions/IA_Look.uasset",
+				"A:/Unreal Projects/DeadTrail/Content/Characters/Player/Input_OLD/Actions/IA_Move.uasset",
+				"A:/Unreal Projects/DeadTrail/Content/Characters/Player/Input_OLD/IMC_Default.uasset",
+				"A:/Unreal Projects/DeadTrail/Content/Characters/Player/Input/IMC_Default.uasset"
+			]
+		}
+	]
+}

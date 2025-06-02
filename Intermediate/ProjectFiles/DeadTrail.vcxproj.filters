@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\DeadTrail.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{F31BBDD1-B3E8-3BCC-9652-680E16935819}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\DeadTrail.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\DeadTrailEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\.vsconfig" />
+    <Filter Include="Config">
+      <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\DeadTrail">
+      <UniqueIdentifier>{182BD856-CCDB-33B2-831E-F8DC26AB82EB}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\DeadTrail\DeadTrail.Build.cs">
+      <Filter>Source\DeadTrail</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\DeadTrail\DeadTrail.cpp">
+      <Filter>Source\DeadTrail</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DeadTrail\DeadTrail.h">
+      <Filter>Source\DeadTrail</Filter>
+    </ClCompile>
+    <Filter Include="Source\DeadTrail\Private">
+      <UniqueIdentifier>{B5EA00A5-8729-31CE-A84C-58956DABBEDB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\DeadTrail\Private\Characters">
+      <UniqueIdentifier>{3AF22DA2-207A-3E7F-B379-C393389B9C3D}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\DeadTrail\Private\Characters\DTBaseCharacter.cpp">
+      <Filter>Source\DeadTrail\Private\Characters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DeadTrail\Private\Characters\DTPlayerCharacter.cpp">
+      <Filter>Source\DeadTrail\Private\Characters</Filter>
+    </ClCompile>
+    <Filter Include="Source\DeadTrail\Private\Components">
+      <UniqueIdentifier>{9BE7F5AF-F91D-31D3-909C-505345084417}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\DeadTrail\Private\Components\StatlineComponent.cpp">
+      <Filter>Source\DeadTrail\Private\Components</Filter>
+    </ClCompile>
+    <Filter Include="Source\DeadTrail\Private\Core">
+      <UniqueIdentifier>{9ABDD03B-2EFB-3B17-8F6D-334893DF9348}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\DeadTrail\Private\Core\DTGameModeBase.cpp">
+      <Filter>Source\DeadTrail\Private\Core</Filter>
+    </ClCompile>
+    <Filter Include="Source\DeadTrail\Public">
+      <UniqueIdentifier>{AAE3BDF6-5A40-392D-9376-6C59A77E8405}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\DeadTrail\Public\Characters">
+      <UniqueIdentifier>{3A387F27-26FB-32AD-A399-E039E9EF97A0}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\DeadTrail\Public\Characters\DTBaseCharacter.h">
+      <Filter>Source\DeadTrail\Public\Characters</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DeadTrail\Public\Characters\DTPlayerCharacter.h">
+      <Filter>Source\DeadTrail\Public\Characters</Filter>
+    </ClCompile>
+    <Filter Include="Source\DeadTrail\Public\Components">
+      <UniqueIdentifier>{334E875B-7E5E-3472-9836-C38FEB2BF103}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\DeadTrail\Public\Components\StatlineComponent.h">
+      <Filter>Source\DeadTrail\Public\Components</Filter>
+    </ClCompile>
+    <Filter Include="Source\DeadTrail\Public\Core">
+      <UniqueIdentifier>{91AA3B82-66DF-3817-80AA-8714C5EFB69E}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\DeadTrail\Public\Core\DTGameModeBase.h">
+      <Filter>Source\DeadTrail\Public\Core</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

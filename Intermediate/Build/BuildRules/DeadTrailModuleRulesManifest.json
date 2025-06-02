@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"A:\\Unreal Projects\\DeadTrail\\Source\\DeadTrail\\DeadTrail.Build.cs",
+		"A:\\Unreal Projects\\DeadTrail\\Source\\DeadTrail.Target.cs",
+		"A:\\Unreal Projects\\DeadTrail\\Source\\DeadTrailEditor.Target.cs"
+	],
+	"EngineVersion": "5.5.4"
+}

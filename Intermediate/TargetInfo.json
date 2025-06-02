@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "DeadTrail",
+			"Path": "..\\Source\\DeadTrail.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "DeadTrailEditor",
+			"Path": "..\\Source\\DeadTrailEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}
