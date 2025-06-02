@@ -80,6 +80,37 @@ void ADTPlayerCharacter::Look(const FInputActionValue& Value)
 	}
 }
 
+void ADTPlayerCharacter::PlayerJump()
+{
+	if (ADTBaseCharacter::CanJump())
+	{
+		ADTBaseCharacter::HasJumped();
+	}
+}
+
+
+
+void ADTPlayerCharacter::StartSprinting()
+{
+	SetSprinting(true);
+}
+
+void ADTPlayerCharacter::StopSprinting()
+{
+	SetSprinting(false);
+}
+
+void ADTPlayerCharacter::StopWalking()
+{
+	SetWalking(false);
+}
+
+void ADTPlayerCharacter::ToggleWalk()
+{
+	bIsWalking = !bIsWalking;
+	SetWalking(bIsWalking);
+}
+
 void ADTPlayerCharacter::NotifyControllerChanged()
 {
 	Super::NotifyControllerChanged();
@@ -99,16 +130,17 @@ void ADTPlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputC
 	// Set up action bindings
 	if (UEnhancedInputComponent* EnhancedInputComponent = Cast<UEnhancedInputComponent>(PlayerInputComponent)) {
 
-		// Jumping
-		EnhancedInputComponent->BindAction(JumpAction, ETriggerEvent::Started, this, &ACharacter::Jump);
+		EnhancedInputComponent->BindAction(JumpAction, ETriggerEvent::Started, this, &ADTPlayerCharacter::PlayerJump);
 		EnhancedInputComponent->BindAction(JumpAction, ETriggerEvent::Completed, this, &ACharacter::StopJumping);
-
-		// Moving
 		EnhancedInputComponent->BindAction(MoveAction, ETriggerEvent::Triggered, this, 
 			&ADTPlayerCharacter::Move);
-
-		// Looking
 		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, 
 			&ADTPlayerCharacter::Look);
+		EnhancedInputComponent->BindAction(SprintAction, ETriggerEvent::Started, this,
+			&ADTPlayerCharacter::StartSprinting);
+		EnhancedInputComponent->BindAction(SprintAction, ETriggerEvent::Completed, this,
+			&ADTPlayerCharacter::StopSprinting);
+		EnhancedInputComponent->BindAction(WalkAction, ETriggerEvent::Triggered, this,
+			&ADTPlayerCharacter::ToggleWalk);
 	}
 }

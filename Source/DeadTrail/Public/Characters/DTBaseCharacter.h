@@ -17,6 +17,12 @@ public:
 
 protected:
 	virtual void BeginPlay() override;
+	bool CanJump() const;
+	void HasJumped();
+
+	bool CanSprint() const;
+	void SetSprinting(const bool& IsSprinting);
+	void SetWalking(const bool& IsWalking);
 
 public:	
 	virtual void Tick(float DeltaTime) override;

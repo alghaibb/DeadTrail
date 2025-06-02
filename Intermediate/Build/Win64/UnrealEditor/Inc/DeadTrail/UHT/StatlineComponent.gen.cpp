@@ -15,6 +15,7 @@ DEADTRAIL_API UClass* Z_Construct_UClass_UStatlineComponent_NoRegister();
 DEADTRAIL_API UEnum* Z_Construct_UEnum_DeadTrail_EStatlineType();
 DEADTRAIL_API UScriptStruct* Z_Construct_UScriptStruct_FStatline();
 ENGINE_API UClass* Z_Construct_UClass_UActorComponent();
+ENGINE_API UClass* Z_Construct_UClass_UCharacterMovementComponent_NoRegister();
 UPackage* Z_Construct_UPackage__Script_DeadTrail();
 // End Cross Module References
 
@@ -157,6 +158,98 @@ UScriptStruct* Z_Construct_UScriptStruct_FStatline()
 }
 // End ScriptStruct FStatline
 
+// Begin Class UStatlineComponent Function CanJump
+struct Z_Construct_UFunction_UStatlineComponent_CanJump_Statics
+{
+	struct StatlineComponent_eventCanJump_Parms
+	{
+		bool ReturnValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/Components/StatlineComponent.h" },
+	};
+#endif // WITH_METADATA
+	static void NewProp_ReturnValue_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+void Z_Construct_UFunction_UStatlineComponent_CanJump_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+{
+	((StatlineComponent_eventCanJump_Parms*)Obj)->ReturnValue = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UStatlineComponent_CanJump_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(StatlineComponent_eventCanJump_Parms), &Z_Construct_UFunction_UStatlineComponent_CanJump_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UStatlineComponent_CanJump_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UStatlineComponent_CanJump_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UStatlineComponent_CanJump_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UStatlineComponent_CanJump_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UStatlineComponent, nullptr, "CanJump", nullptr, nullptr, Z_Construct_UFunction_UStatlineComponent_CanJump_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UStatlineComponent_CanJump_Statics::PropPointers), sizeof(Z_Construct_UFunction_UStatlineComponent_CanJump_Statics::StatlineComponent_eventCanJump_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UStatlineComponent_CanJump_Statics::Function_MetaDataParams), Z_Construct_UFunction_UStatlineComponent_CanJump_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UStatlineComponent_CanJump_Statics::StatlineComponent_eventCanJump_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UStatlineComponent_CanJump()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UStatlineComponent_CanJump_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UStatlineComponent::execCanJump)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->CanJump();
+	P_NATIVE_END;
+}
+// End Class UStatlineComponent Function CanJump
+
+// Begin Class UStatlineComponent Function CanSprint
+struct Z_Construct_UFunction_UStatlineComponent_CanSprint_Statics
+{
+	struct StatlineComponent_eventCanSprint_Parms
+	{
+		bool ReturnValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/Components/StatlineComponent.h" },
+	};
+#endif // WITH_METADATA
+	static void NewProp_ReturnValue_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+void Z_Construct_UFunction_UStatlineComponent_CanSprint_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+{
+	((StatlineComponent_eventCanSprint_Parms*)Obj)->ReturnValue = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UStatlineComponent_CanSprint_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(StatlineComponent_eventCanSprint_Parms), &Z_Construct_UFunction_UStatlineComponent_CanSprint_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UStatlineComponent_CanSprint_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UStatlineComponent_CanSprint_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UStatlineComponent_CanSprint_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UStatlineComponent_CanSprint_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UStatlineComponent, nullptr, "CanSprint", nullptr, nullptr, Z_Construct_UFunction_UStatlineComponent_CanSprint_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UStatlineComponent_CanSprint_Statics::PropPointers), sizeof(Z_Construct_UFunction_UStatlineComponent_CanSprint_Statics::StatlineComponent_eventCanSprint_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UStatlineComponent_CanSprint_Statics::Function_MetaDataParams), Z_Construct_UFunction_UStatlineComponent_CanSprint_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UStatlineComponent_CanSprint_Statics::StatlineComponent_eventCanSprint_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UStatlineComponent_CanSprint()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UStatlineComponent_CanSprint_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UStatlineComponent::execCanSprint)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->CanSprint();
+	P_NATIVE_END;
+}
+// End Class UStatlineComponent Function CanSprint
+
 // Begin Class UStatlineComponent Function GetStatPercentile
 struct Z_Construct_UFunction_UStatlineComponent_GetStatPercentile_Statics
 {
@@ -209,12 +302,192 @@ DEFINE_FUNCTION(UStatlineComponent::execGetStatPercentile)
 }
 // End Class UStatlineComponent Function GetStatPercentile
 
+// Begin Class UStatlineComponent Function HasJumped
+struct Z_Construct_UFunction_UStatlineComponent_HasJumped_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/Components/StatlineComponent.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UStatlineComponent_HasJumped_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UStatlineComponent, nullptr, "HasJumped", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UStatlineComponent_HasJumped_Statics::Function_MetaDataParams), Z_Construct_UFunction_UStatlineComponent_HasJumped_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_UStatlineComponent_HasJumped()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UStatlineComponent_HasJumped_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UStatlineComponent::execHasJumped)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->HasJumped();
+	P_NATIVE_END;
+}
+// End Class UStatlineComponent Function HasJumped
+
+// Begin Class UStatlineComponent Function SetMovementComponentRef
+struct Z_Construct_UFunction_UStatlineComponent_SetMovementComponentRef_Statics
+{
+	struct StatlineComponent_eventSetMovementComponentRef_Parms
+	{
+		UCharacterMovementComponent* Comp;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/Components/StatlineComponent.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Comp_MetaData[] = {
+		{ "EditInline", "true" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_Comp;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UStatlineComponent_SetMovementComponentRef_Statics::NewProp_Comp = { "Comp", nullptr, (EPropertyFlags)0x0010000000080080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(StatlineComponent_eventSetMovementComponentRef_Parms, Comp), Z_Construct_UClass_UCharacterMovementComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Comp_MetaData), NewProp_Comp_MetaData) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UStatlineComponent_SetMovementComponentRef_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UStatlineComponent_SetMovementComponentRef_Statics::NewProp_Comp,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UStatlineComponent_SetMovementComponentRef_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UStatlineComponent_SetMovementComponentRef_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UStatlineComponent, nullptr, "SetMovementComponentRef", nullptr, nullptr, Z_Construct_UFunction_UStatlineComponent_SetMovementComponentRef_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UStatlineComponent_SetMovementComponentRef_Statics::PropPointers), sizeof(Z_Construct_UFunction_UStatlineComponent_SetMovementComponentRef_Statics::StatlineComponent_eventSetMovementComponentRef_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UStatlineComponent_SetMovementComponentRef_Statics::Function_MetaDataParams), Z_Construct_UFunction_UStatlineComponent_SetMovementComponentRef_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UStatlineComponent_SetMovementComponentRef_Statics::StatlineComponent_eventSetMovementComponentRef_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UStatlineComponent_SetMovementComponentRef()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UStatlineComponent_SetMovementComponentRef_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UStatlineComponent::execSetMovementComponentRef)
+{
+	P_GET_OBJECT(UCharacterMovementComponent,Z_Param_Comp);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetMovementComponentRef(Z_Param_Comp);
+	P_NATIVE_END;
+}
+// End Class UStatlineComponent Function SetMovementComponentRef
+
+// Begin Class UStatlineComponent Function SetSprinting
+struct Z_Construct_UFunction_UStatlineComponent_SetSprinting_Statics
+{
+	struct StatlineComponent_eventSetSprinting_Parms
+	{
+		bool IsSprinting;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/Components/StatlineComponent.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_IsSprinting_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif // WITH_METADATA
+	static void NewProp_IsSprinting_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_IsSprinting;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+void Z_Construct_UFunction_UStatlineComponent_SetSprinting_Statics::NewProp_IsSprinting_SetBit(void* Obj)
+{
+	((StatlineComponent_eventSetSprinting_Parms*)Obj)->IsSprinting = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UStatlineComponent_SetSprinting_Statics::NewProp_IsSprinting = { "IsSprinting", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(StatlineComponent_eventSetSprinting_Parms), &Z_Construct_UFunction_UStatlineComponent_SetSprinting_Statics::NewProp_IsSprinting_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_IsSprinting_MetaData), NewProp_IsSprinting_MetaData) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UStatlineComponent_SetSprinting_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UStatlineComponent_SetSprinting_Statics::NewProp_IsSprinting,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UStatlineComponent_SetSprinting_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UStatlineComponent_SetSprinting_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UStatlineComponent, nullptr, "SetSprinting", nullptr, nullptr, Z_Construct_UFunction_UStatlineComponent_SetSprinting_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UStatlineComponent_SetSprinting_Statics::PropPointers), sizeof(Z_Construct_UFunction_UStatlineComponent_SetSprinting_Statics::StatlineComponent_eventSetSprinting_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04420401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UStatlineComponent_SetSprinting_Statics::Function_MetaDataParams), Z_Construct_UFunction_UStatlineComponent_SetSprinting_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UStatlineComponent_SetSprinting_Statics::StatlineComponent_eventSetSprinting_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UStatlineComponent_SetSprinting()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UStatlineComponent_SetSprinting_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UStatlineComponent::execSetSprinting)
+{
+	P_GET_UBOOL_REF(Z_Param_Out_IsSprinting);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetSprinting(Z_Param_Out_IsSprinting);
+	P_NATIVE_END;
+}
+// End Class UStatlineComponent Function SetSprinting
+
+// Begin Class UStatlineComponent Function SetWalking
+struct Z_Construct_UFunction_UStatlineComponent_SetWalking_Statics
+{
+	struct StatlineComponent_eventSetWalking_Parms
+	{
+		bool IsWalking;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/Components/StatlineComponent.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_IsWalking_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif // WITH_METADATA
+	static void NewProp_IsWalking_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_IsWalking;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+void Z_Construct_UFunction_UStatlineComponent_SetWalking_Statics::NewProp_IsWalking_SetBit(void* Obj)
+{
+	((StatlineComponent_eventSetWalking_Parms*)Obj)->IsWalking = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UStatlineComponent_SetWalking_Statics::NewProp_IsWalking = { "IsWalking", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(StatlineComponent_eventSetWalking_Parms), &Z_Construct_UFunction_UStatlineComponent_SetWalking_Statics::NewProp_IsWalking_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_IsWalking_MetaData), NewProp_IsWalking_MetaData) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UStatlineComponent_SetWalking_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UStatlineComponent_SetWalking_Statics::NewProp_IsWalking,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UStatlineComponent_SetWalking_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UStatlineComponent_SetWalking_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UStatlineComponent, nullptr, "SetWalking", nullptr, nullptr, Z_Construct_UFunction_UStatlineComponent_SetWalking_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UStatlineComponent_SetWalking_Statics::PropPointers), sizeof(Z_Construct_UFunction_UStatlineComponent_SetWalking_Statics::StatlineComponent_eventSetWalking_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04420401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UStatlineComponent_SetWalking_Statics::Function_MetaDataParams), Z_Construct_UFunction_UStatlineComponent_SetWalking_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UStatlineComponent_SetWalking_Statics::StatlineComponent_eventSetWalking_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UStatlineComponent_SetWalking()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UStatlineComponent_SetWalking_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UStatlineComponent::execSetWalking)
+{
+	P_GET_UBOOL_REF(Z_Param_Out_IsWalking);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetWalking(Z_Param_Out_IsWalking);
+	P_NATIVE_END;
+}
+// End Class UStatlineComponent Function SetWalking
+
 // Begin Class UStatlineComponent
 void UStatlineComponent::StaticRegisterNativesUStatlineComponent()
 {
 	UClass* Class = UStatlineComponent::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
+		{ "CanJump", &UStatlineComponent::execCanJump },
+		{ "CanSprint", &UStatlineComponent::execCanSprint },
 		{ "GetStatPercentile", &UStatlineComponent::execGetStatPercentile },
+		{ "HasJumped", &UStatlineComponent::execHasJumped },
+		{ "SetMovementComponentRef", &UStatlineComponent::execSetMovementComponentRef },
+		{ "SetSprinting", &UStatlineComponent::execSetSprinting },
+		{ "SetWalking", &UStatlineComponent::execSetWalking },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
@@ -252,15 +525,65 @@ struct Z_Construct_UClass_UStatlineComponent_Statics
 		{ "Category", "StatlineComponent" },
 		{ "ModuleRelativePath", "Public/Components/StatlineComponent.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_bIsSprinting_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "StatlineComponent" },
+		{ "ModuleRelativePath", "Public/Components/StatlineComponent.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_bIsWalking_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "StatlineComponent" },
+		{ "ModuleRelativePath", "Public/Components/StatlineComponent.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SprintCost_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "StatlineComponent" },
+		{ "ModuleRelativePath", "Public/Components/StatlineComponent.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_WalkSpeed_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "StatlineComponent" },
+		{ "ModuleRelativePath", "Public/Components/StatlineComponent.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_JogSpeed_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "StatlineComponent" },
+		{ "ModuleRelativePath", "Public/Components/StatlineComponent.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SprintSpeed_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "StatlineComponent" },
+		{ "ModuleRelativePath", "Public/Components/StatlineComponent.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_JumpCost_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "StatlineComponent" },
+		{ "ModuleRelativePath", "Public/Components/StatlineComponent.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_Health;
 	static const UECodeGen_Private::FStructPropertyParams NewProp_Stamina;
 	static const UECodeGen_Private::FStructPropertyParams NewProp_Hunger;
 	static const UECodeGen_Private::FStructPropertyParams NewProp_Thirst;
+	static void NewProp_bIsSprinting_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_bIsSprinting;
+	static void NewProp_bIsWalking_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_bIsWalking;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_SprintCost;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_WalkSpeed;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_JogSpeed;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_SprintSpeed;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_JumpCost;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
+		{ &Z_Construct_UFunction_UStatlineComponent_CanJump, "CanJump" }, // 3432461670
+		{ &Z_Construct_UFunction_UStatlineComponent_CanSprint, "CanSprint" }, // 2968531836
 		{ &Z_Construct_UFunction_UStatlineComponent_GetStatPercentile, "GetStatPercentile" }, // 4069861115
+		{ &Z_Construct_UFunction_UStatlineComponent_HasJumped, "HasJumped" }, // 4191951482
+		{ &Z_Construct_UFunction_UStatlineComponent_SetMovementComponentRef, "SetMovementComponentRef" }, // 3275231898
+		{ &Z_Construct_UFunction_UStatlineComponent_SetSprinting, "SetSprinting" }, // 3010804755
+		{ &Z_Construct_UFunction_UStatlineComponent_SetWalking, "SetWalking" }, // 4150372787
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -272,11 +595,33 @@ const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UStatlineCompo
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UStatlineComponent_Statics::NewProp_Stamina = { "Stamina", nullptr, (EPropertyFlags)0x0040000000020015, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UStatlineComponent, Stamina), Z_Construct_UScriptStruct_FStatline, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Stamina_MetaData), NewProp_Stamina_MetaData) }; // 3188964235
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UStatlineComponent_Statics::NewProp_Hunger = { "Hunger", nullptr, (EPropertyFlags)0x0040000000020015, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UStatlineComponent, Hunger), Z_Construct_UScriptStruct_FStatline, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Hunger_MetaData), NewProp_Hunger_MetaData) }; // 3188964235
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UStatlineComponent_Statics::NewProp_Thirst = { "Thirst", nullptr, (EPropertyFlags)0x0040000000020015, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UStatlineComponent, Thirst), Z_Construct_UScriptStruct_FStatline, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Thirst_MetaData), NewProp_Thirst_MetaData) }; // 3188964235
+void Z_Construct_UClass_UStatlineComponent_Statics::NewProp_bIsSprinting_SetBit(void* Obj)
+{
+	((UStatlineComponent*)Obj)->bIsSprinting = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UStatlineComponent_Statics::NewProp_bIsSprinting = { "bIsSprinting", nullptr, (EPropertyFlags)0x0040000000020015, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(UStatlineComponent), &Z_Construct_UClass_UStatlineComponent_Statics::NewProp_bIsSprinting_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_bIsSprinting_MetaData), NewProp_bIsSprinting_MetaData) };
+void Z_Construct_UClass_UStatlineComponent_Statics::NewProp_bIsWalking_SetBit(void* Obj)
+{
+	((UStatlineComponent*)Obj)->bIsWalking = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UStatlineComponent_Statics::NewProp_bIsWalking = { "bIsWalking", nullptr, (EPropertyFlags)0x0040000000020015, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(UStatlineComponent), &Z_Construct_UClass_UStatlineComponent_Statics::NewProp_bIsWalking_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_bIsWalking_MetaData), NewProp_bIsWalking_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UStatlineComponent_Statics::NewProp_SprintCost = { "SprintCost", nullptr, (EPropertyFlags)0x0040000000020015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UStatlineComponent, SprintCost), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SprintCost_MetaData), NewProp_SprintCost_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UStatlineComponent_Statics::NewProp_WalkSpeed = { "WalkSpeed", nullptr, (EPropertyFlags)0x0040000000010015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UStatlineComponent, WalkSpeed), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_WalkSpeed_MetaData), NewProp_WalkSpeed_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UStatlineComponent_Statics::NewProp_JogSpeed = { "JogSpeed", nullptr, (EPropertyFlags)0x0040000000010015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UStatlineComponent, JogSpeed), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_JogSpeed_MetaData), NewProp_JogSpeed_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UStatlineComponent_Statics::NewProp_SprintSpeed = { "SprintSpeed", nullptr, (EPropertyFlags)0x0040000000010015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UStatlineComponent, SprintSpeed), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SprintSpeed_MetaData), NewProp_SprintSpeed_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UStatlineComponent_Statics::NewProp_JumpCost = { "JumpCost", nullptr, (EPropertyFlags)0x0040000000020015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UStatlineComponent, JumpCost), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_JumpCost_MetaData), NewProp_JumpCost_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UStatlineComponent_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UStatlineComponent_Statics::NewProp_Health,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UStatlineComponent_Statics::NewProp_Stamina,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UStatlineComponent_Statics::NewProp_Hunger,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UStatlineComponent_Statics::NewProp_Thirst,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UStatlineComponent_Statics::NewProp_bIsSprinting,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UStatlineComponent_Statics::NewProp_bIsWalking,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UStatlineComponent_Statics::NewProp_SprintCost,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UStatlineComponent_Statics::NewProp_WalkSpeed,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UStatlineComponent_Statics::NewProp_JogSpeed,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UStatlineComponent_Statics::NewProp_SprintSpeed,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UStatlineComponent_Statics::NewProp_JumpCost,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UStatlineComponent_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_UStatlineComponent_Statics::DependentSingletons[])() = {
@@ -325,10 +670,10 @@ struct Z_CompiledInDeferFile_FID_DeadTrail_Source_DeadTrail_Public_Components_St
 		{ FStatline::StaticStruct, Z_Construct_UScriptStruct_FStatline_Statics::NewStructOps, TEXT("Statline"), &Z_Registration_Info_UScriptStruct_Statline, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FStatline), 3188964235U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UStatlineComponent, UStatlineComponent::StaticClass, TEXT("UStatlineComponent"), &Z_Registration_Info_UClass_UStatlineComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UStatlineComponent), 1182554998U) },
+		{ Z_Construct_UClass_UStatlineComponent, UStatlineComponent::StaticClass, TEXT("UStatlineComponent"), &Z_Registration_Info_UClass_UStatlineComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UStatlineComponent), 4285291710U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_DeadTrail_Source_DeadTrail_Public_Components_StatlineComponent_h_369750294(TEXT("/Script/DeadTrail"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_DeadTrail_Source_DeadTrail_Public_Components_StatlineComponent_h_3701792398(TEXT("/Script/DeadTrail"),
 	Z_CompiledInDeferFile_FID_DeadTrail_Source_DeadTrail_Public_Components_StatlineComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_DeadTrail_Source_DeadTrail_Public_Components_StatlineComponent_h_Statics::ClassInfo),
 	Z_CompiledInDeferFile_FID_DeadTrail_Source_DeadTrail_Public_Components_StatlineComponent_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_DeadTrail_Source_DeadTrail_Public_Components_StatlineComponent_h_Statics::ScriptStructInfo),
 	Z_CompiledInDeferFile_FID_DeadTrail_Source_DeadTrail_Public_Components_StatlineComponent_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_DeadTrail_Source_DeadTrail_Public_Components_StatlineComponent_h_Statics::EnumInfo));

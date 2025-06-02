@@ -40,70 +40,44 @@ struct Z_Construct_UClass_ADTPlayerCharacter_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CameraBoom_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Camera" },
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "/** Camera boom positioning the camera behind the character */" },
-#endif
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Public/Characters/DTPlayerCharacter.h" },
-#if !UE_BUILD_SHIPPING
-		{ "ToolTip", "Camera boom positioning the camera behind the character" },
-#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_FollowCamera_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Camera" },
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "/** Follow camera */" },
-#endif
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Public/Characters/DTPlayerCharacter.h" },
-#if !UE_BUILD_SHIPPING
-		{ "ToolTip", "Follow camera" },
-#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_DefaultMappingContext_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Input" },
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "/** MappingContext */" },
-#endif
 		{ "ModuleRelativePath", "Public/Characters/DTPlayerCharacter.h" },
-#if !UE_BUILD_SHIPPING
-		{ "ToolTip", "MappingContext" },
-#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_JumpAction_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Input" },
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "/** Jump Input Action */" },
-#endif
 		{ "ModuleRelativePath", "Public/Characters/DTPlayerCharacter.h" },
-#if !UE_BUILD_SHIPPING
-		{ "ToolTip", "Jump Input Action" },
-#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MoveAction_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Input" },
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "/** Move Input Action */" },
-#endif
 		{ "ModuleRelativePath", "Public/Characters/DTPlayerCharacter.h" },
-#if !UE_BUILD_SHIPPING
-		{ "ToolTip", "Move Input Action" },
-#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_LookAction_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Input" },
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "/** Look Input Action */" },
-#endif
 		{ "ModuleRelativePath", "Public/Characters/DTPlayerCharacter.h" },
-#if !UE_BUILD_SHIPPING
-		{ "ToolTip", "Look Input Action" },
-#endif
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SprintAction_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "Input" },
+		{ "ModuleRelativePath", "Public/Characters/DTPlayerCharacter.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_WalkAction_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "Input" },
+		{ "ModuleRelativePath", "Public/Characters/DTPlayerCharacter.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_CameraBoom;
@@ -112,6 +86,8 @@ struct Z_Construct_UClass_ADTPlayerCharacter_Statics
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_JumpAction;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_MoveAction;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_LookAction;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_SprintAction;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_WalkAction;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -125,6 +101,8 @@ const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ADTPlayerChara
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ADTPlayerCharacter_Statics::NewProp_JumpAction = { "JumpAction", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ADTPlayerCharacter, JumpAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_JumpAction_MetaData), NewProp_JumpAction_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ADTPlayerCharacter_Statics::NewProp_MoveAction = { "MoveAction", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ADTPlayerCharacter, MoveAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MoveAction_MetaData), NewProp_MoveAction_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ADTPlayerCharacter_Statics::NewProp_LookAction = { "LookAction", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ADTPlayerCharacter, LookAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_LookAction_MetaData), NewProp_LookAction_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ADTPlayerCharacter_Statics::NewProp_SprintAction = { "SprintAction", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ADTPlayerCharacter, SprintAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SprintAction_MetaData), NewProp_SprintAction_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ADTPlayerCharacter_Statics::NewProp_WalkAction = { "WalkAction", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ADTPlayerCharacter, WalkAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_WalkAction_MetaData), NewProp_WalkAction_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ADTPlayerCharacter_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ADTPlayerCharacter_Statics::NewProp_CameraBoom,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ADTPlayerCharacter_Statics::NewProp_FollowCamera,
@@ -132,6 +110,8 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ADTPlayer
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ADTPlayerCharacter_Statics::NewProp_JumpAction,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ADTPlayerCharacter_Statics::NewProp_MoveAction,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ADTPlayerCharacter_Statics::NewProp_LookAction,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ADTPlayerCharacter_Statics::NewProp_SprintAction,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ADTPlayerCharacter_Statics::NewProp_WalkAction,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ADTPlayerCharacter_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_ADTPlayerCharacter_Statics::DependentSingletons[])() = {
@@ -174,10 +154,10 @@ ADTPlayerCharacter::~ADTPlayerCharacter() {}
 struct Z_CompiledInDeferFile_FID_DeadTrail_Source_DeadTrail_Public_Characters_DTPlayerCharacter_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ADTPlayerCharacter, ADTPlayerCharacter::StaticClass, TEXT("ADTPlayerCharacter"), &Z_Registration_Info_UClass_ADTPlayerCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ADTPlayerCharacter), 2120876652U) },
+		{ Z_Construct_UClass_ADTPlayerCharacter, ADTPlayerCharacter::StaticClass, TEXT("ADTPlayerCharacter"), &Z_Registration_Info_UClass_ADTPlayerCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ADTPlayerCharacter), 1145327553U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_DeadTrail_Source_DeadTrail_Public_Characters_DTPlayerCharacter_h_695803993(TEXT("/Script/DeadTrail"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_DeadTrail_Source_DeadTrail_Public_Characters_DTPlayerCharacter_h_3722259005(TEXT("/Script/DeadTrail"),
 	Z_CompiledInDeferFile_FID_DeadTrail_Source_DeadTrail_Public_Characters_DTPlayerCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_DeadTrail_Source_DeadTrail_Public_Characters_DTPlayerCharacter_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

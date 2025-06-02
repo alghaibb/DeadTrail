@@ -9,6 +9,7 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class UCharacterMovementComponent;
 enum class EStatlineType : uint8;
 #ifdef DEADTRAIL_StatlineComponent_generated_h
 #error "StatlineComponent.generated.h already included, missing '#pragma once' in StatlineComponent.h"
@@ -22,11 +23,17 @@ enum class EStatlineType : uint8;
 
 template<> DEADTRAIL_API UScriptStruct* StaticStruct<struct FStatline>();
 
-#define FID_DeadTrail_Source_DeadTrail_Public_Components_StatlineComponent_h_62_RPC_WRAPPERS_NO_PURE_DECLS \
-	DECLARE_FUNCTION(execGetStatPercentile);
+#define FID_DeadTrail_Source_DeadTrail_Public_Components_StatlineComponent_h_67_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execHasJumped); \
+	DECLARE_FUNCTION(execCanJump); \
+	DECLARE_FUNCTION(execSetWalking); \
+	DECLARE_FUNCTION(execSetSprinting); \
+	DECLARE_FUNCTION(execCanSprint); \
+	DECLARE_FUNCTION(execGetStatPercentile); \
+	DECLARE_FUNCTION(execSetMovementComponentRef);
 
 
-#define FID_DeadTrail_Source_DeadTrail_Public_Components_StatlineComponent_h_62_INCLASS_NO_PURE_DECLS \
+#define FID_DeadTrail_Source_DeadTrail_Public_Components_StatlineComponent_h_67_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUStatlineComponent(); \
 	friend struct Z_Construct_UClass_UStatlineComponent_Statics; \
@@ -35,7 +42,7 @@ public: \
 	DECLARE_SERIALIZER(UStatlineComponent)
 
 
-#define FID_DeadTrail_Source_DeadTrail_Public_Components_StatlineComponent_h_62_ENHANCED_CONSTRUCTORS \
+#define FID_DeadTrail_Source_DeadTrail_Public_Components_StatlineComponent_h_67_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	UStatlineComponent(UStatlineComponent&&); \
@@ -47,13 +54,13 @@ public: \
 	NO_API virtual ~UStatlineComponent();
 
 
-#define FID_DeadTrail_Source_DeadTrail_Public_Components_StatlineComponent_h_59_PROLOG
-#define FID_DeadTrail_Source_DeadTrail_Public_Components_StatlineComponent_h_62_GENERATED_BODY \
+#define FID_DeadTrail_Source_DeadTrail_Public_Components_StatlineComponent_h_64_PROLOG
+#define FID_DeadTrail_Source_DeadTrail_Public_Components_StatlineComponent_h_67_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_DeadTrail_Source_DeadTrail_Public_Components_StatlineComponent_h_62_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_DeadTrail_Source_DeadTrail_Public_Components_StatlineComponent_h_62_INCLASS_NO_PURE_DECLS \
-	FID_DeadTrail_Source_DeadTrail_Public_Components_StatlineComponent_h_62_ENHANCED_CONSTRUCTORS \
+	FID_DeadTrail_Source_DeadTrail_Public_Components_StatlineComponent_h_67_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_DeadTrail_Source_DeadTrail_Public_Components_StatlineComponent_h_67_INCLASS_NO_PURE_DECLS \
+	FID_DeadTrail_Source_DeadTrail_Public_Components_StatlineComponent_h_67_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
