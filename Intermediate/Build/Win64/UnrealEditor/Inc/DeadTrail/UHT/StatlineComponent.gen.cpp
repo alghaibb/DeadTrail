@@ -376,6 +376,56 @@ DEFINE_FUNCTION(UStatlineComponent::execSetMovementComponentRef)
 }
 // End Class UStatlineComponent Function SetMovementComponentRef
 
+// Begin Class UStatlineComponent Function SetSneaking
+struct Z_Construct_UFunction_UStatlineComponent_SetSneaking_Statics
+{
+	struct StatlineComponent_eventSetSneaking_Parms
+	{
+		bool IsSneaking;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/Components/StatlineComponent.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_IsSneaking_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif // WITH_METADATA
+	static void NewProp_IsSneaking_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_IsSneaking;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+void Z_Construct_UFunction_UStatlineComponent_SetSneaking_Statics::NewProp_IsSneaking_SetBit(void* Obj)
+{
+	((StatlineComponent_eventSetSneaking_Parms*)Obj)->IsSneaking = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_UStatlineComponent_SetSneaking_Statics::NewProp_IsSneaking = { "IsSneaking", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(StatlineComponent_eventSetSneaking_Parms), &Z_Construct_UFunction_UStatlineComponent_SetSneaking_Statics::NewProp_IsSneaking_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_IsSneaking_MetaData), NewProp_IsSneaking_MetaData) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UStatlineComponent_SetSneaking_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UStatlineComponent_SetSneaking_Statics::NewProp_IsSneaking,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UStatlineComponent_SetSneaking_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UStatlineComponent_SetSneaking_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UStatlineComponent, nullptr, "SetSneaking", nullptr, nullptr, Z_Construct_UFunction_UStatlineComponent_SetSneaking_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UStatlineComponent_SetSneaking_Statics::PropPointers), sizeof(Z_Construct_UFunction_UStatlineComponent_SetSneaking_Statics::StatlineComponent_eventSetSneaking_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04420401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UStatlineComponent_SetSneaking_Statics::Function_MetaDataParams), Z_Construct_UFunction_UStatlineComponent_SetSneaking_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UStatlineComponent_SetSneaking_Statics::StatlineComponent_eventSetSneaking_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UStatlineComponent_SetSneaking()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UStatlineComponent_SetSneaking_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UStatlineComponent::execSetSneaking)
+{
+	P_GET_UBOOL_REF(Z_Param_Out_IsSneaking);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->SetSneaking(Z_Param_Out_IsSneaking);
+	P_NATIVE_END;
+}
+// End Class UStatlineComponent Function SetSneaking
+
 // Begin Class UStatlineComponent Function SetSprinting
 struct Z_Construct_UFunction_UStatlineComponent_SetSprinting_Statics
 {
@@ -486,6 +536,7 @@ void UStatlineComponent::StaticRegisterNativesUStatlineComponent()
 		{ "GetStatPercentile", &UStatlineComponent::execGetStatPercentile },
 		{ "HasJumped", &UStatlineComponent::execHasJumped },
 		{ "SetMovementComponentRef", &UStatlineComponent::execSetMovementComponentRef },
+		{ "SetSneaking", &UStatlineComponent::execSetSneaking },
 		{ "SetSprinting", &UStatlineComponent::execSetSprinting },
 		{ "SetWalking", &UStatlineComponent::execSetWalking },
 	};
@@ -530,6 +581,16 @@ struct Z_Construct_UClass_UStatlineComponent_Statics
 		{ "Category", "StatlineComponent" },
 		{ "ModuleRelativePath", "Public/Components/StatlineComponent.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_bWantsToSprint_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "StatlineComponent" },
+		{ "ModuleRelativePath", "Public/Components/StatlineComponent.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_bIsSneaking_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "StatlineComponent" },
+		{ "ModuleRelativePath", "Public/Components/StatlineComponent.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_bIsWalking_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "StatlineComponent" },
@@ -555,7 +616,32 @@ struct Z_Construct_UClass_UStatlineComponent_Statics
 		{ "Category", "StatlineComponent" },
 		{ "ModuleRelativePath", "Public/Components/StatlineComponent.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SneakSpeed_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "StatlineComponent" },
+		{ "ModuleRelativePath", "Public/Components/StatlineComponent.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_JumpCost_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "StatlineComponent" },
+		{ "ModuleRelativePath", "Public/Components/StatlineComponent.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SecondsForStaminaExhaustion_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "StatlineComponent" },
+		{ "ModuleRelativePath", "Public/Components/StatlineComponent.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CurrentStaminaExhaustionTime_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "StatlineComponent" },
+		{ "ModuleRelativePath", "Public/Components/StatlineComponent.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_StarvingHealthLossPerSecond_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "StatlineComponent" },
+		{ "ModuleRelativePath", "Public/Components/StatlineComponent.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_DehydrationHealthLossPerSecond_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "StatlineComponent" },
 		{ "ModuleRelativePath", "Public/Components/StatlineComponent.h" },
@@ -567,13 +653,22 @@ struct Z_Construct_UClass_UStatlineComponent_Statics
 	static const UECodeGen_Private::FStructPropertyParams NewProp_Thirst;
 	static void NewProp_bIsSprinting_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_bIsSprinting;
+	static void NewProp_bWantsToSprint_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_bWantsToSprint;
+	static void NewProp_bIsSneaking_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_bIsSneaking;
 	static void NewProp_bIsWalking_SetBit(void* Obj);
 	static const UECodeGen_Private::FBoolPropertyParams NewProp_bIsWalking;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_SprintCost;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_WalkSpeed;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_JogSpeed;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_SprintSpeed;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_SneakSpeed;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_JumpCost;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_SecondsForStaminaExhaustion;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_CurrentStaminaExhaustionTime;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_StarvingHealthLossPerSecond;
+	static const UECodeGen_Private::FFloatPropertyParams NewProp_DehydrationHealthLossPerSecond;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
@@ -582,6 +677,7 @@ struct Z_Construct_UClass_UStatlineComponent_Statics
 		{ &Z_Construct_UFunction_UStatlineComponent_GetStatPercentile, "GetStatPercentile" }, // 4069861115
 		{ &Z_Construct_UFunction_UStatlineComponent_HasJumped, "HasJumped" }, // 4191951482
 		{ &Z_Construct_UFunction_UStatlineComponent_SetMovementComponentRef, "SetMovementComponentRef" }, // 3275231898
+		{ &Z_Construct_UFunction_UStatlineComponent_SetSneaking, "SetSneaking" }, // 1319502441
 		{ &Z_Construct_UFunction_UStatlineComponent_SetSprinting, "SetSprinting" }, // 3010804755
 		{ &Z_Construct_UFunction_UStatlineComponent_SetWalking, "SetWalking" }, // 4150372787
 	};
@@ -600,6 +696,16 @@ void Z_Construct_UClass_UStatlineComponent_Statics::NewProp_bIsSprinting_SetBit(
 	((UStatlineComponent*)Obj)->bIsSprinting = 1;
 }
 const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UStatlineComponent_Statics::NewProp_bIsSprinting = { "bIsSprinting", nullptr, (EPropertyFlags)0x0040000000020015, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(UStatlineComponent), &Z_Construct_UClass_UStatlineComponent_Statics::NewProp_bIsSprinting_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_bIsSprinting_MetaData), NewProp_bIsSprinting_MetaData) };
+void Z_Construct_UClass_UStatlineComponent_Statics::NewProp_bWantsToSprint_SetBit(void* Obj)
+{
+	((UStatlineComponent*)Obj)->bWantsToSprint = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UStatlineComponent_Statics::NewProp_bWantsToSprint = { "bWantsToSprint", nullptr, (EPropertyFlags)0x0040000000020015, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(UStatlineComponent), &Z_Construct_UClass_UStatlineComponent_Statics::NewProp_bWantsToSprint_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_bWantsToSprint_MetaData), NewProp_bWantsToSprint_MetaData) };
+void Z_Construct_UClass_UStatlineComponent_Statics::NewProp_bIsSneaking_SetBit(void* Obj)
+{
+	((UStatlineComponent*)Obj)->bIsSneaking = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UStatlineComponent_Statics::NewProp_bIsSneaking = { "bIsSneaking", nullptr, (EPropertyFlags)0x0040000000020015, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(UStatlineComponent), &Z_Construct_UClass_UStatlineComponent_Statics::NewProp_bIsSneaking_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_bIsSneaking_MetaData), NewProp_bIsSneaking_MetaData) };
 void Z_Construct_UClass_UStatlineComponent_Statics::NewProp_bIsWalking_SetBit(void* Obj)
 {
 	((UStatlineComponent*)Obj)->bIsWalking = 1;
@@ -609,19 +715,31 @@ const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UStatlineCompon
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UStatlineComponent_Statics::NewProp_WalkSpeed = { "WalkSpeed", nullptr, (EPropertyFlags)0x0040000000010015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UStatlineComponent, WalkSpeed), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_WalkSpeed_MetaData), NewProp_WalkSpeed_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UStatlineComponent_Statics::NewProp_JogSpeed = { "JogSpeed", nullptr, (EPropertyFlags)0x0040000000010015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UStatlineComponent, JogSpeed), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_JogSpeed_MetaData), NewProp_JogSpeed_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UStatlineComponent_Statics::NewProp_SprintSpeed = { "SprintSpeed", nullptr, (EPropertyFlags)0x0040000000010015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UStatlineComponent, SprintSpeed), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SprintSpeed_MetaData), NewProp_SprintSpeed_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UStatlineComponent_Statics::NewProp_SneakSpeed = { "SneakSpeed", nullptr, (EPropertyFlags)0x0040000000010015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UStatlineComponent, SneakSpeed), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SneakSpeed_MetaData), NewProp_SneakSpeed_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UStatlineComponent_Statics::NewProp_JumpCost = { "JumpCost", nullptr, (EPropertyFlags)0x0040000000020015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UStatlineComponent, JumpCost), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_JumpCost_MetaData), NewProp_JumpCost_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UStatlineComponent_Statics::NewProp_SecondsForStaminaExhaustion = { "SecondsForStaminaExhaustion", nullptr, (EPropertyFlags)0x0040000000010015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UStatlineComponent, SecondsForStaminaExhaustion), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SecondsForStaminaExhaustion_MetaData), NewProp_SecondsForStaminaExhaustion_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UStatlineComponent_Statics::NewProp_CurrentStaminaExhaustionTime = { "CurrentStaminaExhaustionTime", nullptr, (EPropertyFlags)0x0040000000020015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UStatlineComponent, CurrentStaminaExhaustionTime), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CurrentStaminaExhaustionTime_MetaData), NewProp_CurrentStaminaExhaustionTime_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UStatlineComponent_Statics::NewProp_StarvingHealthLossPerSecond = { "StarvingHealthLossPerSecond", nullptr, (EPropertyFlags)0x0040000000010015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UStatlineComponent, StarvingHealthLossPerSecond), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_StarvingHealthLossPerSecond_MetaData), NewProp_StarvingHealthLossPerSecond_MetaData) };
+const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UStatlineComponent_Statics::NewProp_DehydrationHealthLossPerSecond = { "DehydrationHealthLossPerSecond", nullptr, (EPropertyFlags)0x0040000000010015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UStatlineComponent, DehydrationHealthLossPerSecond), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DehydrationHealthLossPerSecond_MetaData), NewProp_DehydrationHealthLossPerSecond_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UStatlineComponent_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UStatlineComponent_Statics::NewProp_Health,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UStatlineComponent_Statics::NewProp_Stamina,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UStatlineComponent_Statics::NewProp_Hunger,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UStatlineComponent_Statics::NewProp_Thirst,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UStatlineComponent_Statics::NewProp_bIsSprinting,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UStatlineComponent_Statics::NewProp_bWantsToSprint,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UStatlineComponent_Statics::NewProp_bIsSneaking,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UStatlineComponent_Statics::NewProp_bIsWalking,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UStatlineComponent_Statics::NewProp_SprintCost,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UStatlineComponent_Statics::NewProp_WalkSpeed,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UStatlineComponent_Statics::NewProp_JogSpeed,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UStatlineComponent_Statics::NewProp_SprintSpeed,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UStatlineComponent_Statics::NewProp_SneakSpeed,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UStatlineComponent_Statics::NewProp_JumpCost,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UStatlineComponent_Statics::NewProp_SecondsForStaminaExhaustion,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UStatlineComponent_Statics::NewProp_CurrentStaminaExhaustionTime,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UStatlineComponent_Statics::NewProp_StarvingHealthLossPerSecond,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UStatlineComponent_Statics::NewProp_DehydrationHealthLossPerSecond,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_UStatlineComponent_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_UStatlineComponent_Statics::DependentSingletons[])() = {
@@ -670,10 +788,10 @@ struct Z_CompiledInDeferFile_FID_DeadTrail_Source_DeadTrail_Public_Components_St
 		{ FStatline::StaticStruct, Z_Construct_UScriptStruct_FStatline_Statics::NewStructOps, TEXT("Statline"), &Z_Registration_Info_UScriptStruct_Statline, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FStatline), 3188964235U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UStatlineComponent, UStatlineComponent::StaticClass, TEXT("UStatlineComponent"), &Z_Registration_Info_UClass_UStatlineComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UStatlineComponent), 4285291710U) },
+		{ Z_Construct_UClass_UStatlineComponent, UStatlineComponent::StaticClass, TEXT("UStatlineComponent"), &Z_Registration_Info_UClass_UStatlineComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UStatlineComponent), 3281529235U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_DeadTrail_Source_DeadTrail_Public_Components_StatlineComponent_h_3701792398(TEXT("/Script/DeadTrail"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_DeadTrail_Source_DeadTrail_Public_Components_StatlineComponent_h_1990269650(TEXT("/Script/DeadTrail"),
 	Z_CompiledInDeferFile_FID_DeadTrail_Source_DeadTrail_Public_Components_StatlineComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_DeadTrail_Source_DeadTrail_Public_Components_StatlineComponent_h_Statics::ClassInfo),
 	Z_CompiledInDeferFile_FID_DeadTrail_Source_DeadTrail_Public_Components_StatlineComponent_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_DeadTrail_Source_DeadTrail_Public_Components_StatlineComponent_h_Statics::ScriptStructInfo),
 	Z_CompiledInDeferFile_FID_DeadTrail_Source_DeadTrail_Public_Components_StatlineComponent_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_DeadTrail_Source_DeadTrail_Public_Components_StatlineComponent_h_Statics::EnumInfo));

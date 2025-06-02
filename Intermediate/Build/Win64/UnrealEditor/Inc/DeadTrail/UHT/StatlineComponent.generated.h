@@ -27,6 +27,7 @@ template<> DEADTRAIL_API UScriptStruct* StaticStruct<struct FStatline>();
 	DECLARE_FUNCTION(execHasJumped); \
 	DECLARE_FUNCTION(execCanJump); \
 	DECLARE_FUNCTION(execSetWalking); \
+	DECLARE_FUNCTION(execSetSneaking); \
 	DECLARE_FUNCTION(execSetSprinting); \
 	DECLARE_FUNCTION(execCanSprint); \
 	DECLARE_FUNCTION(execGetStatPercentile); \

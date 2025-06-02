@@ -22,7 +22,10 @@ protected:
 
 	bool CanSprint() const;
 	void SetSprinting(const bool& IsSprinting);
+	
 	void SetWalking(const bool& IsWalking);
+
+	void SetSneaking(const bool& IsSneaking);
 
 public:	
 	virtual void Tick(float DeltaTime) override;

@@ -88,8 +88,6 @@ void ADTPlayerCharacter::PlayerJump()
 	}
 }
 
-
-
 void ADTPlayerCharacter::StartSprinting()
 {
 	SetSprinting(true);
@@ -103,6 +101,12 @@ void ADTPlayerCharacter::StopSprinting()
 void ADTPlayerCharacter::StopWalking()
 {
 	SetWalking(false);
+}
+
+void ADTPlayerCharacter::ToggleSneak()
+{
+	bIsSneaking = !bIsSneaking;
+	SetSneaking(bIsSneaking);
 }
 
 void ADTPlayerCharacter::ToggleWalk()
@@ -142,5 +146,7 @@ void ADTPlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputC
 			&ADTPlayerCharacter::StopSprinting);
 		EnhancedInputComponent->BindAction(WalkAction, ETriggerEvent::Triggered, this,
 			&ADTPlayerCharacter::ToggleWalk);
+		EnhancedInputComponent->BindAction(SneakAction, ETriggerEvent::Started, this, &ADTPlayerCharacter::ToggleSneak);
+
 	}
 }

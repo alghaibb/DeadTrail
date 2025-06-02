@@ -42,10 +42,12 @@ void ADTBaseCharacter::SetSprinting(const bool& IsSprinting)
 
 void ADTBaseCharacter::SetWalking(const bool& IsWalking)
 {
-	if (Statline)
-	{
-		Statline->SetWalking(IsWalking);
-	}
+	Statline->SetWalking(IsWalking);
+}
+
+void ADTBaseCharacter::SetSneaking(const bool& IsSneaking)
+{
+	Statline->SetSneaking(IsSneaking);
 }
 
 

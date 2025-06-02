@@ -1,29 +1,61 @@
-#include "Components/StatlineComponent.h"
+﻿#include "Components/StatlineComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
 
-void UStatlineComponent::TickStats(const float& Deltatime)
+void UStatlineComponent::TickStats(const float& DeltaTime)
 {
-	Health.TickStat(Deltatime);
-	TickStamina(Deltatime);
-	Hunger.TickStat(Deltatime);
-	Thirst.TickStat(Deltatime);
+	TickStamina(DeltaTime);
+	TickHunger(DeltaTime);
+	TickThirst(DeltaTime);
+	if (Thirst.GetCurrent() <= 0.0 || Hunger.GetCurrent() <= 0.0)
+	{
+		return;
+	}
+	Health.TickStat(DeltaTime);
 }
 
 void UStatlineComponent::TickStamina(const float& DeltaTime)
 {
+	if (CurrentStaminaExhaustionTime > 0.0)
+	{
+		CurrentStaminaExhaustionTime -= DeltaTime;
+		return;
+	}
+
 	if (bIsSprinting && IsValidSprinting())
 	{
-		Stamina.TickStat(0 - (DeltaTime * SprintCost));
+		Stamina.TickStat(0 - abs((DeltaTime * SprintCost)));
 		
-		if (Stamina.GetCurrent() <= 0.0f)
+		if (Stamina.GetCurrent() <= 0.0)
 		{
+			bWantsToSprint = false;
 			SetSprinting(false);
+			CurrentStaminaExhaustionTime = SecondsForStaminaExhaustion;
 		}
 		
 		return;
 	}
 
 	Stamina.TickStat(DeltaTime);
+}
+
+void UStatlineComponent::TickHunger(const float& DeltaTime)
+{
+	if (Hunger.GetCurrent() <= 0.0)
+	{
+		Health.Adjust(0 - abs(StarvingHealthLossPerSecond * DeltaTime));
+	}
+
+	Hunger.TickStat(DeltaTime);
+}
+
+void UStatlineComponent::TickThirst(const float& DeltaTime)
+{
+	if (Thirst.GetCurrent() <= 0.0)
+	{
+		Health.Adjust(0 - abs(DehydrationHealthLossPerSecond * DeltaTime));
+	}
+	
+	Thirst.TickStat(DeltaTime);
 }
 
 bool UStatlineComponent::IsValidSprinting()
@@ -87,30 +119,35 @@ bool UStatlineComponent::CanSprint() const
 
 void UStatlineComponent::SetSprinting(const bool& IsSprinting)
 {
-	if (bIsWalking || !MovementComponent)
-		return;
-
 	bIsSprinting = IsSprinting;
-	MovementComponent->MaxWalkSpeed = IsSprinting ? SprintSpeed : JogSpeed;
+	if (bIsSneaking && !bIsSprinting)
+	{
+		return;
+	}
+	bIsSneaking = false;
+	MovementComponent->MaxWalkSpeed = bIsSprinting ? SprintSpeed : JogSpeed;
+}
+
+void UStatlineComponent::SetSneaking(const bool& IsSneaking)
+{
+	bIsSneaking = IsSneaking;
+	if (bIsSprinting && bIsSneaking)
+	{
+		return;
+	}
+	bIsSprinting = false;
+	MovementComponent->MaxWalkSpeed = bIsSneaking ? SneakSpeed : (bIsWalking ? WalkSpeed : JogSpeed);
 }
 
 void UStatlineComponent::SetWalking(const bool& IsWalking)
 {
-	if (!MovementComponent)
-		return;
-
 	bIsWalking = IsWalking;
-
-	// Stop sprinting if walking is enabled
-	if (bIsWalking)
+	if (bIsSneaking && bIsWalking)
 	{
-		bIsSprinting = false;
-		MovementComponent->MaxWalkSpeed = WalkSpeed;
+		return;
 	}
-	else
-	{
-		MovementComponent->MaxWalkSpeed = JogSpeed;
-	}
+	bIsSneaking = false;
+	MovementComponent->MaxWalkSpeed = bIsWalking ? WalkSpeed : (bIsSprinting ? SprintSpeed : JogSpeed);
 }
 
 bool UStatlineComponent::CanJump() const

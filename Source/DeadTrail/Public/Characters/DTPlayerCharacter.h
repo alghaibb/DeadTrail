@@ -40,7 +40,11 @@ private:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	UInputAction* WalkAction;
 
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
+	UInputAction* SneakAction;
+
 	bool bIsWalking = false;
+	bool bIsSneaking = false;
 
 public:
 	ADTPlayerCharacter();
@@ -57,8 +61,11 @@ protected:
 
 	void StartSprinting();
 	void StopSprinting();
-	void StopWalking();
+	
 	void ToggleWalk();
+	void StopWalking();
+
+	void ToggleSneak();
 
 	virtual void NotifyControllerChanged() override;
 

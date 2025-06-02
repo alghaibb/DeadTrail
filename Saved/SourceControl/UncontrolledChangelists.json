@@ -6,11 +6,14 @@
 			"description": "Default Uncontrolled Changelist",
 			"files": [
 				"A:/Unreal Projects/DeadTrail/Content/Core/BP_DTGameMode.uasset",
-				"A:/Unreal Projects/DeadTrail/Content/Characters/Player/Blueprints/BP_DTPlayerCharacter.uasset",
-				"A:/Unreal Projects/DeadTrail/Content/Characters/Player/Blueprints/BP_DeadTrailPlayer.uasset",
 				"A:/Unreal Projects/DeadTrail/Content/UI/DEV_DTPlayer.uasset",
 				"A:/Unreal Projects/DeadTrail/Content/Characters/Player/Input/IMC_DTPlayer.uasset",
-				"A:/Unreal Projects/DeadTrail/Content/Maps/DeadTrail_DevMap.umap"
+				"A:/Unreal Projects/DeadTrail/Content/Maps/DeadTrail_DevMap.umap",
+				"A:/Unreal Projects/DeadTrail/Content/Characters/Player/Input/Actions/IA_Walk.uasset",
+				"A:/Unreal Projects/DeadTrail/Content/Characters/Player/Blueprints/BP_DTPlayerCharacter.uasset",
+				"A:/Unreal Projects/DeadTrail/Content/Characters/Player/Input/Actions/IA_Sneak.uasset",
+				"A:/Unreal Projects/DeadTrail/Content/Characters/Player/Blueprints/BP_DeadTrailPlayer.uasset",
+				"A:/Unreal Projects/DeadTrail/Content/Characters/Player/Blueprints/OLD_BP_DTPlayerCharacter.uasset"
 			]
 		}
 	]
