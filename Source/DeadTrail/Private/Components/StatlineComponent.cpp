@@ -1,5 +1,6 @@
 ﻿#include "Components/StatlineComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
+#include "DTUtils.h"
 
 void UStatlineComponent::TickStats(const float& DeltaTime)
 {
@@ -82,7 +83,7 @@ void UStatlineComponent::BeginPlay()
 void UStatlineComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
-	if (TickType != ELevelTick::LEVELTICK_PauseTick)
+	if ( TickType != ELevelTick::LEVELTICK_PauseTick)
 	{
 		TickStats(DeltaTime);
 	}
@@ -161,6 +162,48 @@ bool UStatlineComponent::CanJump() const
 void UStatlineComponent::HasJumped()
 {
 	Stamina.Adjust(0 - JumpCost);
+}
+
+FSaveComponentData UStatlineComponent::GetSaveComponentData_Implementation()
+{
+	FSaveComponentData Ret;
+	
+	Ret.ComponentClass = this->GetClass();
+	Ret.RawData.Add(Health.GetSaveString());
+	Ret.RawData.Add(Stamina.GetSaveString());
+	Ret.RawData.Add(Hunger.GetSaveString());
+	Ret.RawData.Add(Thirst.GetSaveString());
+	// Add any additonla raw data here, needs to be include inside of SetSaveComponentData_Implementation function 
+
+	return Ret;
+}
+
+void UStatlineComponent::SetSaveComponentData_Implementation(FSaveComponentData Data)
+{
+	TArray<FString> Parts;
+	for (int i = 0; i < Data.RawData.Num(); i++)
+	{
+		Parts.Empty();
+		Parts = ChopString(Data.RawData[i], '|');
+		switch (i)
+		{
+		case 0:
+			Health.UpdateFromSaveString(Parts);
+			break;
+		case 1:
+			Stamina.UpdateFromSaveString(Parts);
+			break;
+		case 2:
+			Hunger.UpdateFromSaveString(Parts);
+			break;
+		case 3:
+			Thirst.UpdateFromSaveString(Parts);
+			break;
+		default:
+			// TODO: Log an error or handle the case where the index is out of bounds
+			break; 
+		}
+	}
 }
 
 

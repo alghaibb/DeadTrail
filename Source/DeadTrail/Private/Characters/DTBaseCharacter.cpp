@@ -6,17 +6,21 @@ ADTBaseCharacter::ADTBaseCharacter()
 	PrimaryActorTick.bCanEverTick = true;
 
 	Statline = CreateDefaultSubobject<UStatlineComponent>(TEXT("Statline"));
+	Statline->SetMovementComponentRef(GetCharacterMovement());
+
+	SaveActorID = FGuid::NewGuid(); 
 
 }
 
 void ADTBaseCharacter::BeginPlay()
 {
 	Super::BeginPlay();
-	
-	if (Statline)
+
+	if (SaveActorID.IsValid())
 	{
-		Statline->SetMovementComponentRef(GetCharacterMovement());
+		SaveActorID = FGuid::NewGuid();
 	}
+
 }
 
 bool ADTBaseCharacter::CanJump() const
@@ -61,5 +65,21 @@ void ADTBaseCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
+}
+
+FGuid ADTBaseCharacter::GetActorSaveID_Implementation()
+{
+	return SaveActorID;
+}
+
+FSaveDTActorData ADTBaseCharacter::GetSaveData_Implementation()
+{
+	FSaveDTActorData Ret;
+
+	Ret.ActorClass = this->GetClass();
+	Ret.ActorTransform = this->GetTransform();
+	Ret.WasSpawned = this->WasSpawned;
+
+	return Ret;
 }
 
