@@ -15,10 +15,15 @@ private:
 	TMap<FGuid, FSaveDTActorData> SaveableDTActorData;
 	UPROPERTY()
 	FName CurrentLoadedLevel = "NONE";
+	UPROPERTY()
+	FSaveDTActorData PlayerData;
 
 public:
 	void SetSaveActorData(TMap<FGuid, FSaveDTActorData> Data);
 	TMap<FGuid, FSaveDTActorData> GetSaveActorData();
 	void SetCurrentLevel(const FName Level);
 	FName GetCurrentLevel();
+
+	void SetPlayerData(FSaveDTActorData Data);
+	FSaveDTActorData GetPlayerData();
 };

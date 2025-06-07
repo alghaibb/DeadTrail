@@ -9,6 +9,10 @@ FGuid ISaveDTActorInterface::GetActorSaveID_Implementation()
     return Ret;
 }
 
+void ISaveDTActorInterface::SetActorGUID_Implementation(const FGuid& NewGUID)
+{
+}
+
 FSaveDTActorData ISaveDTActorInterface::GetSaveData_Implementation()
 {
 	return FSaveDTActorData();

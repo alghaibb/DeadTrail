@@ -35,6 +35,7 @@ template<> DEADTRAIL_API UScriptStruct* StaticStruct<struct FSaveDTActorData>();
 	DECLARE_FUNCTION(execSetSaveComponentData); \
 	DECLARE_FUNCTION(execGetSaveComponentData); \
 	DECLARE_FUNCTION(execGetSaveData); \
+	DECLARE_FUNCTION(execSetActorGUID); \
 	DECLARE_FUNCTION(execGetActorSaveID);
 
 
@@ -79,6 +80,7 @@ public: \
 	static FGuid Execute_GetActorSaveID(UObject* O); \
 	static FSaveComponentData Execute_GetSaveComponentData(UObject* O); \
 	static FSaveDTActorData Execute_GetSaveData(UObject* O); \
+	static void Execute_SetActorGUID(UObject* O, FGuid const& NewGUID); \
 	static void Execute_SetSaveComponentData(UObject* O, FSaveComponentData Data); \
 	virtual UObject* _getUObject() const { return nullptr; }
 

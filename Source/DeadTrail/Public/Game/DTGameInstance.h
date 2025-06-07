@@ -5,24 +5,31 @@
 #include "Interface/SaveDTActorInterface.h"
 #include "DTGameInstance.generated.h"
 
-
 UCLASS()
 class DEADTRAIL_API UDTGameInstance : public UGameInstance
 {
 	GENERATED_BODY()
 
 private:
+	UPROPERTY()
 	TMap<FGuid, FSaveDTActorData> SaveableDTActorData;
 	UPROPERTY()
 	class UDTSaveGame* SaveGameObject = nullptr;
+	UPROPERTY()
 	FString SaveGameName = TEXT("DEFAULT");
+	UPROPERTY()
 	FName CurrentLoadedLevel = "NONE";
+	UPROPERTY()
+	FSaveDTActorData PlayerData;
 
 	UDTGameInstance();
 
 	void CreateSaveSlot();
 	void GatherActorData();
 	void LoadGame();
+
+	void GatherPlayerData();
+	void SetPlayerData();
 
 public:
 	UFUNCTION(BlueprintCallable)

@@ -24,6 +24,7 @@ void UStatlineComponent::TickStamina(const float& DeltaTime)
 
 	if (bIsSprinting && IsValidSprinting())
 	{
+		UE_LOG(LogTemp, Warning, TEXT("Draining stamina... Current: %f"), Stamina.GetCurrent());
 		Stamina.TickStat(0 - abs((DeltaTime * SprintCost)));
 		
 		if (Stamina.GetCurrent() <= 0.0)
@@ -158,7 +159,6 @@ bool UStatlineComponent::CanJump() const
 	return MovementComponent->IsMovingOnGround() && Stamina.GetCurrent() >= JumpCost;
 }
 
-
 void UStatlineComponent::HasJumped()
 {
 	Stamina.Adjust(0 - JumpCost);
@@ -173,7 +173,15 @@ FSaveComponentData UStatlineComponent::GetSaveComponentData_Implementation()
 	Ret.RawData.Add(Stamina.GetSaveString());
 	Ret.RawData.Add(Hunger.GetSaveString());
 	Ret.RawData.Add(Thirst.GetSaveString());
-	// Add any additonla raw data here, needs to be include inside of SetSaveComponentData_Implementation function 
+
+	// Debug output for testing purposes
+	/*for (auto s : Ret.RawData)
+	{
+		if (GEngine)
+		{
+			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, s);
+		}
+	}*/
 
 	return Ret;
 }
@@ -181,10 +189,22 @@ FSaveComponentData UStatlineComponent::GetSaveComponentData_Implementation()
 void UStatlineComponent::SetSaveComponentData_Implementation(FSaveComponentData Data)
 {
 	TArray<FString> Parts;
+
+	// Debug output for testing purposes
+	/*for (auto s : Data.RawData)
+	{
+		if (GEngine)
+		{
+			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, s);
+		}
+	}*/
+
 	for (int i = 0; i < Data.RawData.Num(); i++)
 	{
 		Parts.Empty();
 		Parts = ChopString(Data.RawData[i], '|');
+
+		
 		switch (i)
 		{
 		case 0:

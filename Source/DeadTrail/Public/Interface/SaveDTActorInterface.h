@@ -54,6 +54,9 @@ public:
 	FGuid GetActorSaveID();
 	virtual FGuid GetActorSaveID_Implementation();
 	UFUNCTION(BlueprintNativeEvent)
+	void SetActorGUID(const FGuid& NewGUID);
+	void SetActorGUID_Implementation(const FGuid& NewGUID);
+	UFUNCTION(BlueprintNativeEvent)
 	FSaveDTActorData GetSaveData();
 	virtual FSaveDTActorData GetSaveData_Implementation();
 	UFUNCTION(BlueprintNativeEvent)

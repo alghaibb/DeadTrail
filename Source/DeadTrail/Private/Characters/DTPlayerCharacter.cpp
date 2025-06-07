@@ -151,3 +151,10 @@ void ADTPlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputC
 
 	}
 }
+
+void ADTPlayerCharacter::BeginPlay()
+{
+	Super::BeginPlay();
+	ADTBaseCharacter::BeginPlay();
+	SaveActorID.Invalidate();
+}

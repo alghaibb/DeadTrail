@@ -1,0 +1,1916 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FGenericCrashContext>
+	<RuntimeProperties>
+		<CrashVersion>3</CrashVersion>
+		<ExecutionGuid>2E01CD894AF611AB26752DAE25D1B436</ExecutionGuid>
+		<CrashGUID>UECC-Windows-71192A334292BC124713E0B902B02462_0000</CrashGUID>
+		<IsEnsure>true</IsEnsure>
+		<IsStall>false</IsStall>
+		<IsAssert>false</IsAssert>
+		<CrashType>Ensure</CrashType>
+		<ErrorMessage>Ensure condition failed: ActorHasBegunPlay == EActorBeginPlayState::BeginningPlay [File:D:\build\++UE5\Sync\Engine\Source\Runtime\Engine\Private\Actor.cpp] [Line: 4308] 
+BeginPlay was called on actor /Game/Maps/UEDPIE_0_DeadTrail_DevMap.DeadTrail_DevMap:PersistentLevel.BP_DTPlayerCharacter_C_0 which was in state 2
+Stack: 
+0x00007fffe7b44937 UnrealEditor-Engine.dll!UnknownFunction []
+0x00007fffe5261ee7 UnrealEditor-Engine.dll!UnknownFunction []
+0x00007fffe69a3a4a UnrealEditor-Engine.dll!UnknownFunction []
+0x00007fffb14eb2cf UnrealEditor-DeadTrail.dll!ADTBaseCharacter::BeginPlay() [A:\Unreal Projects\DeadTrail\Source\DeadTrail\Private\Characters\DTBaseCharacter.cpp:19]
+0x00007fffb14edbb6 UnrealEditor-DeadTrail.dll!ADTPlayerCharacter::BeginPlay() [A:\Unreal Projects\DeadTrail\Source\DeadTrail\Private\Characters\DTPlayerCharacter.cpp:159]
+0x00007fffe5273664 UnrealEditor-Engine.dll!UnknownFunction []
+0x00007fffe7781936 UnrealEditor-Engine.dll!UnknownFunction []
+0x00007fffe6005e51 UnrealEditor-Engine.dll!UnknownFunction []
+0x00007fffe75053a4 UnrealEditor-Engine.dll!UnknownFunction []
+0x00007fffe5f53648 UnrealEditor-Engine.dll!UnknownFunction []
+0x00007fffe0d83a75 UnrealEditor-UnrealEd.dll!UnknownFunction []
+0x00007fffe0dafc99 UnrealEditor-UnrealEd.dll!UnknownFunction []
+0x00007fffe0d847b4 UnrealEditor-UnrealEd.dll!UnknownFunction []
+0x00007fffe0dd0360 UnrealEditor-UnrealEd.dll!UnknownFunction []
+0x00007fffe0dd4823 UnrealEditor-UnrealEd.dll!UnknownFunction []
+0x00007fffe0dd3dee UnrealEditor-UnrealEd.dll!UnknownFunction []
+0x00007fffe06444b2 UnrealEditor-UnrealEd.dll!UnknownFunction []
+0x00007fffe12d42c6 UnrealEditor-UnrealEd.dll!UnknownFunction []
+0x00007ff7b2686b47 UnrealEditor.exe!UnknownFunction []
+0x00007ff7b26a57ac UnrealEditor.exe!UnknownFunction []
+0x00007ff7b26a589a UnrealEditor.exe!UnknownFunction []
+0x00007ff7b26a9114 UnrealEditor.exe!UnknownFunction []
+0x00007ff7b26bbd04 UnrealEditor.exe!UnknownFunction []
+0x00007ff7b26bf0ba UnrealEditor.exe!UnknownFunction []
+0x00007ff8f4627614 K</ErrorMessage>
+		<CrashReporterMessage />
+		<CrashReporterMessage>Attended</CrashReporterMessage>
+		<ProcessId>30492</ProcessId>
+		<SecondsSinceStart>13</SecondsSinceStart>
+		<IsInternalBuild>false</IsInternalBuild>
+		<IsPerforceBuild>false</IsPerforceBuild>
+		<IsWithDebugInfo>true</IsWithDebugInfo>
+		<IsSourceDistribution>false</IsSourceDistribution>
+		<GameName>UE-DeadTrail</GameName>
+		<ExecutableName>UnrealEditor</ExecutableName>
+		<BuildConfiguration>Development</BuildConfiguration>
+		<GameSessionID />
+		<PlatformName>WindowsEditor</PlatformName>
+		<PlatformFullName>Win64 [Windows 10 (22H2) [10.0.19045.2604]  64b]</PlatformFullName>
+		<PlatformNameIni>Windows</PlatformNameIni>
+		<EngineMode>Editor</EngineMode>
+		<EngineModeEx>Dirty</EngineModeEx>
+		<DeploymentName />
+		<EngineVersion>5.5.4-40574608+++UE5+Release-5.5</EngineVersion>
+		<EngineCompatibleVersion>5.5.4-40574608+++UE5+Release-5.5</EngineCompatibleVersion>
+		<CommandLine>CommandLineRemoved</CommandLine>
+		<LanguageLCID>9</LanguageLCID>
+		<AppDefaultLocale>en-AU</AppDefaultLocale>
+		<BuildVersion>++UE5+Release-5.5-CL-40574608</BuildVersion>
+		<Symbols>**UE5*Release-5.5-CL-40574608-Win64-Development</Symbols>
+		<IsUERelease>true</IsUERelease>
+		<IsRequestingExit>false</IsRequestingExit>
+		<UserName />
+		<BaseDir>B:/UE_5.5/Engine/Binaries/Win64/</BaseDir>
+		<RootDir>B:/UE_5.5/</RootDir>
+		<MachineId>6517101F4610D752B66D4781B786FF95</MachineId>
+		<LoginId>6517101f4610d752b66d4781b786ff95</LoginId>
+		<EpicAccountId>ac6c5029f8254d92916da217acc4facc</EpicAccountId>
+		<SourceContext />
+		<UserDescription>Sent in the unattended mode</UserDescription>
+		<UserActivityHint>Layout=&quot;LevelEditorViewport&quot; Label=&quot;Viewport 1&quot; Content=SAssetE</UserActivityHint>
+		<CrashDumpMode>0</CrashDumpMode>
+		<GameStateName />
+		<Misc.NumberOfCores>16</Misc.NumberOfCores>
+		<Misc.NumberOfCoresIncludingHyperthreads>32</Misc.NumberOfCoresIncludingHyperthreads>
+		<Misc.Is64bitOperatingSystem>1</Misc.Is64bitOperatingSystem>
+		<Misc.CPUVendor>AuthenticAMD</Misc.CPUVendor>
+		<Misc.CPUBrand>AMD Ryzen 9 7950X3D 16-Core Processor</Misc.CPUBrand>
+		<Misc.PrimaryGPUBrand>NVIDIA GeForce RTX 3070 Ti</Misc.PrimaryGPUBrand>
+		<Misc.OSVersionMajor>Windows 10 (22H2) [10.0.19045.2604]</Misc.OSVersionMajor>
+		<Misc.OSVersionMinor />
+		<Misc.AnticheatProvider />
+		<MemoryStats.TotalPhysical>33396600832</MemoryStats.TotalPhysical>
+		<MemoryStats.TotalVirtual>44835487744</MemoryStats.TotalVirtual>
+		<MemoryStats.PageSize>4096</MemoryStats.PageSize>
+		<MemoryStats.TotalPhysicalGB>32</MemoryStats.TotalPhysicalGB>
+		<MemoryStats.AvailablePhysical>14797406208</MemoryStats.AvailablePhysical>
+		<MemoryStats.AvailableVirtual>14750265344</MemoryStats.AvailableVirtual>
+		<MemoryStats.UsedPhysical>3770327040</MemoryStats.UsedPhysical>
+		<MemoryStats.PeakUsedPhysical>3772719104</MemoryStats.PeakUsedPhysical>
+		<MemoryStats.UsedVirtual>6618107904</MemoryStats.UsedVirtual>
+		<MemoryStats.PeakUsedVirtual>7336742912</MemoryStats.PeakUsedVirtual>
+		<MemoryStats.bIsOOM>0</MemoryStats.bIsOOM>
+		<MemoryStats.OOMAllocationSize>0</MemoryStats.OOMAllocationSize>
+		<MemoryStats.OOMAllocationAlignment>0</MemoryStats.OOMAllocationAlignment>
+		<NumMinidumpFramesToIgnore>7</NumMinidumpFramesToIgnore>
+		<CallStack>UnrealEditor_Engine
+UnrealEditor_Engine
+UnrealEditor_Engine
+UnrealEditor_DeadTrail!ADTBaseCharacter::BeginPlay() [A:\Unreal Projects\DeadTrail\Source\DeadTrail\Private\Characters\DTBaseCharacter.cpp:19]
+UnrealEditor_DeadTrail!ADTPlayerCharacter::BeginPlay() [A:\Unreal Projects\DeadTrail\Source\DeadTrail\Private\Characters\DTPlayerCharacter.cpp:159]
+UnrealEditor_Engine
+UnrealEditor_Engine
+UnrealEditor_Engine
+UnrealEditor_Engine
+UnrealEditor_Engine
+UnrealEditor_UnrealEd
+UnrealEditor_UnrealEd
+UnrealEditor_UnrealEd
+UnrealEditor_UnrealEd
+UnrealEditor_UnrealEd
+UnrealEditor_UnrealEd
+UnrealEditor_UnrealEd
+UnrealEditor_UnrealEd
+UnrealEditor
+UnrealEditor
+UnrealEditor
+UnrealEditor
+UnrealEditor
+UnrealEditor
+kernel32
+ntdll</CallStack>
+		<PCallStack>
+
+UnrealEditor-Engine 0x00007fffe4cd0000 + 2e74937 
+UnrealEditor-Engine 0x00007fffe4cd0000 + 591ee7 
+UnrealEditor-Engine 0x00007fffe4cd0000 + 1cd3a4a 
+UnrealEditor-DeadTrail 0x00007fffb14e0000 + b2cf 
+UnrealEditor-DeadTrail 0x00007fffb14e0000 + dbb6 
+UnrealEditor-Engine 0x00007fffe4cd0000 + 5a3664 
+UnrealEditor-Engine 0x00007fffe4cd0000 + 2ab1936 
+UnrealEditor-Engine 0x00007fffe4cd0000 + 1335e51 
+UnrealEditor-Engine 0x00007fffe4cd0000 + 28353a4 
+UnrealEditor-Engine 0x00007fffe4cd0000 + 1283648 
+UnrealEditor-UnrealEd 0x00007fffdfdc0000 + fc3a75 
+UnrealEditor-UnrealEd 0x00007fffdfdc0000 + fefc99 
+UnrealEditor-UnrealEd 0x00007fffdfdc0000 + fc47b4 
+UnrealEditor-UnrealEd 0x00007fffdfdc0000 + 1010360 
+UnrealEditor-UnrealEd 0x00007fffdfdc0000 + 1014823 
+UnrealEditor-UnrealEd 0x00007fffdfdc0000 + 1013dee 
+UnrealEditor-UnrealEd 0x00007fffdfdc0000 + 8844b2 
+UnrealEditor-UnrealEd 0x00007fffdfdc0000 + 15142c6 
+UnrealEditor 0x00007ff7b2680000 + 6b47 
+UnrealEditor 0x00007ff7b2680000 + 257ac 
+UnrealEditor 0x00007ff7b2680000 + 2589a 
+UnrealEditor 0x00007ff7b2680000 + 29114 
+UnrealEditor 0x00007ff7b2680000 + 3bd04 
+UnrealEditor 0x00007ff7b2680000 + 3f0ba 
+KERNEL32 0x00007ff8f4610000 + 17614 
+ntdll 0x00007ff8f62f0000 + 526a1 
+</PCallStack>
+		<PCallStackHash>3F305B4BA5D935A436F6F4E1E2FA7B09B4F95EEA</PCallStackHash>
+		<Threads>
+			<Thread>
+				<CallStack>KERNELBASE 0x00007ff8f3b70000 + 2cd29 
+UnrealEditor-Core 0x00007fffe97f0000 + 6b30c8 
+UnrealEditor-Core 0x00007fffe97f0000 + 6b2efb 
+UnrealEditor-Core 0x00007fffe97f0000 + 424c1d 
+UnrealEditor-Core 0x00007fffe97f0000 + 4393c3 
+UnrealEditor-Core 0x00007fffe97f0000 + d91384 
+UnrealEditor-Core 0x00007fffe97f0000 + d91425 
+UnrealEditor-Engine 0x00007fffe4cd0000 + 2e74937 
+UnrealEditor-Engine 0x00007fffe4cd0000 + 591ee7 
+UnrealEditor-Engine 0x00007fffe4cd0000 + 1cd3a4a 
+UnrealEditor-DeadTrail 0x00007fffb14e0000 + b2cf 
+UnrealEditor-DeadTrail 0x00007fffb14e0000 + dbb6 
+UnrealEditor-Engine 0x00007fffe4cd0000 + 5a3664 
+UnrealEditor-Engine 0x00007fffe4cd0000 + 2ab1936 
+UnrealEditor-Engine 0x00007fffe4cd0000 + 1335e51 
+UnrealEditor-Engine 0x00007fffe4cd0000 + 28353a4 
+UnrealEditor-Engine 0x00007fffe4cd0000 + 1283648 
+UnrealEditor-UnrealEd 0x00007fffdfdc0000 + fc3a75 
+UnrealEditor-UnrealEd 0x00007fffdfdc0000 + fefc99 
+UnrealEditor-UnrealEd 0x00007fffdfdc0000 + fc47b4 
+UnrealEditor-UnrealEd 0x00007fffdfdc0000 + 1010360 
+UnrealEditor-UnrealEd 0x00007fffdfdc0000 + 1014823 
+UnrealEditor-UnrealEd 0x00007fffdfdc0000 + 1013dee 
+UnrealEditor-UnrealEd 0x00007fffdfdc0000 + 8844b2 
+UnrealEditor-UnrealEd 0x00007fffdfdc0000 + 15142c6 
+UnrealEditor 0x00007ff7b2680000 + 6b47 
+UnrealEditor 0x00007ff7b2680000 + 257ac 
+UnrealEditor 0x00007ff7b2680000 + 2589a 
+UnrealEditor 0x00007ff7b2680000 + 29114 
+UnrealEditor 0x00007ff7b2680000 + 3bd04 
+UnrealEditor 0x00007ff7b2680000 + 3f0ba 
+KERNEL32 0x00007ff8f4610000 + 17614 
+ntdll 0x00007ff8f62f0000 + 526a1 
+</CallStack>
+				<IsCrashed>true</IsCrashed>
+				<Registers />
+				<ThreadID>41784</ThreadID>
+				<ThreadName>GameThread</ThreadName>
+			</Thread>
+		</Threads>
+		<TimeOfCrash>638848125631980000</TimeOfCrash>
+		<bAllowToBeContacted>1</bAllowToBeContacted>
+		<CPUBrand>AMD Ryzen 9 7950X3D 16-Core Processor</CPUBrand>
+		<CrashReportClientVersion>1.0</CrashReportClientVersion>
+		<Modules>B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-WindowsPlatformEditor.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-ViewportSnapping.dll
+B:\UE_5.5\Engine\Plugins\Experimental\CharacterAI\Binaries\Win64\UnrealEditor-CharacterAI.dll
+B:\UE_5.5\Engine\Binaries\ThirdParty\Python3\Win64\python3.dll
+B:\UE_5.5\Engine\Plugins\Chooser\Binaries\Win64\UnrealEditor-Chooser.dll
+B:\UE_5.5\Engine\Plugins\Chooser\Binaries\Win64\UnrealEditor-ChooserUncooked.dll
+B:\UE_5.5\Engine\Plugins\EnhancedInput\Binaries\Win64\UnrealEditor-EnhancedInput.dll
+B:\UE_5.5\Engine\Plugins\EnhancedInput\Binaries\Win64\UnrealEditor-InputBlueprintNodes.dll
+B:\UE_5.5\Engine\Plugins\Animation\BlendStack\Binaries\Win64\UnrealEditor-BlendStack.dll
+B:\UE_5.5\Engine\Plugins\Animation\BlendStack\Binaries\Win64\UnrealEditor-BlendStackEditor.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-Blutility.dll
+B:\UE_5.5\Engine\Plugins\Editor\DataValidation\Binaries\Win64\UnrealEditor-DataValidation.dll
+B:\UE_5.5\Engine\Plugins\Runtime\SignificanceManager\Binaries\Win64\UnrealEditor-SignificanceManager.dll
+B:\UE_5.5\Engine\Plugins\EnhancedInput\Binaries\Win64\UnrealEditor-InputEditor.dll
+B:\UE_5.5\Engine\Plugins\Developer\AnimationSharing\Binaries\Win64\UnrealEditor-AnimationSharing.dll
+B:\UE_5.5\Engine\Plugins\Developer\PropertyAccessNode\Binaries\Win64\UnrealEditor-PropertyAccessNode.dll
+B:\UE_5.5\Engine\Plugins\Editor\ContentBrowser\ContentBrowserAssetDataSource\Binaries\Win64\UnrealEditor-ContentBrowserAssetDataSource.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-TreeMap.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-LocalizationCommandletExecution.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-TranslationEditor.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-HotReload.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-TraceInsightsCore.dll
+B:\UE_5.5\Engine\Plugins\Editor\AssetManagerEditor\Binaries\Win64\UnrealEditor-AssetManagerEditor.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-UndoHistory.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-UndoHistoryEditor.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-MainFrame.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-PixelInspectorModule.dll
+B:\UE_5.5\Engine\Plugins\Editor\FacialAnimation\Binaries\Win64\UnrealEditor-FacialAnimation.dll
+B:\UE_5.5\Engine\Plugins\Editor\FacialAnimation\Binaries\Win64\UnrealEditor-FacialAnimationEditor.dll
+B:\UE_5.5\Engine\Plugins\Editor\GameplayTagsEditor\Binaries\Win64\UnrealEditor-GameplayTagsEditor.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-SparseVolumeTexture.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-SessionFrontend.dll
+B:\UE_5.5\Engine\Plugins\FX\Niagara\Binaries\Win64\UnrealEditor-NiagaraEditor.dll
+B:\UE_5.5\Engine\Plugins\FX\Niagara\Binaries\Win64\UnrealEditor-NiagaraAnimNotifies.dll
+B:\UE_5.5\Engine\Plugins\FX\NiagaraSimCaching\Binaries\Win64\UnrealEditor-NiagaraSimCaching.dll
+B:\UE_5.5\Engine\Plugins\VirtualProduction\Takes\Binaries\Win64\UnrealEditor-TakesCore.dll
+B:\UE_5.5\Engine\Plugins\VirtualProduction\Takes\Binaries\Win64\UnrealEditor-TakeMovieScene.dll
+B:\UE_5.5\Engine\Plugins\VirtualProduction\Takes\Binaries\Win64\UnrealEditor-TakeTrackRecorders.dll
+B:\UE_5.5\Engine\Plugins\VirtualProduction\Takes\Binaries\Win64\UnrealEditor-TakeRecorder.dll
+B:\UE_5.5\Engine\Plugins\VirtualProduction\Takes\Binaries\Win64\UnrealEditor-CacheTrackRecorder.dll
+B:\UE_5.5\Engine\Plugins\FX\NiagaraSimCaching\Binaries\Win64\UnrealEditor-NiagaraSimCachingEditor.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-Serialization.dll
+B:\UE_5.5\Engine\Plugins\Messaging\TcpMessaging\Binaries\Win64\UnrealEditor-TcpMessaging.dll
+B:\UE_5.5\Engine\Plugins\Messaging\UdpMessaging\Binaries\Win64\UnrealEditor-UdpMessaging.dll
+B:\UE_5.5\Engine\Plugins\Runtime\AudioSynesthesia\Binaries\Win64\UnrealEditor-AudioSynesthesiaCore.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-AudioAnalyzer.dll
+B:\UE_5.5\Engine\Plugins\Runtime\AudioSynesthesia\Binaries\Win64\UnrealEditor-AudioSynesthesia.dll
+B:\UE_5.5\Engine\Plugins\Runtime\CableComponent\Binaries\Win64\UnrealEditor-CableComponent.dll
+B:\UE_5.5\Engine\Plugins\Runtime\CustomMeshComponent\Binaries\Win64\UnrealEditor-CustomMeshComponent.dll
+B:\UE_5.5\Engine\Plugins\Runtime\LocationServicesBPLibrary\Binaries\Win64\UnrealEditor-LocationServicesBPLibrary.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-MathCore.dll
+B:\UE_5.5\Engine\Plugins\Runtime\Metasound\Binaries\Win64\UnrealEditor-MetasoundGraphCore.dll
+B:\UE_5.5\Engine\Plugins\Runtime\Metasound\Binaries\Win64\UnrealEditor-MetasoundFrontend.dll
+B:\UE_5.5\Engine\Plugins\Runtime\Metasound\Binaries\Win64\UnrealEditor-MetasoundGenerator.dll
+B:\UE_5.5\Engine\Plugins\Runtime\Metasound\Binaries\Win64\UnrealEditor-MetasoundStandardNodes.dll
+B:\UE_5.5\Engine\Plugins\Runtime\WaveTable\Binaries\Win64\UnrealEditor-WaveTable.dll
+B:\UE_5.5\Engine\Plugins\Runtime\Metasound\Binaries\Win64\UnrealEditor-MetasoundEngine.dll
+B:\UE_5.5\Engine\Plugins\Runtime\Metasound\Binaries\Win64\UnrealEditor-MetasoundEngineTest.dll
+B:\UE_5.5\Engine\Plugins\Runtime\AudioWidgets\Binaries\Win64\UnrealEditor-AudioWidgets.dll
+B:\UE_5.5\Engine\Plugins\Runtime\Metasound\Binaries\Win64\UnrealEditor-MetasoundEditor.dll
+B:\UE_5.5\Engine\Plugins\Runtime\MsQuic\Binaries\Win64\UnrealEditor-MsQuicRuntime.dll
+B:\UE_5.5\Engine\Plugins\Runtime\ProceduralMeshComponent\Binaries\Win64\UnrealEditor-ProceduralMeshComponent.dll
+B:\UE_5.5\Engine\Plugins\Runtime\PropertyAccess\Binaries\Win64\UnrealEditor-PropertyAccessEditor.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-StructUtilsEditor.dll
+B:\UE_5.5\Engine\Plugins\Runtime\RigVM\Binaries\Win64\UnrealEditor-RigVM.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-VisualGraphUtils.dll
+B:\UE_5.5\Engine\Plugins\Runtime\RigVM\Binaries\Win64\UnrealEditor-RigVMDeveloper.dll
+B:\UE_5.5\Engine\Plugins\Runtime\ResonanceAudio\Binaries\Win64\UnrealEditor-ResonanceAudio.dll
+B:\UE_5.5\Engine\Plugins\Runtime\SoundFields\Binaries\Win64\UnrealEditor-SoundFields.dll
+B:\UE_5.5\Engine\Plugins\Runtime\StateTree\Binaries\Win64\UnrealEditor-StateTreeModule.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-RewindDebuggerInterface.dll
+B:\UE_5.5\Engine\Plugins\Runtime\StateTree\Binaries\Win64\UnrealEditor-StateTreeEditorModule.dll
+B:\UE_5.5\Engine\Plugins\Runtime\StateTree\Binaries\Win64\UnrealEditor-StateTreeTestSuite.dll
+B:\UE_5.5\Engine\Plugins\Runtime\Synthesis\Binaries\Win64\UnrealEditor-Synthesis.dll
+B:\UE_5.5\Engine\Plugins\Animation\RigLogic\Binaries\Win64\UnrealEditor-RigLogicDeveloper.dll
+B:\UE_5.5\Engine\Plugins\Media\ImgMedia\Binaries\Win64\UnrealEditor-ImgMediaEngine.dll
+B:\UE_5.5\Engine\Plugins\Editor\EditorDebugTools\Binaries\Win64\UnrealEditor-EditorDebugTools.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-SkeletalMeshEditor.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-StaticMeshEditor.dll
+B:\UE_5.5\Engine\Plugins\Editor\EditorScriptingUtilities\Binaries\Win64\UnrealEditor-EditorScriptingUtilities.dll
+B:\UE_5.5\Engine\Plugins\Editor\MaterialAnalyzer\Binaries\Win64\UnrealEditor-MaterialAnalyzer.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-MeshConversionEngineTypes.dll
+B:\UE_5.5\Engine\Plugins\Experimental\PlanarCutPlugin\Binaries\Win64\UnrealEditor-PlanarCut.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-GeometryFramework.dll
+B:\UE_5.5\Engine\Plugins\Runtime\MeshModelingToolset\Binaries\Win64\UnrealEditor-ModelingComponents.dll
+B:\UE_5.5\Engine\Plugins\Runtime\MeshModelingToolset\Binaries\Win64\UnrealEditor-ModelingComponentsEditorOnly.dll
+B:\UE_5.5\Engine\Plugins\Runtime\MeshModelingToolset\Binaries\Win64\UnrealEditor-ModelingOperators.dll
+B:\UE_5.5\Engine\Plugins\Runtime\MeshModelingToolset\Binaries\Win64\UnrealEditor-MeshModelingTools.dll
+B:\UE_5.5\Engine\Plugins\Experimental\MeshModelingToolsetExp\Binaries\Win64\UnrealEditor-MeshModelingToolsExp.dll
+B:\UE_5.5\Engine\Plugins\Experimental\GeometryFlow\Binaries\Win64\UnrealEditor-GeometryFlowCore.dll
+B:\UE_5.5\Engine\Plugins\Experimental\GeometryFlow\Binaries\Win64\UnrealEditor-GeometryFlowMeshProcessing.dll
+B:\UE_5.5\Engine\Plugins\Runtime\MeshModelingToolset\Binaries\Win64\UnrealEditor-ModelingOperatorsEditorOnly.dll
+B:\UE_5.5\Engine\Plugins\Experimental\GeometryFlow\Binaries\Win64\UnrealEditor-GeometryFlowMeshProcessingEditor.dll
+B:\UE_5.5\Engine\Plugins\Editor\MeshLODToolset\Binaries\Win64\UnrealEditor-MeshLODToolset.dll
+B:\UE_5.5\Engine\Plugins\Editor\MobileLauncherProfileWizard\Binaries\Win64\UnrealEditor-MobileLauncherProfileWizard.dll
+B:\UE_5.5\Engine\Plugins\Runtime\MeshModelingToolset\Binaries\Win64\UnrealEditor-MeshModelingToolsEditorOnly.dll
+B:\UE_5.5\Engine\Plugins\Experimental\MeshModelingToolsetExp\Binaries\Win64\UnrealEditor-SkeletalMeshModifiers.dll
+B:\UE_5.5\Engine\Plugins\Experimental\MeshModelingToolsetExp\Binaries\Win64\UnrealEditor-MeshModelingToolsEditorOnlyExp.dll
+B:\UE_5.5\Engine\Plugins\Experimental\MeshModelingToolsetExp\Binaries\Win64\UnrealEditor-ModelingUI.dll
+B:\UE_5.5\Engine\Plugins\Experimental\MeshModelingToolsetExp\Binaries\Win64\UnrealEditor-ModelingEditorUI.dll
+B:\UE_5.5\Engine\Plugins\Experimental\ToolPresets\Binaries\Win64\UnrealEditor-ToolPresetAsset.dll
+B:\UE_5.5\Engine\Plugins\Experimental\ToolPresets\Binaries\Win64\UnrealEditor-ToolPresetEditor.dll
+B:\UE_5.5\Engine\Plugins\Editor\StylusInput\Binaries\Win64\UnrealEditor-StylusInput.dll
+B:\UE_5.5\Engine\Plugins\Editor\ModelingToolsEditorMode\Binaries\Win64\UnrealEditor-ModelingToolsEditorMode.dll
+B:\UE_5.5\Engine\Plugins\Editor\PluginBrowser\Binaries\Win64\UnrealEditor-PluginBrowser.dll
+B:\UE_5.5\Engine\Plugins\MovieScene\SequencerScripting\Binaries\Win64\UnrealEditor-SequencerScripting.dll
+B:\UE_5.5\Engine\Plugins\MovieScene\SequencerScripting\Binaries\Win64\UnrealEditor-SequencerScriptingEditor.dll
+B:\UE_5.5\Engine\Plugins\MovieScene\LevelSequenceEditor\Binaries\Win64\UnrealEditor-LevelSequenceEditor.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-AnimationEditor.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-AnimationEditorWidgets.dll
+B:\UE_5.5\Engine\Plugins\Animation\ControlRig\Binaries\Win64\UnrealEditor-ControlRigEditor.dll
+B:\UE_5.5\Engine\Plugins\Editor\SequencerAnimTools\Binaries\Win64\UnrealEditor-SequencerAnimTools.dll
+B:\UE_5.5\Engine\Plugins\Editor\SpeedTreeImporter\Binaries\Win64\UnrealEditor-SpeedTreeImporter.dll
+B:\UE_5.5\Engine\Plugins\Editor\StylusInput\Binaries\Win64\UnrealEditor-StylusInputDebugWidget.dll
+B:\UE_5.5\Engine\Plugins\Editor\UMGWidgetPreview\Binaries\Win64\UnrealEditor-UMGWidgetPreview.dll
+B:\UE_5.5\Engine\Plugins\Editor\UVEditor\Binaries\Win64\UnrealEditor-UVEditorTools.dll
+B:\UE_5.5\Engine\Plugins\Editor\UVEditor\Binaries\Win64\UnrealEditor-UVEditorToolsEditorOnly.dll
+B:\UE_5.5\Engine\Plugins\Editor\UVEditor\Binaries\Win64\UnrealEditor-UVEditor.dll
+B:\UE_5.5\Engine\Plugins\Editor\WorldPartitionHLODUtilities\Binaries\Win64\UnrealEditor-WorldPartitionHLODUtilities.dll
+B:\UE_5.5\Engine\Plugins\Enterprise\DatasmithContent\Binaries\Win64\UnrealEditor-DatasmithContentEditor.dll
+B:\UE_5.5\Engine\Plugins\Enterprise\VariantManagerContent\Binaries\Win64\UnrealEditor-VariantManagerContentEditor.dll
+B:\UE_5.5\Engine\Plugins\FX\Niagara\Binaries\Win64\UnrealEditor-NiagaraBlueprintNodes.dll
+B:\UE_5.5\Engine\Plugins\FX\Niagara\Binaries\Win64\UnrealEditor-NiagaraEditorWidgets.dll
+B:\UE_5.5\Engine\Plugins\Importers\AlembicImporter\Binaries\Win64\UnrealEditor-AlembicLibrary.dll
+B:\UE_5.5\Engine\Plugins\Importers\AlembicImporter\Binaries\Win64\UnrealEditor-AlembicImporter.dll
+B:\UE_5.5\Engine\Plugins\Runtime\GeometryCache\Binaries\Win64\UnrealEditor-GeometryCacheEd.dll
+B:\UE_5.5\Engine\Plugins\Marketplace\RDRSystee70478f77df3V1\Binaries\Win64\UnrealEditor-Game.dll
+B:\UE_5.5\Engine\Plugins\Marketplace\RDRSystee70478f77df3V1\Binaries\Win64\UnrealEditor-BaseCamera.dll
+B:\UE_5.5\Engine\Plugins\Marketplace\RDRSystee70478f77df3V1\Binaries\Win64\UnrealEditor-GameExtras.dll
+B:\UE_5.5\Engine\Plugins\Runtime\ActorLayerUtilities\Binaries\Win64\UnrealEditor-ActorLayerUtilities.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-Layers.dll
+B:\UE_5.5\Engine\Plugins\Runtime\ActorLayerUtilities\Binaries\Win64\UnrealEditor-ActorLayerUtilitiesEditor.dll
+B:\UE_5.5\Engine\Plugins\Runtime\AppleImageUtils\Binaries\Win64\UnrealEditor-AppleImageUtils.dll
+B:\UE_5.5\Engine\Plugins\Runtime\AppleImageUtils\Binaries\Win64\UnrealEditor-AppleImageUtilsBlueprintSupport.dll
+B:\UE_5.5\Engine\Plugins\Runtime\ArchVisCharacter\Binaries\Win64\UnrealEditor-ArchVisCharacter.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-AudioCaptureCore.dll
+B:\UE_5.5\Engine\Plugins\Runtime\AudioCapture\Binaries\Win64\UnrealEditor-AudioCapture.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-AudioPlatformSupportWasapi.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-AudioCaptureWasapi.dll
+B:\UE_5.5\Engine\Plugins\Runtime\AssetTags\Binaries\Win64\UnrealEditor-AssetTags.dll
+B:\UE_5.5\Engine\Plugins\Runtime\AudioWidgets\Binaries\Win64\UnrealEditor-AudioWidgetsEditor.dll
+B:\UE_5.5\Engine\Plugins\Runtime\ComputeFramework\Binaries\Win64\UnrealEditor-ComputeFrameworkEditor.dll
+B:\UE_5.5\Engine\Plugins\Runtime\GeometryCache\Binaries\Win64\UnrealEditor-GeometryCacheTracks.dll
+B:\UE_5.5\Engine\Plugins\Runtime\GeometryCache\Binaries\Win64\UnrealEditor-GeometryCacheSequencer.dll
+B:\UE_5.5\Engine\Plugins\Runtime\GeometryCache\Binaries\Win64\UnrealEditor-GeometryCacheStreamer.dll
+B:\UE_5.5\Engine\Plugins\Runtime\GeometryProcessing\Binaries\Win64\UnrealEditor-MeshFileUtils.dll
+B:\UE_5.5\Engine\Plugins\Runtime\HairStrands\Binaries\Win64\UnrealEditor-HairStrandsDeformer.dll
+B:\UE_5.5\Engine\Plugins\Runtime\HairStrands\Binaries\Win64\UnrealEditor-HairStrandsRuntime.dll
+B:\UE_5.5\Engine\Plugins\Runtime\HairStrands\Binaries\Win64\UnrealEditor-HairCardGeneratorFramework.dll
+B:\UE_5.5\Engine\Plugins\Runtime\HairStrands\Binaries\Win64\UnrealEditor-HairStrandsEditor.dll
+B:\UE_5.5\Engine\Plugins\Runtime\InputDebugging\Binaries\Win64\UnrealEditor-InputDebugging.dll
+B:\UE_5.5\Engine\Plugins\Runtime\InputDebugging\Binaries\Win64\UnrealEditor-InputDebuggingEditor.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-VirtualFileCache.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-BuildPatchServices.dll
+B:\UE_5.5\Engine\Plugins\Runtime\MobilePatchingUtils\Binaries\Win64\UnrealEditor-MobilePatchingUtils.dll
+B:\UE_5.5\Engine\Plugins\Runtime\ProceduralMeshComponent\Binaries\Win64\UnrealEditor-ProceduralMeshComponentEditor.dll
+B:\UE_5.5\Engine\Plugins\Runtime\Synthesis\Binaries\Win64\UnrealEditor-SynthesisEditor.dll
+B:\UE_5.5\Engine\Plugins\Animation\ACLPlugin\Binaries\Win64\UnrealEditor-ACLPluginEditor.dll
+B:\UE_5.5\Engine\Plugins\Animation\AnimationModifierLibrary\Binaries\Win64\UnrealEditor-AnimationModifierLibrary.dll
+B:\UE_5.5\Engine\Plugins\Animation\BlendSpaceMotionAnalysis\Binaries\Win64\UnrealEditor-BlendSpaceMotionAnalysis.dll
+B:\UE_5.5\Engine\Plugins\Animation\ControlRigSpline\Binaries\Win64\UnrealEditor-ControlRigSpline.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-AnimationBlueprintEditor.dll
+B:\UE_5.5\Engine\Plugins\Animation\GameplayInsights\Binaries\Win64\UnrealEditor-RewindDebuggerRuntime.dll
+B:\UE_5.5\Engine\Plugins\Animation\GameplayInsights\Binaries\Win64\UnrealEditor-RewindDebuggerVLogRuntime.dll
+B:\UE_5.5\Engine\Plugins\Animation\RigLogic\Binaries\Win64\UnrealEditor-RigLogicEditor.dll
+B:\UE_5.5\Engine\Plugins\Cameras\GameplayCameras\Binaries\Win64\UnrealEditor-GameplayCamerasUncookedOnly.dll
+B:\UE_5.5\Engine\Plugins\Compression\OodleNetwork\Binaries\Win64\UnrealEditor-OodleNetworkHandlerComponent.dll
+B:\UE_5.5\Engine\Plugins\Experimental\AdvancedRenamer\Binaries\Win64\UnrealEditor-AdvancedRenamer.dll
+B:\UE_5.5\Engine\Plugins\Experimental\AutomationUtils\Binaries\Win64\UnrealEditor-AutomationUtils.dll
+B:\UE_5.5\Engine\Plugins\Experimental\AutomationUtils\Binaries\Win64\UnrealEditor-AutomationUtilsEditor.dll
+B:\UE_5.5\Engine\Plugins\Experimental\Fracture\Binaries\Win64\UnrealEditor-FractureEngine.dll
+B:\UE_5.5\Engine\Plugins\Experimental\ChaosEditor\Binaries\Win64\UnrealEditor-FractureEditor.dll
+B:\UE_5.5\Engine\Plugins\Experimental\ChaosNiagara\Binaries\Win64\UnrealEditor-ChaosNiagara.dll
+B:\UE_5.5\Engine\Plugins\Experimental\BackChannel\Binaries\Win64\UnrealEditor-BackChannel.dll
+B:\UE_5.5\Engine\Plugins\Experimental\ChaosSolverPlugin\Binaries\Win64\UnrealEditor-ChaosSolverEditor.dll
+B:\UE_5.5\Engine\Plugins\Experimental\ChaosUserDataPT\Binaries\Win64\UnrealEditor-ChaosUserDataPT.dll
+B:\UE_5.5\Engine\Plugins\Experimental\Dataflow\Binaries\Win64\UnrealEditor-DataflowAssetTools.dll
+B:\UE_5.5\Engine\Plugins\Experimental\Dataflow\Binaries\Win64\UnrealEditor-DataflowEnginePlugin.dll
+B:\UE_5.5\Engine\Plugins\Experimental\Dataflow\Binaries\Win64\UnrealEditor-DataflowNodes.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-MassEntityEditor.dll
+B:\UE_5.5\Engine\Plugins\Experimental\EditorDataStorage\Binaries\Win64\UnrealEditor-TedsCore.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-MassEntityDebugger.dll
+B:\UE_5.5\Engine\Plugins\Experimental\EditorDataStorage\Binaries\Win64\UnrealEditor-TedsUI.dll
+B:\UE_5.5\Engine\Plugins\Experimental\CharacterFXEditor\BaseCharacterFXEditor\Binaries\Win64\UnrealEditor-BaseCharacterFXEditor.dll
+B:\UE_5.5\Engine\Plugins\Experimental\Dataflow\Binaries\Win64\UnrealEditor-DataflowEditor.dll
+B:\UE_5.5\Engine\Plugins\Experimental\GeometryCollectionPlugin\Binaries\Win64\UnrealEditor-GeometryCollectionEditor.dll
+B:\UE_5.5\Engine\Plugins\Experimental\GeometryCollectionPlugin\Binaries\Win64\UnrealEditor-GeometryCollectionTracks.dll
+B:\UE_5.5\Engine\Plugins\Experimental\GeometryCollectionPlugin\Binaries\Win64\UnrealEditor-GeometryCollectionSequencer.dll
+B:\UE_5.5\Engine\Plugins\Experimental\GeometryCollectionPlugin\Binaries\Win64\UnrealEditor-GeometryCollectionNodes.dll
+B:\UE_5.5\Engine\Plugins\Experimental\GeometryCollectionPlugin\Binaries\Win64\UnrealEditor-GeometryCollectionDepNodes.dll
+B:\UE_5.5\Engine\Plugins\Experimental\MeshModelingToolsetExp\Binaries\Win64\UnrealEditor-GeometryProcessingAdapters.dll
+B:\UE_5.5\Engine\Plugins\Experimental\LocalizableMessage\Binaries\Win64\UnrealEditor-LocalizableMessage.dll
+B:\UE_5.5\Engine\Plugins\Experimental\LocalizableMessage\Binaries\Win64\UnrealEditor-LocalizableMessageBlueprint.dll
+B:\UE_5.5\Engine\Plugins\Media\ImgMedia\Binaries\Win64\UnrealEditor-ImgMediaFactory.dll
+B:\UE_5.5\Engine\Plugins\Media\ImgMedia\Binaries\Win64\UnrealEditor-OpenExrWrapper.dll
+B:\UE_5.5\Engine\Plugins\Media\ImgMedia\Binaries\Win64\UnrealEditor-ImgMedia.dll
+B:\UE_5.5\Engine\Plugins\Media\MediaPlate\Binaries\Win64\UnrealEditor-MediaPlate.dll
+B:\UE_5.5\Engine\Plugins\Media\MediaCompositing\Binaries\Win64\UnrealEditor-MediaCompositing.dll
+B:\UE_5.5\Engine\Plugins\Media\MediaCompositing\Binaries\Win64\UnrealEditor-MediaCompositingEditor.dll
+B:\UE_5.5\Engine\Plugins\Media\MediaPlayerEditor\Binaries\Win64\UnrealEditor-MediaPlayerEditor.dll
+B:\UE_5.5\Engine\Plugins\Media\MediaPlate\Binaries\Win64\UnrealEditor-MediaPlateEditor.dll
+B:\UE_5.5\Engine\Plugins\NNE\NNEDenoiser\Binaries\Win64\UnrealEditor-NNEDenoiser.dll
+B:\UE_5.5\Engine\Plugins\VirtualProduction\Takes\Binaries\Win64\UnrealEditor-TakeSequencer.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-CollectionManager.dll
+B:\UE_5.5\Engine\Plugins\Editor\ContentBrowser\ContentBrowserClassDataSource\Binaries\Win64\UnrealEditor-ContentBrowserClassDataSource.dll
+B:\UE_5.5\Engine\Plugins\Editor\Localization\PortableObjectFileDataSource\Binaries\Win64\UnrealEditor-PortableObjectFileDataSource.dll
+B:\UE_5.5\Engine\Plugins\Experimental\Animation\SkeletalMeshModelingTools\Binaries\Win64\UnrealEditor-SkeletalMeshModelingTools.dll
+B:\UE_5.5\Engine\Plugins\Experimental\MetaHuman\MetaHumanSDK\Binaries\Win64\UnrealEditor-MetaHumanSDKEditor.dll
+B:\UE_5.5\Engine\Plugins\Experimental\MetaHuman\MetaHumanSDK\Binaries\Win64\UnrealEditor-MetaHumanSDKRuntime.dll
+B:\UE_5.5\Engine\Plugins\Editor\ObjectMixer\LightMixer\Binaries\Win64\UnrealEditor-LightMixer.dll
+B:\UE_5.5\Engine\Plugins\Runtime\Windows\XInputDevice\Binaries\Win64\UnrealEditor-XInputDevice.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-CEF3Utils.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-WebBrowser.dll
+B:\UE_5.5\Engine\Plugins\Bridge\Binaries\Win64\UnrealEditor-MegascansPlugin.dll
+B:\UE_5.5\Engine\Plugins\Bridge\Binaries\Win64\UnrealEditor-Bridge.dll
+B:\UE_5.5\Engine\Plugins\CmdLinkServer\Binaries\Win64\UnrealEditor-CmdLinkServer.dll
+B:\UE_5.5\Engine\Plugins\Runtime\AudioSynesthesia\Binaries\Win64\UnrealEditor-AudioSynesthesiaEditor.dll
+B:\UE_5.5\Engine\Plugins\VirtualProduction\Takes\Binaries\Win64\UnrealEditor-TakeRecorderSources.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor.exe
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-EditorAnalyticsSession.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-Media.dll
+B:\UE_5.5\Engine\Binaries\Win64\tbbmalloc.dll
+B:\UE_5.5\Engine\Plugins\Animation\DeformerGraph\Binaries\Win64\UnrealEditor-OptimusDeveloper.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-RewindDebuggerRuntimeInterface.dll
+B:\UE_5.5\Engine\Plugins\AI\AISupport\Binaries\Win64\UnrealEditor-AISupportModule.dll
+B:\UE_5.5\Engine\Plugins\Runtime\ExampleDeviceProfileSelector\Binaries\Win64\UnrealEditor-ExampleDeviceProfileSelector.dll
+B:\UE_5.5\Engine\Binaries\ThirdParty\Vorbis\Win64\VS2015\libvorbisfile_64.dll
+B:\UE_5.5\Engine\Binaries\ThirdParty\Windows\WinPixEventRuntime\x64\WinPixEventRuntime.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-BuildSettings.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-CorePreciseFP.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-TraceLog.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-Projects.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-MoviePlayerProxy.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-MoviePlayer.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-InputCore.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-HierarchicalLODOutliner.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-WorldBrowser.dll
+B:\UE_5.5\Engine\Binaries\Win64\oo2tex_win64_2.9.8.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-SequenceRecorderSections.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-AutomationWorker.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-LandscapeEditor.dll
+B:\UE_5.5\Engine\Plugins\MovieScene\TemplateSequence\Binaries\Win64\UnrealEditor-TemplateSequenceEditor.dll
+B:\UE_5.5\Engine\Plugins\MovieScene\ActorSequence\Binaries\Win64\UnrealEditor-ActorSequenceEditor.dll
+B:\UE_5.5\Engine\Plugins\Media\WmfMedia\Binaries\Win64\UnrealEditor-WmfMediaEditor.dll
+B:\UE_5.5\Engine\Plugins\Media\WebMMedia\Binaries\Win64\UnrealEditor-WebMMediaFactory.dll
+B:\UE_5.5\Engine\Plugins\Media\WebMMedia\Binaries\Win64\UnrealEditor-WebMMediaEditor.dll
+B:\UE_5.5\Engine\Plugins\Media\ImgMedia\Binaries\Win64\UnrealEditor-ImgMediaEditor.dll
+B:\UE_5.5\Engine\Plugins\Media\AndroidMedia\Binaries\Win64\UnrealEditor-AndroidMediaFactory.dll
+B:\UE_5.5\Engine\Plugins\Media\AndroidMedia\Binaries\Win64\UnrealEditor-AndroidMediaEditor.dll
+B:\UE_5.5\Engine\Plugins\Media\AvfMedia\Binaries\Win64\UnrealEditor-AvfMediaFactory.dll
+B:\UE_5.5\Engine\Plugins\Media\AvfMedia\Binaries\Win64\UnrealEditor-AvfMediaEditor.dll
+B:\UE_5.5\Engine\Plugins\Cameras\GameplayCameras\Binaries\Win64\UnrealEditor-GameplayCamerasEditor.dll
+B:\UE_5.5\Engine\Plugins\Cameras\CameraShakePreviewer\Binaries\Win64\UnrealEditor-CameraShakePreviewer.dll
+B:\UE_5.5\Engine\Plugins\Animation\IKRig\Binaries\Win64\UnrealEditor-IKRigEditor.dll
+B:\UE_5.5\Engine\Plugins\Animation\GameplayInsights\Binaries\Win64\UnrealEditor-RewindDebuggerVLog.dll
+B:\UE_5.5\Engine\Plugins\Animation\GameplayInsights\Binaries\Win64\UnrealEditor-RewindDebugger.dll
+B:\UE_5.5\Engine\Plugins\Animation\DeformerGraph\Binaries\Win64\UnrealEditor-OptimusEditor.dll
+B:\UE_5.5\Engine\Plugins\Runtime\WaveTable\Binaries\Win64\UnrealEditor-WaveTableEditor.dll
+B:\UE_5.5\Engine\Plugins\Runtime\ResonanceAudio\Binaries\Win64\UnrealEditor-ResonanceAudioEditor.dll
+B:\UE_5.5\Engine\Plugins\Runtime\AudioCapture\Binaries\Win64\UnrealEditor-AudioCaptureEditor.dll
+B:\UE_5.5\Engine\Plugins\Editor\GeometryMode\Binaries\Win64\UnrealEditor-TextureAlignMode.dll
+B:\UE_5.5\Engine\Plugins\Editor\GeometryMode\Binaries\Win64\UnrealEditor-BspMode.dll
+B:\UE_5.5\Engine\Plugins\Editor\GeometryMode\Binaries\Win64\UnrealEditor-GeometryMode.dll
+B:\UE_5.5\Engine\Plugins\Editor\EngineAssetDefinitions\Binaries\Win64\UnrealEditor-EngineAssetDefinitions.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-SessionServices.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-SessionMessages.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-PlacementMode.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-ClothPainter.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-MeshPaint.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-LogVisualizer.dll
+B:\UE_5.5\Engine\Binaries\Win64\IOS\UnrealEditor-IOSPlatformEditor.dll
+B:\UE_5.5\Engine\Binaries\Win64\Android\UnrealEditor-AndroidDeviceDetection.dll
+B:\UE_5.5\Engine\Binaries\Win64\Android\UnrealEditor-AndroidPlatformEditor.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-MacPlatformEditor.dll
+B:\UE_5.5\Engine\Binaries\Win64\IOS\UnrealEditor-IOSRuntimeSettings.dll
+B:\UE_5.5\Engine\Binaries\Win64\Android\UnrealEditor-AndroidRuntimeSettings.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-StructUtilsTestSuite.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-UniversalObjectLocatorEditor.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-RenderResourceViewer.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-GameplayDebuggerEditor.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-AnimationSettings.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-VirtualizationEditor.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-CSVtoSVG.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-InputBindingEditor.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-MergeActors.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-LocalizationService.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-LocalizationDashboard.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-DeviceProfileEditor.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-ProjectTargetPlatformEditor.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-ProjectSettingsViewer.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-EditorSettingsViewer.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-SettingsEditor.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-ProjectLauncher.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-DeviceManager.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-AutomationWindow.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-PackagesDialog.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-StructViewer.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-SourceControlWindowExtender.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-Documentation.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-StreamingPauseRendering.dll
+B:\UE_5.5\Engine\Binaries\ThirdParty\Windows\XAudio2_9\x64\xaudio2_9redist.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-AudioMixerXAudio2.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-WindowsMMDeviceEnumeration.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-LauncherPlatform.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-PortalServices.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-PortalRpc.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-MessagingRpc.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-LevelInstanceEditor.dll
+B:\UE_5.5\Engine\Binaries\Win64\oo2tex_win64_2.9.11.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-ProfileVisualizer.dll
+B:\UE_5.5\Engine\Plugins\Editor\CurveEditorTools\Binaries\Win64\UnrealEditor-CurveEditorTools.dll
+B:\UE_5.5\Engine\Plugins\Editor\CryptoKeys\Binaries\Win64\UnrealEditor-CryptoKeys.dll
+B:\UE_5.5\Engine\Plugins\Editor\CryptoKeys\Binaries\Win64\UnrealEditor-CryptoKeysOpenSSL.dll
+B:\UE_5.5\Engine\Plugins\Editor\ColorGrading\Binaries\Win64\UnrealEditor-ColorGradingEditor.dll
+B:\UE_5.5\Engine\Plugins\Editor\ObjectMixer\ObjectMixer\Binaries\Win64\UnrealEditor-ObjectMixerEditor.dll
+B:\UE_5.5\Engine\Plugins\Editor\BlueprintHeaderView\Binaries\Win64\UnrealEditor-BlueprintHeaderView.dll
+B:\UE_5.5\Engine\Plugins\Developer\VisualStudioSourceCodeAccess\Binaries\Win64\UnrealEditor-VisualStudioSourceCodeAccess.dll
+B:\UE_5.5\Engine\Plugins\Developer\VisualStudioCodeSourceCodeAccess\Binaries\Win64\UnrealEditor-VisualStudioCodeSourceCodeAccess.dll
+B:\UE_5.5\Engine\Plugins\Developer\UObjectPlugin\Binaries\Win64\UnrealEditor-UObjectPlugin.dll
+B:\UE_5.5\Engine\Plugins\Developer\RiderSourceCodeAccess\Binaries\Win64\UnrealEditor-RiderSourceCodeAccess.dll
+B:\UE_5.5\Engine\Plugins\Developer\PluginUtils\Binaries\Win64\UnrealEditor-PluginUtils.dll
+B:\UE_5.5\Engine\Plugins\Developer\N10XSourceCodeAccess\Binaries\Win64\UnrealEditor-N10XSourceCodeAccess.dll
+B:\UE_5.5\Engine\Plugins\Developer\GitSourceControl\Binaries\Win64\UnrealEditor-GitSourceControl.dll
+B:\UE_5.5\Engine\Plugins\Developer\DumpGPUServices\Binaries\Win64\UnrealEditor-DumpGPUServices.dll
+B:\UE_5.5\Engine\Plugins\Developer\CLionSourceCodeAccess\Binaries\Win64\UnrealEditor-CLionSourceCodeAccess.dll
+B:\UE_5.5\Engine\Plugins\Developer\AnimationSharing\Binaries\Win64\UnrealEditor-AnimationSharingEd.dll
+B:\UE_5.5\Engine\Plugins\WorldMetrics\Binaries\Win64\UnrealEditor-CsvMetrics.dll
+B:\UE_5.5\Engine\Plugins\WorldMetrics\Binaries\Win64\UnrealEditor-WorldMetricsTest.dll
+B:\UE_5.5\Engine\Plugins\WorldMetrics\Binaries\Win64\UnrealEditor-WorldMetricsCore.dll
+B:\UE_5.5\Engine\Plugins\TraceUtilities\Binaries\Win64\UnrealEditor-EditorTraceUtilities.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-TraceTools.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-TraceInsightsFrontend.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-AutomationDriver.dll
+B:\UE_5.5\Engine\Plugins\TraceUtilities\Binaries\Win64\UnrealEditor-TraceUtilities.dll
+B:\UE_5.5\Engine\Plugins\RenderGraphInsights\Binaries\Win64\UnrealEditor-RenderGraphInsights.dll
+B:\UE_5.5\Engine\Plugins\Chooser\Binaries\Win64\UnrealEditor-ProxyTableEditor.dll
+B:\UE_5.5\Engine\Plugins\Chooser\Binaries\Win64\UnrealEditor-ProxyTableUncooked.dll
+B:\UE_5.5\Engine\Plugins\Chooser\Binaries\Win64\UnrealEditor-ProxyTable.dll
+B:\UE_5.5\Engine\Plugins\Chooser\Binaries\Win64\UnrealEditor-ChooserEditor.dll
+B:\UE_5.5\Engine\Plugins\ChaosVD\Binaries\Win64\UnrealEditor-ChaosVDBlueprint.dll
+B:\UE_5.5\Engine\Plugins\ChaosVD\Binaries\Win64\UnrealEditor-ChaosVD.dll
+B:\UE_5.5\Engine\Plugins\Runtime\GeometryProcessing\Binaries\Win64\UnrealEditor-DynamicMesh.dll
+B:\UE_5.5\Engine\Plugins\Runtime\GeometryProcessing\Binaries\Win64\UnrealEditor-GeometryAlgorithms.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-OutputLog.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-ChaosVDData.dll
+B:\UE_5.5\Engine\Plugins\ChaosCloth\Binaries\Win64\UnrealEditor-ChaosClothEditor.dll
+A:\Unreal Projects\DeadTrail\Binaries\Win64\UnrealEditor-DeadTrail.dll
+B:\UE_5.5\Engine\Plugins\Experimental\Animation\MotionTrajectory\Binaries\Win64\UnrealEditor-MotionTrajectory.dll
+B:\UE_5.5\Engine\Binaries\Win64\NNEEditorOnnxTools.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-NNEEditor.dll
+B:\UE_5.5\Engine\Binaries\Win64\DML\DirectML.dll
+B:\UE_5.5\Engine\Plugins\NNE\NNERuntimeORT\Binaries\ThirdParty\Onnxruntime\Win64\onnxruntime.dll
+B:\UE_5.5\Engine\Plugins\NNE\NNERuntimeORT\Binaries\Win64\UnrealEditor-NNERuntimeORT.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-NNE.dll
+B:\UE_5.5\Engine\Plugins\MovieScene\ActorSequence\Binaries\Win64\UnrealEditor-ActorSequence.dll
+B:\UE_5.5\Engine\Plugins\Experimental\PythonScriptPlugin\Binaries\Win64\UnrealEditor-PythonScriptPlugin.dll
+B:\UE_5.5\Engine\Plugins\Editor\ContentBrowser\ContentBrowserFileDataSource\Binaries\Win64\UnrealEditor-ContentBrowserFileDataSource.dll
+B:\UE_5.5\Engine\Plugins\Experimental\FullBodyIK\Binaries\Win64\UnrealEditor-FullBodyIK.dll
+B:\UE_5.5\Engine\Plugins\Experimental\ChaosCaching\Binaries\Win64\UnrealEditor-ChaosCachingEditor.dll
+B:\UE_5.5\Engine\Plugins\Cameras\GameplayCameras\Binaries\Win64\UnrealEditor-GameplayCameras.dll
+B:\UE_5.5\Engine\Plugins\Cameras\EngineCameras\Binaries\Win64\UnrealEditor-EngineCameras.dll
+B:\UE_5.5\Engine\Plugins\MovieScene\TemplateSequence\Binaries\Win64\UnrealEditor-TemplateSequence.dll
+B:\UE_5.5\Engine\Plugins\Animation\RigLogic\Binaries\Win64\UnrealEditor-RigLogicModule.dll
+B:\UE_5.5\Engine\Plugins\Animation\RigLogic\Binaries\Win64\UnrealEditor-RigLogicLibTest.dll
+B:\UE_5.5\Engine\Plugins\Animation\RigLogic\Binaries\Win64\UnrealEditor-RigLogicLib.dll
+B:\UE_5.5\Engine\Plugins\Animation\PoseSearch\Binaries\Win64\UnrealEditor-PoseSearchEditor.dll
+B:\UE_5.5\Engine\Plugins\Animation\GameplayInsights\Binaries\Win64\UnrealEditor-GameplayInsights.dll
+B:\UE_5.5\Engine\Plugins\Animation\GameplayInsights\Binaries\Win64\UnrealEditor-GameplayInsightsEditor.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-TraceInsights.dll
+B:\UE_5.5\Engine\Plugins\Animation\PoseSearch\Binaries\Win64\UnrealEditor-PoseSearch.dll
+B:\UE_5.5\Engine\Plugins\Animation\IKRig\Binaries\Win64\UnrealEditor-IKRigDeveloper.dll
+B:\UE_5.5\Engine\Plugins\Animation\IKRig\Binaries\Win64\UnrealEditor-IKRig.dll
+B:\UE_5.5\Engine\Plugins\Experimental\FullBodyIK\Binaries\Win64\UnrealEditor-PBIK.dll
+B:\UE_5.5\Engine\Plugins\Animation\DeformerGraph\Binaries\Win64\UnrealEditor-OptimusCore.dll
+B:\UE_5.5\Engine\Plugins\Animation\ControlRig\Binaries\Win64\UnrealEditor-ControlRigDeveloper.dll
+B:\UE_5.5\Engine\Plugins\Runtime\RigVM\Binaries\Win64\UnrealEditor-RigVMEditor.dll
+B:\UE_5.5\Engine\Plugins\Animation\AnimationWarping\Binaries\Win64\UnrealEditor-AnimationWarpingEditor.dll
+B:\UE_5.5\Engine\Plugins\Animation\AnimationWarping\Binaries\Win64\UnrealEditor-AnimationWarpingRuntime.dll
+B:\UE_5.5\Engine\Plugins\Animation\AnimationData\Binaries\Win64\UnrealEditor-AnimationData.dll
+B:\UE_5.5\Engine\Plugins\Animation\ControlRig\Binaries\Win64\UnrealEditor-ControlRig.dll
+B:\UE_5.5\Engine\Plugins\AI\EnvironmentQueryEditor\Binaries\Win64\UnrealEditor-EnvironmentQueryEditor.dll
+B:\UE_5.5\Engine\Plugins\Editor\ProxyLODPlugin\Binaries\Win64\UnrealEditor-ProxyLODMeshReduction.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-Persona.dll
+B:\UE_5.5\Engine\Plugins\Media\WebMMedia\Binaries\Win64\UnrealEditor-WebMMedia.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-MetalShaderFormat.dll
+B:\UE_5.5\Engine\Binaries\ThirdParty\ShaderConductor\Win64\ShaderConductor.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-VulkanShaderFormat.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-ShaderFormatOpenGL.dll
+B:\UE_5.5\Engine\Binaries\ThirdParty\ShaderConductor\Win64\dxcompiler.dll
+B:\UE_5.5\Engine\Binaries\ThirdParty\ShaderConductor\Win64\dxil.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-ShaderFormatD3D.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-ShaderFormatVectorVM.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-ShaderCompilerCommon.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-MassEntityTestSuite.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-FileUtilities.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-ShaderPreprocessor.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-AudioFormatRad.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-AudioFormatBink.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-AudioFormatADPCM.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-AudioFormatOgg.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-AudioFormatOpus.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-WindowsTargetPlatformControls.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-WindowsTargetPlatformSettings.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-CookedEditor.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-WindowsTargetPlatform.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-MassEntity.dll
+B:\UE_5.5\Engine\Binaries\Win64\IOS\UnrealEditor-TVOSTargetPlatformControls.dll
+B:\UE_5.5\Engine\Binaries\Win64\IOS\UnrealEditor-TVOSTargetPlatformSettings.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-NaniteBuilder.dll
+B:\UE_5.5\Engine\Binaries\Win64\IOS\UnrealEditor-TVOSTargetPlatform.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-NaniteUtilities.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-GeometryProcessingInterfaces.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-MeshBoneReduction.dll
+B:\UE_5.5\Engine\Plugins\Experimental\SkeletalReduction\Binaries\Win64\UnrealEditor-SkeletalMeshReduction.dll
+B:\UE_5.5\Engine\Binaries\Win64\tbb.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-QuadricMeshReduction.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-MeshReductionInterface.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-MeshMergeUtilities.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-MeshUtilities.dll
+B:\UE_5.5\Engine\Plugins\Runtime\WindowsMoviePlayer\Binaries\Win64\UnrealEditor-WindowsMoviePlayer.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-PinnedCommandList.dll
+B:\UE_5.5\Engine\Plugins\Runtime\WebMMoviePlayer\Binaries\Win64\UnrealEditor-WebMMoviePlayer.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-AITestSuite.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-WorldPartitionEditor.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-AnimationDataController.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-ClothingSystemEditor.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-ClothingSystemRuntimeNv.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-OverlayEditor.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-Overlay.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-StringTableEditor.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-GameplayTasksEditor.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-BehaviorTreeEditor.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-AIGraph.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-FunctionalTesting.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-AutomationController.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-AutomationMessages.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-AutomationTest.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-CollisionAnalyzer.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-ScriptableEditorWidgets.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-MRMesh.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-Messaging.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-LiveCoding.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-MacTargetPlatformControls.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-MacTargetPlatformSettings.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-MacTargetPlatform.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-WorkspaceMenuStructure.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-LandscapeEditorUtilities.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-SourceCodeAccess.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-TargetDeviceServices.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-NullInstallBundleManager.dll
+B:\UE_5.5\Engine\Binaries\Win64\LinuxArm64\UnrealEditor-LinuxArm64TargetPlatformControls.dll
+B:\UE_5.5\Engine\Binaries\Win64\LinuxArm64\UnrealEditor-LinuxArm64TargetPlatformSettings.dll
+B:\UE_5.5\Engine\Binaries\Win64\LinuxArm64\UnrealEditor-LinuxArm64TargetPlatform.dll
+B:\UE_5.5\Engine\Binaries\Win64\Linux\UnrealEditor-LinuxTargetPlatformControls.dll
+B:\UE_5.5\Engine\Binaries\Win64\Linux\UnrealEditor-LinuxTargetPlatformSettings.dll
+B:\UE_5.5\Engine\Binaries\Win64\Linux\UnrealEditor-LinuxTargetPlatform.dll
+B:\UE_5.5\Engine\Binaries\Win64\IOS\UnrealEditor-IOSTargetPlatformControls.dll
+B:\UE_5.5\Engine\Binaries\Win64\IOS\UnrealEditor-IOSTargetPlatformSettings.dll
+B:\UE_5.5\Engine\Binaries\Win64\IOS\UnrealEditor-IOSTargetPlatform.dll
+B:\UE_5.5\Engine\Binaries\Win64\Android\UnrealEditor-AndroidTargetPlatformControls.dll
+B:\UE_5.5\Engine\Binaries\Win64\Android\UnrealEditor-AndroidTargetPlatformSettings.dll
+B:\UE_5.5\Engine\Binaries\Win64\Android\UnrealEditor-AndroidTargetPlatform.dll
+B:\UE_5.5\Engine\Binaries\Win64\oo2tex_win64_2.9.5.dll
+B:\UE_5.5\Engine\Binaries\Win64\oo2tex_win64_2.9.12.dll
+B:\UE_5.5\Engine\Plugins\Developer\TextureFormatOodle\Binaries\Win64\UnrealEditor-TextureFormatOodle.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-TextureFormatUncompressed.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-TextureFormatETC2.dll
+B:\UE_5.5\Engine\Binaries\ThirdParty\NVIDIA\NVaftermath\Win64\GFSDK_Aftermath_Lib.x64.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-Settings.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-TextureFormatIntelISPCTexComp.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-TextureFormatDXT.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-TextureFormatASTC.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-TextureBuild.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-TextureFormat.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-TurnkeySupport.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-LauncherServices.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-TargetPlatform.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-WindowsPlatformFeatures.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-GameplayMediaEncoder.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-AVEncoder.dll
+B:\UE_5.5\Engine\Binaries\Win64\D3D12\D3D12Core.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-D3D12RHI.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-RHICore.dll
+B:\UE_5.5\Engine\Plugins\Experimental\Compositing\HoldoutComposite\Binaries\Win64\UnrealEditor-HoldoutComposite.dll
+B:\UE_5.5\Engine\Plugins\NNE\NNEDenoiser\Binaries\Win64\UnrealEditor-NNEDenoiserShaders.dll
+B:\UE_5.5\Engine\Plugins\Media\WmfMedia\Binaries\Win64\UnrealEditor-WmfMedia.dll
+B:\UE_5.5\Engine\Plugins\Media\WmfMedia\Binaries\Win64\UnrealEditor-WmfMediaFactory.dll
+B:\UE_5.5\Engine\Plugins\Media\ImgMedia\Binaries\Win64\UnrealEditor-ExrReaderGpu.dll
+B:\UE_5.5\Engine\Plugins\Experimental\StudioTelemetry\Binaries\Win64\UnrealEditor-AnalyticsHorde.dll
+B:\UE_5.5\Engine\Plugins\Experimental\StudioTelemetry\Binaries\Win64\UnrealEditor-AnalyticsLog.dll
+B:\UE_5.5\Engine\Plugins\Experimental\NFORDenoise\Binaries\Win64\UnrealEditor-NFORDenoise.dll
+B:\UE_5.5\Engine\Plugins\Experimental\EditorTelemetry\Binaries\Win64\UnrealEditor-EditorTelemetry.dll
+B:\UE_5.5\Engine\Plugins\Experimental\EditorPerformance\Binaries\Win64\UnrealEditor-EditorPerformance.dll
+B:\UE_5.5\Engine\Plugins\Experimental\StudioTelemetry\Binaries\Win64\UnrealEditor-StudioTelemetry.dll
+B:\UE_5.5\Engine\Plugins\Animation\DeformerGraph\Binaries\Win64\UnrealEditor-OptimusSettings.dll
+B:\UE_5.5\Engine\Plugins\Animation\ACLPlugin\Binaries\Win64\UnrealEditor-ACLPlugin.dll
+B:\UE_5.5\Engine\Plugins\Runtime\WindowsDeviceProfileSelector\Binaries\Win64\UnrealEditor-WindowsDeviceProfileSelector.dll
+B:\UE_5.5\Engine\Plugins\Runtime\HairStrands\Binaries\Win64\UnrealEditor-HairStrandsCore.dll
+B:\UE_5.5\Engine\Plugins\Runtime\GeometryCache\Binaries\Win64\UnrealEditor-GeometryCache.dll
+B:\UE_5.5\Engine\Plugins\FX\Niagara\Binaries\Win64\UnrealEditor-Niagara.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-VectorVM.dll
+B:\UE_5.5\Engine\Plugins\Runtime\ComputeFramework\Binaries\Win64\UnrealEditor-ComputeFramework.dll
+B:\UE_5.5\Engine\Plugins\Runtime\ChunkDownloader\Binaries\Win64\UnrealEditor-ChunkDownloader.dll
+B:\UE_5.5\Engine\Plugins\Portal\LauncherChunkInstaller\Binaries\Win64\UnrealEditor-LauncherChunkInstaller.dll
+B:\UE_5.5\Engine\Plugins\Online\OnlineSubsystemUtils\Binaries\Win64\UnrealEditor-OnlineBlueprintSupport.dll
+B:\UE_5.5\Engine\Plugins\Online\OnlineSubsystemNull\Binaries\Win64\UnrealEditor-OnlineSubsystemNull.dll
+B:\UE_5.5\Engine\Plugins\Online\OnlineSubsystemUtils\Binaries\Win64\UnrealEditor-OnlineSubsystemUtils.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-Voice.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-XMPP.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-WebSockets.dll
+B:\UE_5.5\Engine\Plugins\Online\OnlineSubsystem\Binaries\Win64\UnrealEditor-OnlineSubsystem.dll
+B:\UE_5.5\Engine\Plugins\Online\OnlineServices\Binaries\Win64\UnrealEditor-OnlineServicesCommonEngineUtils.dll
+B:\UE_5.5\Engine\Plugins\Online\OnlineServices\Binaries\Win64\UnrealEditor-OnlineServicesCommon.dll
+B:\UE_5.5\Engine\Plugins\Online\OnlineBase\Binaries\Win64\UnrealEditor-OnlineBase.dll
+B:\UE_5.5\Engine\Plugins\Online\OnlineServices\Binaries\Win64\UnrealEditor-OnlineServicesInterface.dll
+B:\UE_5.5\Engine\Plugins\FX\Niagara\Binaries\Win64\UnrealEditor-NiagaraShader.dll
+B:\UE_5.5\Engine\Plugins\FX\Niagara\Binaries\Win64\UnrealEditor-NiagaraVertexFactories.dll
+B:\UE_5.5\Engine\Plugins\FX\Niagara\Binaries\Win64\UnrealEditor-NiagaraCore.dll
+B:\UE_5.5\Engine\Plugins\Enterprise\DatasmithContent\Binaries\Win64\UnrealEditor-DatasmithContent.dll
+B:\UE_5.5\Engine\Plugins\Enterprise\VariantManagerContent\Binaries\Win64\UnrealEditor-VariantManagerContent.dll
+B:\UE_5.5\Engine\Plugins\Developer\RenderDocPlugin\Binaries\Win64\UnrealEditor-RenderDocPlugin.dll
+B:\UE_5.5\Engine\Plugins\Developer\PixWinPlugin\Binaries\Win64\UnrealEditor-PixWinPlugin.dll
+B:\UE_5.5\Engine\Plugins\ChaosCloth\Binaries\Win64\UnrealEditor-ChaosCloth.dll
+B:\UE_5.5\Engine\Plugins\Experimental\ChaosCaching\Binaries\Win64\UnrealEditor-ChaosCaching.dll
+B:\UE_5.5\Engine\Binaries\ThirdParty\Python3\Win64\python311.dll
+B:\UE_5.5\Engine\Plugins\Experimental\PythonScriptPlugin\Binaries\Win64\UnrealEditor-PythonScriptPluginPreload.dll
+B:\UE_5.5\Engine\Plugins\Experimental\PlatformCrypto\Binaries\Win64\UnrealEditor-PlatformCrypto.dll
+B:\UE_5.5\Engine\Plugins\Experimental\PlatformCrypto\Binaries\Win64\UnrealEditor-PlatformCryptoOpenSSL.dll
+B:\UE_5.5\Engine\Plugins\Experimental\PlatformCrypto\Binaries\Win64\UnrealEditor-PlatformCryptoTypes.dll
+B:\UE_5.5\Engine\Plugins\XGEController\Binaries\Win64\UnrealEditor-XGEController.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealBuildAccelerator\x64\UbaHost.dll
+B:\UE_5.5\Engine\Plugins\UbaController\Binaries\Win64\UnrealEditor-UbaController.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-UbaCoordinatorHorde.dll
+B:\UE_5.5\Engine\Plugins\FastBuildController\Binaries\Win64\UnrealEditor-FastBuildController.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-RadAudioDecoder.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-BinkAudioDecoder.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-AdpcmAudioDecoder.dll
+B:\UE_5.5\Engine\Binaries\ThirdParty\Vorbis\Win64\VS2015\libvorbis_64.dll
+B:\UE_5.5\Engine\Binaries\ThirdParty\Ogg\Win64\VS2015\libogg_64.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-VorbisAudioDecoder.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-OpusAudioDecoder.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-IoStoreOnDemand.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-IoStoreHttpClient.dll
+B:\UE_5.5\Engine\Binaries\ThirdParty\DbgHelp\dbghelp.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-AnimationModifiers.dll
+B:\UE_5.5\Engine\Binaries\ThirdParty\libsndfile\Win64\libsndfile-1.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-AudioEditor.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-MessageLog.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-Virtualization.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-StreamingFile.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-NetworkFile.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-StorageServerClient.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-DataflowCore.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-DataflowSimulation.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-AVIWriter.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-GameplayTasks.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-GameplayDebugger.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-SequenceRecorder.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-LiveLinkInterface.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-DataflowEngine.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-ChaosSolverEngine.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-FieldSystemEngine.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-MeshConversion.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-SequencerCore.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-VirtualTexturingEditor.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-AIModule.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-InternationalizationSettings.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-DesktopWidgets.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-AdvancedWidgets.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-SlateReflector.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-MovieSceneTools.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-ContentBrowser.dll
+B:\UE_5.5\Engine\Binaries\Win64\OpenColorIO_2_3.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-MeshBuilderCommon.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-MeshUtilitiesEngine.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-GeometryCollectionEngine.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-Navmesh.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-Cbor.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-PIEPreviewDeviceSpecification.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-Sequencer.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-HeadMountedDisplay.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-Constraints.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-AnimationCore.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-AnimationBlueprintLibrary.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-HardwareTargeting.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-ContentBrowserData.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-ClassViewer.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-WidgetCarousel.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-UnsavedAssetsTracker.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-DerivedDataEditor.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-SourceControlWindows.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-DetailCustomizations.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-Voronoi.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-ChaosCore.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-Networking.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-SceneDepthPickerMode.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-ActorPickerMode.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-EditorConfig.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-EditorStyle.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-MeshUtilitiesCommon.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-RSA.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-AdvancedPreviewScene.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-UELibSampleRate.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-ReliabilityHandlerComponent.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-SceneOutliner.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-SequencerWidgets.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-AnimGraphRuntime.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-AnimationEditMode.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-MediaAssets.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-UMGEditor.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-JsonObjectGraph.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-SharedSettingsWidgets.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-BlueprintEditorLibrary.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-KismetCompiler.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-KismetWidgets.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-OpenColorIOWrapper.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-PropertyPath.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-SlateRHIRenderer.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-ActionableMessage.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-Renderer.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-TelemetryUtils.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-AudioLinkEngine.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-SoundFieldRendering.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-MeshBuilder.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-EventLoop.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-CommonMenuExtensions.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-WidgetRegistration.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-AssetTools.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-ToolWidgets.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-PhysicsUtilities.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-SubobjectDataInterface.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-InterchangeEngine.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-InterchangeCore.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-StatusBar.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-InteractiveToolsFramework.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-EditorSubsystem.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-NavigationSystem.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-Localization.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-BlueprintGraph.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-UnrealEdMessages.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-UncontrolledChangelists.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-SourceControl.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-EditorFramework.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-SandboxFile.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-DirectoryWatcher.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-AssetDefinition.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-GeometryCore.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-SubobjectEditor.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-MaterialBaking.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-TraceServices.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-TraceAnalysis.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-EditorInteractiveToolsFramework.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-IoStoreUtilities.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-ToolMenus.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-ScriptDisassembler.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-TimeManagement.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-PakFileUtilities.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-SerializedRecorderInterface.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-PIEPreviewDeviceProfileSelector.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-ClothingSystemRuntimeCommon.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-MovieSceneCapture.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-AudioSettingsEditor.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-ComponentVisualizers.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-ConfigEditor.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-VREditor.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-ViewportInteraction.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-MovieSceneTracks.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-MovieScene.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-HierarchicalLODUtilities.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-GameProjectGeneration.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-AddContentDialog.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-IrisCore.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-LevelEditor.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-ClothingSystemRuntimeInterface.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-FoliageEdit.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-ChaosVDRuntime.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-Foliage.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-Chaos.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-Horde.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-TextureBuildUtilities.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-GraphEditor.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-EditorWidgets.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-CookOnTheFly.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-AudioLinkCore.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-SwarmInterface.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-DeveloperSettings.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-AudioExtensions.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-StatsViewer.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-PhysicsCore.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-TextureUtilitiesCommon.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-SkeletalMeshDescription.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-SkeletalMeshUtilitiesCommon.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-StaticMeshDescription.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-PropertyEditor.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-MeshDescription.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-PakFile.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-MaterialEditor.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-PacketHandler.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-GameplayTags.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-ImageWrapper.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-EngineMessages.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-DataLayerEditor.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-AnalyticsET.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-CurveEditor.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-AnimGraph.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-AssetRegistry.dll
+B:\UE_5.5\Engine\Binaries\Win64\libfbxsdk.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-Kismet.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-UMG.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-Landscape.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-UnrealEd.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-EngineSettings.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-AppFramework.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-Zen.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-HTTP.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-SlateCore.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-Slate.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-Engine.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-Core.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-Sockets.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-CinematicCamera.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-LevelSequence.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-NetworkReplayStreaming.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-JsonUtilities.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-CookMetadata.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-AudioMixer.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-AudioPlatformConfiguration.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-NetCore.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-BSPUtils.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-AssetTagsEditor.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-ImageCore.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-SSL.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-CoreUObject.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-FieldNotification.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-TextureCompressor.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-IESFile.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-CoreOnline.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-DeveloperToolSettings.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-MaterialUtilities.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-XmlParser.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-UniversalObjectLocator.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-Icmp.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-SignalProcessing.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-MaterialShaderQualitySettings.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-TypedElementRuntime.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-DerivedDataCache.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-Analytics.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-RenderCore.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-TypedElementFramework.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-ImageWriteQueue.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-Nanosvg.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-Json.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-DesktopPlatform.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-MediaUtils.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-InstallBundleManager.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-ApplicationCore.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-ClothingSystemEditorInterface.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-RawMesh.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-AudioMixerCore.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-PreLoadScreen.dll
+B:\UE_5.5\Engine\Binaries\Win64\UnrealEditor-RHI.dll</Modules>
+	</RuntimeProperties>
+	<PlatformProperties>
+		<PlatformIsRunningWindows>1</PlatformIsRunningWindows>
+		<PlatformIsRunningWine>false</PlatformIsRunningWine>
+		<IsRunningOnBattery>false</IsRunningOnBattery>
+		<DriveStats.Project.Name>B:/UE_5.5/Engine/Binaries/Win64/</DriveStats.Project.Name>
+		<DriveStats.Project.Type>SSD</DriveStats.Project.Type>
+		<DriveStats.Project.FreeSpaceKb>22725904</DriveStats.Project.FreeSpaceKb>
+		<DriveStats.PersistentDownload.Name>C:/Users/lolpo/AppData/Local/CrashReportClient/Saved/PersistentDownloadDir</DriveStats.PersistentDownload.Name>
+		<DriveStats.PersistentDownload.Type>NVMe</DriveStats.PersistentDownload.Type>
+		<DriveStats.PersistentDownload.FreeSpaceKb>15980596</DriveStats.PersistentDownload.FreeSpaceKb>
+		<PlatformCallbackResult>0</PlatformCallbackResult>
+		<CrashTrigger>0</CrashTrigger>
+	</PlatformProperties>
+	<EngineData>
+		<MatchingDPStatus>WindowsEditorNo errors</MatchingDPStatus>
+		<RHI.IntegratedGPU>false</RHI.IntegratedGPU>
+		<RHI.DriverDenylisted>false</RHI.DriverDenylisted>
+		<RHI.D3DDebug>false</RHI.D3DDebug>
+		<RHI.DRED>false</RHI.DRED>
+		<RHI.DREDMarkersOnly>false</RHI.DREDMarkersOnly>
+		<RHI.DREDContext>false</RHI.DREDContext>
+		<RHI.Aftermath>true</RHI.Aftermath>
+		<RHI.RHIName>D3D12</RHI.RHIName>
+		<RHI.AdapterName>NVIDIA GeForce RTX 3070 Ti</RHI.AdapterName>
+		<RHI.UserDriverVersion>576.02</RHI.UserDriverVersion>
+		<RHI.InternalDriverVersion>32.0.15.7602</RHI.InternalDriverVersion>
+		<RHI.DriverDate>4-12-2025</RHI.DriverDate>
+		<RHI.FeatureLevel>SM6</RHI.FeatureLevel>
+		<RHI.GPUVendor>NVIDIA</RHI.GPUVendor>
+		<RHI.DeviceId>2482</RHI.DeviceId>
+		<DeviceProfile.Name>WindowsEditor</DeviceProfile.Name>
+		<Platform.AppHasFocus>true</Platform.AppHasFocus>
+	</EngineData>
+	<GameData>
+</GameData>
+	<EnabledPlugins>
+		<Plugin>{
+&quot;Version&quot;: 53,
+&quot;VersionName&quot;: &quot;2025.0.3&quot;,
+&quot;FriendlyName&quot;: &quot;Bridge&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Chaos Cloth&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;0.1&quot;,
+&quot;FriendlyName&quot;: &quot;Chaos Visual Debugger&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Chooser&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Command Link Server&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Enhanced Input&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;0.1&quot;,
+&quot;FriendlyName&quot;: &quot;FastBuild Controller&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;RDG Insights&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;TraceUtilities&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;0.1&quot;,
+&quot;FriendlyName&quot;: &quot;UBA Controller&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;World Metrics&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;0.1&quot;,
+&quot;FriendlyName&quot;: &quot;XGE Controller&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Animation Sharing&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 2,
+&quot;VersionName&quot;: &quot;2.0&quot;,
+&quot;FriendlyName&quot;: &quot;CLion Integration&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;CodeLite Integration&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Dump GPU Services&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 14,
+&quot;VersionName&quot;: &quot;1.4&quot;,
+&quot;FriendlyName&quot;: &quot;Git&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;KDevelop Integration&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;10X Editor Integration&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Linux Compiler-only Integration&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;PIX on Windows GPU Capture Plugin&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Plugin Utilities&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Property Access Node&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;RenderDoc Plugin&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 2,
+&quot;VersionName&quot;: &quot;1.7&quot;,
+&quot;FriendlyName&quot;: &quot;Rider Integration&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Oodle Texture&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;UObject Example Plugin&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Visual Studio Code Integration&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Visual Studio Integration&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;XCode Integration&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Asset Manager Editor&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Blueprint C++ Header Preview&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Color Grading&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;CryptoKeys&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Curve Editor Tools&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;EditorDebugTools&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Data Validation&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Editor Scripting Utilities&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Engine Asset Definitions&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Facial Animation Bulk Importer&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;GameplayTagsEditor&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;GeometryMode&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Mac Graphics Switching&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Material Analyzer&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;0.1&quot;,
+&quot;FriendlyName&quot;: &quot;Mesh LOD Toolset&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Wizard for mobile packaging scenarios&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;0.1&quot;,
+&quot;FriendlyName&quot;: &quot;Modeling Tools Editor Mode&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Plugin Browser&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;0.1&quot;,
+&quot;FriendlyName&quot;: &quot;Proxy LOD Plugin (Experimental)&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Sequencer Anim Tools&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;SpeedTree Importer&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 2,
+&quot;VersionName&quot;: &quot;2.0&quot;,
+&quot;FriendlyName&quot;: &quot;Stylus &amp; Tablet Plugin&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;UMG Widget Preview&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 2,
+&quot;VersionName&quot;: &quot;0.2&quot;,
+&quot;FriendlyName&quot;: &quot;UVEditor&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;World Partition HLOD Utilities&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Datasmith Content&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Variant Manager Content&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Niagara&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;NiagaraSimCaching&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Alembic Importer&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;RDRSystem&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;TCP Messaging&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;UDP Messaging&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Online Base&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Online Services&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Online Subsystem&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Online Subsystem NULL&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Online Subsystem Utils&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Launcher Chunk Installer&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Actor Layer Utilities&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Android Device Profile Selector&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Android Movie Player&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Apple Image Utils&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Apple Movie Player&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;ArchVis Character&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Audio Capture&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Asset Tags&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Audio Synesthesia&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;AudioWidgets&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Cable Component&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Chunk Downloader&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;0.9&quot;,
+&quot;FriendlyName&quot;: &quot;Compute Framework&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Custom Mesh Component&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Example Device Profile Selector&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Geometry Cache&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;0.1&quot;,
+&quot;FriendlyName&quot;: &quot;Geometry Processing&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Google Cloud Messaging&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 2,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Groom&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Input Debugging&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Linux Device Profile Selector&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Mobile Location Services Blueprints Library&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;IOS Device Profile Selector&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;0.1&quot;,
+&quot;FriendlyName&quot;: &quot;Mesh Modeling Toolset&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;MetaSound&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Mobile Patching Utilities&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;MsQuic Runtime Plugin&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Procedural Mesh Component&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Property Access Editor&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;RigVM&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Resonance Audio&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Significance Manager&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;SoundFields&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;0.1&quot;,
+&quot;FriendlyName&quot;: &quot;StateTree&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.1&quot;,
+&quot;FriendlyName&quot;: &quot;Synthesis and DSP Effects&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Wave Tables&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Movie Player for WebM files&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Windows Device Profile Selector&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Windows Movie Player&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;AISupport&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Environment Query Editor&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 30100,
+&quot;VersionName&quot;: &quot;3.1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Animation Compression Library&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Animation Data&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Animation Modifier Library&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Animation Warping&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Blendspace Motion Analysis&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Blend Stack&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Control Rig&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Control Rig Modules&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Control Rig Spline&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;0.9&quot;,
+&quot;FriendlyName&quot;: &quot;Deformer Graph&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Animation Insights&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;IK Rig&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Pose Search&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 10,
+&quot;VersionName&quot;: &quot;10.2.5&quot;,
+&quot;FriendlyName&quot;: &quot;RigLogic Plugin v10.2.5&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;0.1&quot;,
+&quot;FriendlyName&quot;: &quot;Camera Shake Previewer&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;0.1&quot;,
+&quot;FriendlyName&quot;: &quot;Engine Cameras&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;0.1&quot;,
+&quot;FriendlyName&quot;: &quot;Gameplay Cameras&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Oodle Network&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Batch Renamer&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;0.1&quot;,
+&quot;FriendlyName&quot;: &quot;Automation Utilities&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;ChaosCaching&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;ChaosEditor&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;0.1&quot;,
+&quot;FriendlyName&quot;: &quot;Chaos Niagara&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1&quot;,
+&quot;FriendlyName&quot;: &quot;BackChannel&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;0.1&quot;,
+&quot;FriendlyName&quot;: &quot;Chaos Solver&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;ChaosUserDataPT&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;0.1&quot;,
+&quot;FriendlyName&quot;: &quot;CharacterAI&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;0.1&quot;,
+&quot;FriendlyName&quot;: &quot;Editor DataflowGraph&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;0.1&quot;,
+&quot;FriendlyName&quot;: &quot;TEDS: Editor Data Storage&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Editor Performance&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Editor Telemetry&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;0.1&quot;,
+&quot;FriendlyName&quot;: &quot;Fracture&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Full Body IK&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;0.1&quot;,
+&quot;FriendlyName&quot;: &quot;Geometry&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;0.1&quot;,
+&quot;FriendlyName&quot;: &quot;GeometryFlow&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;0.1&quot;,
+&quot;FriendlyName&quot;: &quot;Experimental Mesh Modeling Toolset&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Low-level network trace Plugin&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Localizable Message&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;NFORDenoise&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;0.1&quot;,
+&quot;FriendlyName&quot;: &quot;Planar Cut&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Platform Cryptography Plugin&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Python Editor Script Plugin&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Skeletal Mesh Simplifier (Early Access)&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Studio Telemetry&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;0.1&quot;,
+&quot;FriendlyName&quot;: &quot;Tool Presets&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 2,
+&quot;VersionName&quot;: &quot;2.0&quot;,
+&quot;FriendlyName&quot;: &quot;AVF Media Player&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 2,
+&quot;VersionName&quot;: &quot;2.0&quot;,
+&quot;FriendlyName&quot;: &quot;Android Media Player&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Image Sequence Media Player&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 0,
+&quot;VersionName&quot;: &quot;0.1&quot;,
+&quot;FriendlyName&quot;: &quot;Media Plate&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Media Player Editor&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;WebM Video Player&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Media Compositing&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 2,
+&quot;VersionName&quot;: &quot;2.0&quot;,
+&quot;FriendlyName&quot;: &quot;WMF Media Player&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;0.1&quot;,
+&quot;FriendlyName&quot;: &quot;Actor Sequence (Experimental)&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Sequencer Scripting&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;0.1&quot;,
+&quot;FriendlyName&quot;: &quot;Template Sequence&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Level Sequence Editor&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;NNEDenoiser&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;NNERuntimeORT&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Take Recorder&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Content Browser - File Data Source&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Content Browser - Asset Data Source&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Content Browser - Class Data Source&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Portable Object File Data Source&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;0.1&quot;,
+&quot;FriendlyName&quot;: &quot;BaseCharacterFXEditor&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;HoldoutComposite&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;0.1&quot;,
+&quot;FriendlyName&quot;: &quot;Motion Trajectory&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Skeletal Mesh Editing Tools&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;MetaHuman SDK&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Light Mixer&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Online Subsystem iOS&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;Object Mixer&quot;
+}</Plugin>
+		<Plugin>{
+&quot;Version&quot;: 1,
+&quot;VersionName&quot;: &quot;1.0&quot;,
+&quot;FriendlyName&quot;: &quot;XInput Device&quot;
+}</Plugin>
+	</EnabledPlugins>
+</FGenericCrashContext>

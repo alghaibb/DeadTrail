@@ -83,3 +83,13 @@ FSaveDTActorData ADTBaseCharacter::GetSaveData_Implementation()
 	return Ret;
 }
 
+void ADTBaseCharacter::SetActorGUID_Implementation(const FGuid& NewGUID)
+{
+	if (SaveActorID.IsValid())
+	{
+		SaveActorID.Invalidate();
+	}
+
+	SaveActorID = NewGUID;
+}
+

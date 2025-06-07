@@ -20,3 +20,13 @@ FName UDTSaveGame::GetCurrentLevel()
 {
 	return CurrentLoadedLevel;
 }
+
+void UDTSaveGame::SetPlayerData(FSaveDTActorData Data)
+{
+	PlayerData = Data;
+}
+
+FSaveDTActorData UDTSaveGame::GetPlayerData()
+{
+	return PlayerData;
+}
