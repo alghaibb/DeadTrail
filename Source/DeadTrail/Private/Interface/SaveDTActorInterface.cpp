@@ -1,22 +1,29 @@
 #include "Interface/SaveDTActorInterface.h"
 
-// Add default functionality here for any ISaveDTActorInterface functions that are not pure virtual.
+// Add default functionality here for any ISaveDTActorInterface functions 
+// that are not pure virtual.
+
+// === Actor GUID ===
 
 FGuid ISaveDTActorInterface::GetActorSaveID_Implementation()
 {
-	FGuid Ret = FGuid();
+	FGuid Ret;
 	Ret.Invalidate();
-    return Ret;
+	return Ret;
 }
 
 void ISaveDTActorInterface::SetActorGUID_Implementation(const FGuid& NewGUID)
 {
 }
 
+// === Actor Save Data ===
+
 FSaveDTActorData ISaveDTActorInterface::GetSaveData_Implementation()
 {
 	return FSaveDTActorData();
 }
+
+// === Component Save Data ===
 
 FSaveComponentData ISaveDTActorInterface::GetSaveComponentData_Implementation()
 {
@@ -26,4 +33,3 @@ FSaveComponentData ISaveDTActorInterface::GetSaveComponentData_Implementation()
 void ISaveDTActorInterface::SetSaveComponentData_Implementation(FSaveComponentData Data)
 {
 }
-

@@ -3,6 +3,7 @@
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
 #include "interface/SaveDTActorInterface.h"
+#include "Logger.h"
 #include "StatlineComponent.generated.h"
 
 UENUM(BlueprintType)
@@ -22,13 +23,15 @@ struct FStatline
 private:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, SaveGame, meta = (AllowPrivateAccess = "true"))
 	float Current = 100;
+
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, SaveGame, meta = (AllowPrivateAccess = "true"))
 	float Max = 100;
+
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, SaveGame, meta = (AllowPrivateAccess = "true"))
 	float PerSecondTick = 1;
 
 public:
-	FStatline(){}
+	FStatline() {}
 	FStatline(const float& current, const float& max, const float& tick)
 	{
 		Current = current;
@@ -46,20 +49,9 @@ public:
 		Current = FMath::Clamp(Current + Amount, 0, Max);
 	}
 
-	float Percentile() const
-	{
-		return Current / Max;
-	}
-
-	void AdjustTick(const float& NewTick)
-	{
-		PerSecondTick = NewTick;
-	}
-
-	float GetCurrent() const
-	{
-		return Current;
-	}
+	float Percentile() const { return Current / Max; }
+	void AdjustTick(const float& NewTick) { PerSecondTick = NewTick; }
+	float GetCurrent() const { return Current; }
 
 	FString GetSaveString()
 	{
@@ -75,7 +67,7 @@ public:
 	{
 		if (Parts.Num() != 3)
 		{
-			// TODO: Log error about invalid statline save format
+			Logger::GetInstance()->AddMessage("FStatline::UpdatedFromSaveString called with other then 3 parts:", ERRORLEVEL::EL_WARNING);
 			return;
 		}
 		Current = FCString::Atof(*Parts[0]);
@@ -84,53 +76,74 @@ public:
 	}
 };
 
-UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
+UCLASS(ClassGroup = (Custom), meta = (BlueprintSpawnableComponent))
 class DEADTRAIL_API UStatlineComponent : public UActorComponent, public ISaveDTActorInterface
 {
 	GENERATED_BODY()
 
 private:
 
+	// === Movement Reference ===
 	class UCharacterMovementComponent* MovementComponent;
 
+	// === Stats ===
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, SaveGame, meta = (AllowPrivateAccess = "true"))
 	FStatline Health;
+
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, SaveGame, meta = (AllowPrivateAccess = "true"))
 	FStatline Stamina;
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, SaveGame, meta = (AllowPrivateAccess = "true"))
-	FStatline Hunger = FStatline(100, 100, -10.125);
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, SaveGame, meta = (AllowPrivateAccess = "true"))
-	FStatline Thirst = FStatline(100, 100, -10.25); 
 
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, SaveGame, meta = (AllowPrivateAccess = "true")) // TODO: Change to VisibleAnywhere for release
+		FStatline Hunger = FStatline(100, 100, -0.125);
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, SaveGame, meta = (AllowPrivateAccess = "true")) // TODO: Change to VisibleAnywhere for release
+		FStatline Thirst = FStatline(100, 100, -0.25);
+
+	// === State Flags ===
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, meta = (AllowPrivateAccess = "true"))
 	bool bIsSprinting = false;
+
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, meta = (AllowPrivateAccess = "true"))
 	bool bWantsToSprint = false;
+
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, meta = (AllowPrivateAccess = "true"))
 	bool bIsSneaking = false;
+
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, meta = (AllowPrivateAccess = "true"))
 	bool bIsWalking = false;
+
+	// === Stat Settings ===
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, meta = (AllowPrivateAccess = "true"))
 	float SprintCost = 2;
+
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, meta = (AllowPrivateAccess = "true"))
 	float WalkSpeed = 300;
+
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, meta = (AllowPrivateAccess = "true"))
 	float JogSpeed = 500;
+
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, meta = (AllowPrivateAccess = "true"))
 	float SprintSpeed = 700;
+
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, meta = (AllowPrivateAccess = "true"))
 	float SneakSpeed = 200;
+
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, meta = (AllowPrivateAccess = "true"))
 	float JumpCost = 10;
+
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, meta = (AllowPrivateAccess = "true"))
 	float SecondsForStaminaExhaustion = 5;
+
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, meta = (AllowPrivateAccess = "true"))
 	float CurrentStaminaExhaustionTime = 0;
+
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, meta = (AllowPrivateAccess = "true"))
-	float StarvingHealthLossPerSecond = 1; 
+	float StarvingHealthLossPerSecond = 1;
+
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, meta = (AllowPrivateAccess = "true"))
 	float DehydrationHealthLossPerSecond = 1;
 
+	// === Internal Tick Logic ===
 	void TickStats(const float& DeltaTime);
 	void TickStamina(const float& DeltaTime);
 	void TickHunger(const float& DeltaTime);
@@ -138,14 +151,17 @@ private:
 	bool IsValidSprinting();
 
 protected:
+
 	virtual void BeginPlay() override;
 
-public:	
-	
+public:
+
 	UStatlineComponent();
 
+	// === Tick ===
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
+	// === External Control ===
 	UFUNCTION(BlueprintCallable)
 	void SetMovementComponentRef(UCharacterMovementComponent* Comp);
 
@@ -154,19 +170,23 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	bool CanSprint() const;
+
 	UFUNCTION(BlueprintCallable)
 	void SetSprinting(const bool& IsSprinting);
+
 	UFUNCTION(BlueprintCallable)
 	void SetSneaking(const bool& IsSneaking);
+
 	UFUNCTION(BlueprintCallable)
 	void SetWalking(const bool& IsWalking);
-	
+
 	UFUNCTION(BlueprintCallable)
 	bool CanJump() const;
+
 	UFUNCTION(BlueprintCallable)
 	void HasJumped();
 
+	// === Save Interface ===
 	virtual FSaveComponentData GetSaveComponentData_Implementation();
 	void SetSaveComponentData_Implementation(FSaveComponentData Data);
-		
 };

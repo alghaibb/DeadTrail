@@ -16,14 +16,14 @@ enum class EStatlineType : uint8;
 #endif
 #define DEADTRAIL_StatlineComponent_generated_h
 
-#define FID_DeadTrail_Source_DeadTrail_Public_Components_StatlineComponent_h_20_GENERATED_BODY \
+#define FID_DeadTrail_Source_DeadTrail_Public_Components_StatlineComponent_h_21_GENERATED_BODY \
 	friend struct Z_Construct_UScriptStruct_FStatline_Statics; \
 	DEADTRAIL_API static class UScriptStruct* StaticStruct();
 
 
 template<> DEADTRAIL_API UScriptStruct* StaticStruct<struct FStatline>();
 
-#define FID_DeadTrail_Source_DeadTrail_Public_Components_StatlineComponent_h_90_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_DeadTrail_Source_DeadTrail_Public_Components_StatlineComponent_h_82_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execHasJumped); \
 	DECLARE_FUNCTION(execCanJump); \
 	DECLARE_FUNCTION(execSetWalking); \
@@ -34,7 +34,7 @@ template<> DEADTRAIL_API UScriptStruct* StaticStruct<struct FStatline>();
 	DECLARE_FUNCTION(execSetMovementComponentRef);
 
 
-#define FID_DeadTrail_Source_DeadTrail_Public_Components_StatlineComponent_h_90_INCLASS_NO_PURE_DECLS \
+#define FID_DeadTrail_Source_DeadTrail_Public_Components_StatlineComponent_h_82_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUStatlineComponent(); \
 	friend struct Z_Construct_UClass_UStatlineComponent_Statics; \
@@ -44,7 +44,7 @@ public: \
 	virtual UObject* _getUObject() const override { return const_cast<UStatlineComponent*>(this); }
 
 
-#define FID_DeadTrail_Source_DeadTrail_Public_Components_StatlineComponent_h_90_ENHANCED_CONSTRUCTORS \
+#define FID_DeadTrail_Source_DeadTrail_Public_Components_StatlineComponent_h_82_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	UStatlineComponent(UStatlineComponent&&); \
@@ -56,13 +56,13 @@ public: \
 	NO_API virtual ~UStatlineComponent();
 
 
-#define FID_DeadTrail_Source_DeadTrail_Public_Components_StatlineComponent_h_87_PROLOG
-#define FID_DeadTrail_Source_DeadTrail_Public_Components_StatlineComponent_h_90_GENERATED_BODY \
+#define FID_DeadTrail_Source_DeadTrail_Public_Components_StatlineComponent_h_79_PROLOG
+#define FID_DeadTrail_Source_DeadTrail_Public_Components_StatlineComponent_h_82_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_DeadTrail_Source_DeadTrail_Public_Components_StatlineComponent_h_90_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_DeadTrail_Source_DeadTrail_Public_Components_StatlineComponent_h_90_INCLASS_NO_PURE_DECLS \
-	FID_DeadTrail_Source_DeadTrail_Public_Components_StatlineComponent_h_90_ENHANCED_CONSTRUCTORS \
+	FID_DeadTrail_Source_DeadTrail_Public_Components_StatlineComponent_h_82_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_DeadTrail_Source_DeadTrail_Public_Components_StatlineComponent_h_82_INCLASS_NO_PURE_DECLS \
+	FID_DeadTrail_Source_DeadTrail_Public_Components_StatlineComponent_h_82_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

@@ -1,7 +1,10 @@
 A:\Unreal Projects\DeadTrail\Source\DeadTrail\Public\Characters\DTBaseCharacter.h
 A:\Unreal Projects\DeadTrail\Source\DeadTrail\Public\Characters\DTPlayerCharacter.h
-A:\Unreal Projects\DeadTrail\Source\DeadTrail\Public\Game\DTGameInstance.h
-A:\Unreal Projects\DeadTrail\Source\DeadTrail\Public\Core\DTGameModeBase.h
 A:\Unreal Projects\DeadTrail\Source\DeadTrail\Public\Components\StatlineComponent.h
-A:\Unreal Projects\DeadTrail\Source\DeadTrail\Public\Interface\SaveDTActorInterface.h
+A:\Unreal Projects\DeadTrail\Source\DeadTrail\Public\Core\DTGameModeBase.h
+A:\Unreal Projects\DeadTrail\Source\DeadTrail\Public\Game\DTGameInstance.h
 A:\Unreal Projects\DeadTrail\Source\DeadTrail\Public\Game\DTSaveGame.h
+A:\Unreal Projects\DeadTrail\Source\DeadTrail\Public\Interaction\DTBaseActor.h
+A:\Unreal Projects\DeadTrail\Source\DeadTrail\Public\Interaction\DTDoorBase.h
+A:\Unreal Projects\DeadTrail\Source\DeadTrail\Public\Interface\DTInteractionInterface.h
+A:\Unreal Projects\DeadTrail\Source\DeadTrail\Public\Interface\SaveDTActorInterface.h

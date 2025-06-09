@@ -8,76 +8,115 @@
 #include "EnhancedInputComponent.h"
 #include "EnhancedInputSubsystems.h"
 #include "InputActionValue.h"
+#include "Components/SphereComponent.h"
+#include "Interface/DTInteractionInterface.h"
+#include "Logger.h"
 
 ADTPlayerCharacter::ADTPlayerCharacter()
 {
-	// Set size for collision capsule
-	GetCapsuleComponent()->InitCapsuleSize(42.f, 96.0f);
+	PrimaryActorTick.bCanEverTick = true;
+	PrimaryActorTick.bTickEvenWhenPaused = false;
 
-	// Don't rotate when the controller rotates. Let that just affect the camera.
+	// === Capsule & Rotation ===
+	GetCapsuleComponent()->InitCapsuleSize(42.f, 96.0f);
 	bUseControllerRotationPitch = false;
 	bUseControllerRotationYaw = false;
 	bUseControllerRotationRoll = false;
 
-	// Configure character movement
-	GetCharacterMovement()->bOrientRotationToMovement = true; // Character moves in the direction of input...	
-	GetCharacterMovement()->RotationRate = FRotator(0.0f, 500.0f, 0.0f); // ...at this rotation rate
+	// === Movement Config ===
+	UCharacterMovementComponent* Movement = GetCharacterMovement();
+	Movement->bOrientRotationToMovement = true;
+	Movement->RotationRate = FRotator(0.0f, 500.0f, 0.0f);
+	Movement->JumpZVelocity = 550.f;
+	Movement->AirControl = 0.2f;
+	Movement->MaxWalkSpeed = 500.f;
+	Movement->MinAnalogWalkSpeed = 20.f;
+	Movement->BrakingDecelerationWalking = 2000.f;
+	Movement->BrakingDecelerationFalling = 2500.0f;
+	Movement->GravityScale = 1.2f;
 
-	// Note: For faster iteration times these variables, and many more, can be tweaked in the Character Blueprint
-	// instead of recompiling to adjust them
-	GetCharacterMovement()->JumpZVelocity = 550.f;
-	GetCharacterMovement()->AirControl = 0.2f;
-	GetCharacterMovement()->MaxWalkSpeed = 500.f;
-	GetCharacterMovement()->MinAnalogWalkSpeed = 20.f;
-	GetCharacterMovement()->BrakingDecelerationWalking = 2000.f;
-	GetCharacterMovement()->BrakingDecelerationFalling = 2500.0f;
-	GetCharacterMovement()->GravityScale = 1.2f; 
-
-	// Create a camera boom (pulls in towards the player if there is a collision)
+	// === Camera Setup ===
 	CameraBoom = CreateDefaultSubobject<USpringArmComponent>(TEXT("CameraBoom"));
 	CameraBoom->SetupAttachment(RootComponent);
-	CameraBoom->TargetArmLength = 400.0f; // The camera follows at this distance behind the character	
-	CameraBoom->bUsePawnControlRotation = true; // Rotate the arm based on the controller
+	CameraBoom->TargetArmLength = 400.0f;
+	CameraBoom->bUsePawnControlRotation = true;
 
-	// Create a follow camera
 	FollowCamera = CreateDefaultSubobject<UCameraComponent>(TEXT("FollowCamera"));
-	FollowCamera->SetupAttachment(CameraBoom, USpringArmComponent::SocketName); // Attach the camera to the end of the boom and let the boom adjust to match the controller orientation
-	FollowCamera->bUsePawnControlRotation = false; // Camera does not rotate relative to arm
+	FollowCamera->SetupAttachment(CameraBoom, USpringArmComponent::SocketName);
+	FollowCamera->bUsePawnControlRotation = false;
+
+	// === Interaction Trigger Component ===
+	InteractionTrigger = CreateDefaultSubobject<USphereComponent>(TEXT("InteractionTriggerVolume"));
+	InteractionTrigger->SetupAttachment(RootComponent);
+	InteractionTrigger->SetRelativeScale3D(FVector(10));
+	InteractionTrigger->OnComponentBeginOverlap.AddDynamic(this, &ADTPlayerCharacter::OnInteractionTriggerOverlapBegin);
+	InteractionTrigger->OnComponentEndOverlap.AddDynamic(this, &ADTPlayerCharacter::OnInteractionTriggerOverlapEnd);
 }
+
+void ADTPlayerCharacter::Tick(float DeltaTime)
+{
+	if (bEnableRayTrace)
+	{
+		TraceForInteraction();
+	}
+}
+
+// === Overlap Begin: Called when another actor enters the interaction sphere ===
+void ADTPlayerCharacter::OnInteractionTriggerOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
+{
+	if (OtherActor->Implements<UDTInteractionInterface>())
+	{
+		return;
+	}
+	InteractableActors.Add(OtherActor);
+	bEnableRayTrace = true;
+}
+
+// === Overlap End: Called when another actor exits the interaction sphere ===
+void ADTPlayerCharacter::OnInteractionTriggerOverlapEnd(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex)
+{
+	if (OtherActor->Implements<UDTInteractionInterface>())
+	{
+		return;
+	}
+	InteractableActors.Remove(OtherActor);
+	bEnableRayTrace = InteractableActors.Num() > 0;
+}
+
+// === Update Interaction Text: Called to update the interaction text based on the current interaction actor ===
+void ADTPlayerCharacter::UpdateInteractionText_Implementation()
+{
+	UpdateInteractionText();
+}
+
+
+// === Input Functions ===
 
 void ADTPlayerCharacter::Move(const FInputActionValue& Value)
 {
-	// input is a Vector2D
 	FVector2D MovementVector = Value.Get<FVector2D>();
 
-	if (Controller != nullptr)
+	if (Controller)
 	{
-		// find out which way is forward
 		const FRotator Rotation = Controller->GetControlRotation();
 		const FRotator YawRotation(0, Rotation.Yaw, 0);
 
-		// get forward vector
-		const FVector ForwardDirection = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::X);
+		const FVector Forward = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::X);
+		const FVector Right = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::Y);
 
-		// get right vector 
-		const FVector RightDirection = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::Y);
-
-		// add movement 
-		AddMovementInput(ForwardDirection, MovementVector.Y);
-		AddMovementInput(RightDirection, MovementVector.X);
+		AddMovementInput(Forward, MovementVector.Y);
+		AddMovementInput(Right, MovementVector.X);
 	}
 }
 
 void ADTPlayerCharacter::Look(const FInputActionValue& Value)
 {
-	// input is a Vector2D
-	FVector2D LookAxisVector = Value.Get<FVector2D>();
+	FVector2D LookAxis = Value.Get<FVector2D>();
 
-	if (Controller != nullptr)
+	if (Controller)
 	{
-		// add yaw and pitch input to controller
-		AddControllerYawInput(LookAxisVector.X);
-		AddControllerPitchInput(LookAxisVector.Y);
+		AddControllerYawInput(LookAxis.X);
+		AddControllerPitchInput(LookAxis.Y);
 	}
 }
 
@@ -89,6 +128,8 @@ void ADTPlayerCharacter::PlayerJump()
 	}
 }
 
+// === Sprint, Walk, Sneak ===
+
 void ADTPlayerCharacter::StartSprinting()
 {
 	SetSprinting(true);
@@ -97,6 +138,12 @@ void ADTPlayerCharacter::StartSprinting()
 void ADTPlayerCharacter::StopSprinting()
 {
 	SetSprinting(false);
+}
+
+void ADTPlayerCharacter::ToggleWalk()
+{
+	bIsWalking = !bIsWalking;
+	SetWalking(bIsWalking);
 }
 
 void ADTPlayerCharacter::StopWalking()
@@ -110,20 +157,60 @@ void ADTPlayerCharacter::ToggleSneak()
 	SetSneaking(bIsSneaking);
 }
 
-void ADTPlayerCharacter::ToggleWalk()
+// === Interact ===
+void ADTPlayerCharacter::OnInteract()
 {
-	bIsWalking = !bIsWalking;
-	SetWalking(bIsWalking);
+	if (InteractionActor == nullptr)
+	{
+		return;
+	}
+	IDTInteractionInterface* Inter = Cast<IDTInteractionInterface>(InteractionActor);
+	if (Inter == nullptr)
+	{
+		Logger::GetInstance()->AddMessage("ADTPlayerCharacter::OnInteract - Failed to cast to InteractionInterface:", ERRORLEVEL::EL_ERROR);
+		return;
+	}
+	//Inter->Interact_Implementation(this);
+	Inter->Execute_Interact(InteractionActor, this);
 }
+
+// === Interaction Trace ===
+
+void ADTPlayerCharacter::TraceForInteraction()
+{
+	FCollisionQueryParams LTParams = FCollisionQueryParams(FName(TEXT("InteractionTrace")), true, this);
+	LTParams.bReturnPhysicalMaterial = false;
+	LTParams.bReturnFaceIndex = false;
+
+	GetWorld()->DebugDrawTraceTag = DebugShowInteractionTrace ? TEXT("InteractionTrace") : TEXT("");
+	
+	FHitResult LTHit(ForceInit);
+	FVector LTStart = FollowCamera->GetComponentLocation();
+	float SearchLength = (FollowCamera->GetComponentLocation() - CameraBoom->GetComponentLocation()).Length();
+	SearchLength += InteractionTraceLength;
+	FVector LTEnd = (FollowCamera->GetForwardVector() * SearchLength) + LTStart;
+
+	GetWorld()->LineTraceSingleByChannel(LTHit, LTStart, LTEnd, ECC_Visibility, LTParams);
+	
+	UpdateInteractionText_Implementation();
+	if (!LTHit.bBlockingHit || !LTHit.GetActor()->Implements<UDTInteractionInterface>())
+	{
+		InteractionActor = nullptr;
+		return;
+	}
+	InteractionActor = LTHit.GetActor();
+
+}
+
+// === Input & Mapping Context ===
 
 void ADTPlayerCharacter::NotifyControllerChanged()
 {
 	Super::NotifyControllerChanged();
 
-	// Add Input Mapping Context
-	if (APlayerController* PlayerController = Cast<APlayerController>(Controller))
+	if (APlayerController* PC = Cast<APlayerController>(Controller))
 	{
-		if (UEnhancedInputLocalPlayerSubsystem* Subsystem = ULocalPlayer::GetSubsystem<UEnhancedInputLocalPlayerSubsystem>(PlayerController->GetLocalPlayer()))
+		if (UEnhancedInputLocalPlayerSubsystem* Subsystem = ULocalPlayer::GetSubsystem<UEnhancedInputLocalPlayerSubsystem>(PC->GetLocalPlayer()))
 		{
 			Subsystem->AddMappingContext(DefaultMappingContext, 0);
 		}
@@ -132,29 +219,24 @@ void ADTPlayerCharacter::NotifyControllerChanged()
 
 void ADTPlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
-	// Set up action bindings
-	if (UEnhancedInputComponent* EnhancedInputComponent = Cast<UEnhancedInputComponent>(PlayerInputComponent)) {
-
-		EnhancedInputComponent->BindAction(JumpAction, ETriggerEvent::Started, this, &ADTPlayerCharacter::PlayerJump);
-		EnhancedInputComponent->BindAction(JumpAction, ETriggerEvent::Completed, this, &ACharacter::StopJumping);
-		EnhancedInputComponent->BindAction(MoveAction, ETriggerEvent::Triggered, this, 
-			&ADTPlayerCharacter::Move);
-		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, 
-			&ADTPlayerCharacter::Look);
-		EnhancedInputComponent->BindAction(SprintAction, ETriggerEvent::Started, this,
-			&ADTPlayerCharacter::StartSprinting);
-		EnhancedInputComponent->BindAction(SprintAction, ETriggerEvent::Completed, this,
-			&ADTPlayerCharacter::StopSprinting);
-		EnhancedInputComponent->BindAction(WalkAction, ETriggerEvent::Triggered, this,
-			&ADTPlayerCharacter::ToggleWalk);
-		EnhancedInputComponent->BindAction(SneakAction, ETriggerEvent::Started, this, &ADTPlayerCharacter::ToggleSneak);
-
+	if (UEnhancedInputComponent* Enhanced = Cast<UEnhancedInputComponent>(PlayerInputComponent))
+	{
+		Enhanced->BindAction(JumpAction, ETriggerEvent::Started, this, &ADTPlayerCharacter::PlayerJump);
+		Enhanced->BindAction(JumpAction, ETriggerEvent::Completed, this, &ACharacter::StopJumping);
+		Enhanced->BindAction(MoveAction, ETriggerEvent::Triggered, this, &ADTPlayerCharacter::Move);
+		Enhanced->BindAction(LookAction, ETriggerEvent::Triggered, this, &ADTPlayerCharacter::Look);
+		Enhanced->BindAction(SprintAction, ETriggerEvent::Started, this, &ADTPlayerCharacter::StartSprinting);
+		Enhanced->BindAction(SprintAction, ETriggerEvent::Completed, this, &ADTPlayerCharacter::StopSprinting);
+		Enhanced->BindAction(WalkAction, ETriggerEvent::Triggered, this, &ADTPlayerCharacter::ToggleWalk);
+		Enhanced->BindAction(SneakAction, ETriggerEvent::Started, this, &ADTPlayerCharacter::ToggleSneak);
+		Enhanced->BindAction(InteractAction, ETriggerEvent::Completed, this, &ADTPlayerCharacter::OnInteract);
 	}
 }
+
+// === Lifecycle ===
 
 void ADTPlayerCharacter::BeginPlay()
 {
 	Super::BeginPlay();
-	ADTBaseCharacter::BeginPlay();
 	SaveActorID.Invalidate();
 }

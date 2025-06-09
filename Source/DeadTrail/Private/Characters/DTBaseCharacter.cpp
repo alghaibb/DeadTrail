@@ -8,8 +8,7 @@ ADTBaseCharacter::ADTBaseCharacter()
 	Statline = CreateDefaultSubobject<UStatlineComponent>(TEXT("Statline"));
 	Statline->SetMovementComponentRef(GetCharacterMovement());
 
-	SaveActorID = FGuid::NewGuid(); 
-
+	SaveActorID = FGuid::NewGuid();
 }
 
 void ADTBaseCharacter::BeginPlay()
@@ -20,8 +19,9 @@ void ADTBaseCharacter::BeginPlay()
 	{
 		SaveActorID = FGuid::NewGuid();
 	}
-
 }
+
+// === Movement & Action Interfaces ===
 
 bool ADTBaseCharacter::CanJump() const
 {
@@ -54,18 +54,19 @@ void ADTBaseCharacter::SetSneaking(const bool& IsSneaking)
 	Statline->SetSneaking(IsSneaking);
 }
 
+// === Tick & Input ===
 
 void ADTBaseCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
 }
 
 void ADTBaseCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
-
 }
+
+// === Save System ===
 
 FGuid ADTBaseCharacter::GetActorSaveID_Implementation()
 {
@@ -92,4 +93,3 @@ void ADTBaseCharacter::SetActorGUID_Implementation(const FGuid& NewGUID)
 
 	SaveActorID = NewGUID;
 }
-

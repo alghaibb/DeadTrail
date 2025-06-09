@@ -30,7 +30,13 @@ struct Z_Construct_UFunction_UDTGameInstance_AddActorData_Statics
 	};
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// === Public API ===\n" },
+#endif
 		{ "ModuleRelativePath", "Public/Game/DTGameInstance.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "=== Public API ===" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ActorID_MetaData[] = {
 		{ "NativeConst", "" },
@@ -152,7 +158,13 @@ struct Z_Construct_UClass_UDTGameInstance_Statics
 		{ "ModuleRelativePath", "Public/Game/DTGameInstance.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SaveableDTActorData_MetaData[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// === Save System ===\n" },
+#endif
 		{ "ModuleRelativePath", "Public/Game/DTGameInstance.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "=== Save System ===" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SaveGameObject_MetaData[] = {
 		{ "ModuleRelativePath", "Public/Game/DTGameInstance.h" },
@@ -177,7 +189,7 @@ struct Z_Construct_UClass_UDTGameInstance_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_UDTGameInstance_AddActorData, "AddActorData" }, // 2232570491
+		{ &Z_Construct_UFunction_UDTGameInstance_AddActorData, "AddActorData" }, // 921138068
 		{ &Z_Construct_UFunction_UDTGameInstance_DEV_LoadGame, "DEV_LoadGame" }, // 2182251232
 		{ &Z_Construct_UFunction_UDTGameInstance_DEV_SaveGame, "DEV_SaveGame" }, // 3112286920
 	};
@@ -244,10 +256,10 @@ UDTGameInstance::~UDTGameInstance() {}
 struct Z_CompiledInDeferFile_FID_DeadTrail_Source_DeadTrail_Public_Game_DTGameInstance_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UDTGameInstance, UDTGameInstance::StaticClass, TEXT("UDTGameInstance"), &Z_Registration_Info_UClass_UDTGameInstance, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UDTGameInstance), 3481430957U) },
+		{ Z_Construct_UClass_UDTGameInstance, UDTGameInstance::StaticClass, TEXT("UDTGameInstance"), &Z_Registration_Info_UClass_UDTGameInstance, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UDTGameInstance), 703194273U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_DeadTrail_Source_DeadTrail_Public_Game_DTGameInstance_h_3720747237(TEXT("/Script/DeadTrail"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_DeadTrail_Source_DeadTrail_Public_Game_DTGameInstance_h_1249708211(TEXT("/Script/DeadTrail"),
 	Z_CompiledInDeferFile_FID_DeadTrail_Source_DeadTrail_Public_Game_DTGameInstance_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_DeadTrail_Source_DeadTrail_Public_Game_DTGameInstance_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

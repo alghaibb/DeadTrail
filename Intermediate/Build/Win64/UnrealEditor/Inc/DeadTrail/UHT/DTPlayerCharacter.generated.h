@@ -9,11 +9,21 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class AActor;
+class UPrimitiveComponent;
+struct FHitResult;
 #ifdef DEADTRAIL_DTPlayerCharacter_generated_h
 #error "DTPlayerCharacter.generated.h already included, missing '#pragma once' in DTPlayerCharacter.h"
 #endif
 #define DEADTRAIL_DTPlayerCharacter_generated_h
 
+#define FID_DeadTrail_Source_DeadTrail_Public_Characters_DTPlayerCharacter_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execUpdateInteractionText); \
+	DECLARE_FUNCTION(execOnInteractionTriggerOverlapEnd); \
+	DECLARE_FUNCTION(execOnInteractionTriggerOverlapBegin);
+
+
+#define FID_DeadTrail_Source_DeadTrail_Public_Characters_DTPlayerCharacter_h_16_CALLBACK_WRAPPERS
 #define FID_DeadTrail_Source_DeadTrail_Public_Characters_DTPlayerCharacter_h_16_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesADTPlayerCharacter(); \
@@ -39,6 +49,8 @@ public: \
 #define FID_DeadTrail_Source_DeadTrail_Public_Characters_DTPlayerCharacter_h_16_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
+	FID_DeadTrail_Source_DeadTrail_Public_Characters_DTPlayerCharacter_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_DeadTrail_Source_DeadTrail_Public_Characters_DTPlayerCharacter_h_16_CALLBACK_WRAPPERS \
 	FID_DeadTrail_Source_DeadTrail_Public_Characters_DTPlayerCharacter_h_16_INCLASS_NO_PURE_DECLS \
 	FID_DeadTrail_Source_DeadTrail_Public_Characters_DTPlayerCharacter_h_16_ENHANCED_CONSTRUCTORS \
 private: \

@@ -39,13 +39,25 @@ struct Z_Construct_UClass_ADTBaseCharacter_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Statline_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "DTBaseCharacter" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// === Components ===\n" },
+#endif
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Public/Characters/DTBaseCharacter.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "=== Components ===" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SaveActorID_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "DTBaseCharacter" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// === Save System ===\n" },
+#endif
 		{ "ModuleRelativePath", "Public/Characters/DTBaseCharacter.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "=== Save System ===" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_WasSpawned_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
@@ -121,10 +133,10 @@ ADTBaseCharacter::~ADTBaseCharacter() {}
 struct Z_CompiledInDeferFile_FID_DeadTrail_Source_DeadTrail_Public_Characters_DTBaseCharacter_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ADTBaseCharacter, ADTBaseCharacter::StaticClass, TEXT("ADTBaseCharacter"), &Z_Registration_Info_UClass_ADTBaseCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ADTBaseCharacter), 692176667U) },
+		{ Z_Construct_UClass_ADTBaseCharacter, ADTBaseCharacter::StaticClass, TEXT("ADTBaseCharacter"), &Z_Registration_Info_UClass_ADTBaseCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ADTBaseCharacter), 1109460688U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_DeadTrail_Source_DeadTrail_Public_Characters_DTBaseCharacter_h_3876644445(TEXT("/Script/DeadTrail"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_DeadTrail_Source_DeadTrail_Public_Characters_DTBaseCharacter_h_223002713(TEXT("/Script/DeadTrail"),
 	Z_CompiledInDeferFile_FID_DeadTrail_Source_DeadTrail_Public_Characters_DTBaseCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_DeadTrail_Source_DeadTrail_Public_Characters_DTBaseCharacter_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

@@ -36,7 +36,13 @@ struct Z_Construct_UClass_UDTSaveGame_Statics
 		{ "ModuleRelativePath", "Public/Game/DTSaveGame.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SaveableDTActorData_MetaData[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// === Save Data ===\n" },
+#endif
 		{ "ModuleRelativePath", "Public/Game/DTSaveGame.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "=== Save Data ===" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_CurrentLoadedLevel_MetaData[] = {
 		{ "ModuleRelativePath", "Public/Game/DTSaveGame.h" },
@@ -111,10 +117,10 @@ UDTSaveGame::~UDTSaveGame() {}
 struct Z_CompiledInDeferFile_FID_DeadTrail_Source_DeadTrail_Public_Game_DTSaveGame_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UDTSaveGame, UDTSaveGame::StaticClass, TEXT("UDTSaveGame"), &Z_Registration_Info_UClass_UDTSaveGame, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UDTSaveGame), 3444745448U) },
+		{ Z_Construct_UClass_UDTSaveGame, UDTSaveGame::StaticClass, TEXT("UDTSaveGame"), &Z_Registration_Info_UClass_UDTSaveGame, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UDTSaveGame), 2129382764U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_DeadTrail_Source_DeadTrail_Public_Game_DTSaveGame_h_4147373587(TEXT("/Script/DeadTrail"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_DeadTrail_Source_DeadTrail_Public_Game_DTSaveGame_h_851087162(TEXT("/Script/DeadTrail"),
 	Z_CompiledInDeferFile_FID_DeadTrail_Source_DeadTrail_Public_Game_DTSaveGame_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_DeadTrail_Source_DeadTrail_Public_Game_DTSaveGame_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

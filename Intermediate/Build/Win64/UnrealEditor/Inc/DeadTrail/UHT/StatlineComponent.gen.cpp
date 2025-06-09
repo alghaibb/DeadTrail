@@ -341,7 +341,13 @@ struct Z_Construct_UFunction_UStatlineComponent_SetMovementComponentRef_Statics
 	};
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// === External Control ===\n" },
+#endif
 		{ "ModuleRelativePath", "Public/Components/StatlineComponent.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "=== External Control ===" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Comp_MetaData[] = {
 		{ "EditInline", "true" },
@@ -560,7 +566,13 @@ struct Z_Construct_UClass_UStatlineComponent_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Health_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "StatlineComponent" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// === Stats ===\n" },
+#endif
 		{ "ModuleRelativePath", "Public/Components/StatlineComponent.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "=== Stats ===" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Stamina_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
@@ -570,17 +582,35 @@ struct Z_Construct_UClass_UStatlineComponent_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Hunger_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "StatlineComponent" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// TODO: Change to VisibleAnywhere for release\n" },
+#endif
 		{ "ModuleRelativePath", "Public/Components/StatlineComponent.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "TODO: Change to VisibleAnywhere for release" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Thirst_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "StatlineComponent" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// TODO: Change to VisibleAnywhere for release\n" },
+#endif
 		{ "ModuleRelativePath", "Public/Components/StatlineComponent.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "TODO: Change to VisibleAnywhere for release" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_bIsSprinting_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "StatlineComponent" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// === State Flags ===\n" },
+#endif
 		{ "ModuleRelativePath", "Public/Components/StatlineComponent.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "=== State Flags ===" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_bWantsToSprint_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
@@ -600,7 +630,13 @@ struct Z_Construct_UClass_UStatlineComponent_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SprintCost_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "StatlineComponent" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// === Stat Settings ===\n" },
+#endif
 		{ "ModuleRelativePath", "Public/Components/StatlineComponent.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "=== Stat Settings ===" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_WalkSpeed_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
@@ -677,7 +713,7 @@ struct Z_Construct_UClass_UStatlineComponent_Statics
 		{ &Z_Construct_UFunction_UStatlineComponent_CanSprint, "CanSprint" }, // 2968531836
 		{ &Z_Construct_UFunction_UStatlineComponent_GetStatPercentile, "GetStatPercentile" }, // 4069861115
 		{ &Z_Construct_UFunction_UStatlineComponent_HasJumped, "HasJumped" }, // 4191951482
-		{ &Z_Construct_UFunction_UStatlineComponent_SetMovementComponentRef, "SetMovementComponentRef" }, // 3275231898
+		{ &Z_Construct_UFunction_UStatlineComponent_SetMovementComponentRef, "SetMovementComponentRef" }, // 4096049850
 		{ &Z_Construct_UFunction_UStatlineComponent_SetSneaking, "SetSneaking" }, // 1319502441
 		{ &Z_Construct_UFunction_UStatlineComponent_SetSprinting, "SetSprinting" }, // 3010804755
 		{ &Z_Construct_UFunction_UStatlineComponent_SetWalking, "SetWalking" }, // 4150372787
@@ -691,8 +727,8 @@ struct Z_Construct_UClass_UStatlineComponent_Statics
 };
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UStatlineComponent_Statics::NewProp_Health = { "Health", nullptr, (EPropertyFlags)0x0040000001020015, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UStatlineComponent, Health), Z_Construct_UScriptStruct_FStatline, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Health_MetaData), NewProp_Health_MetaData) }; // 2616569430
 const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UStatlineComponent_Statics::NewProp_Stamina = { "Stamina", nullptr, (EPropertyFlags)0x0040000001020015, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UStatlineComponent, Stamina), Z_Construct_UScriptStruct_FStatline, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Stamina_MetaData), NewProp_Stamina_MetaData) }; // 2616569430
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UStatlineComponent_Statics::NewProp_Hunger = { "Hunger", nullptr, (EPropertyFlags)0x0040000001020015, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UStatlineComponent, Hunger), Z_Construct_UScriptStruct_FStatline, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Hunger_MetaData), NewProp_Hunger_MetaData) }; // 2616569430
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UStatlineComponent_Statics::NewProp_Thirst = { "Thirst", nullptr, (EPropertyFlags)0x0040000001020015, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UStatlineComponent, Thirst), Z_Construct_UScriptStruct_FStatline, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Thirst_MetaData), NewProp_Thirst_MetaData) }; // 2616569430
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UStatlineComponent_Statics::NewProp_Hunger = { "Hunger", nullptr, (EPropertyFlags)0x0040000001000015, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UStatlineComponent, Hunger), Z_Construct_UScriptStruct_FStatline, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Hunger_MetaData), NewProp_Hunger_MetaData) }; // 2616569430
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_UStatlineComponent_Statics::NewProp_Thirst = { "Thirst", nullptr, (EPropertyFlags)0x0040000001000015, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(UStatlineComponent, Thirst), Z_Construct_UScriptStruct_FStatline, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Thirst_MetaData), NewProp_Thirst_MetaData) }; // 2616569430
 void Z_Construct_UClass_UStatlineComponent_Statics::NewProp_bIsSprinting_SetBit(void* Obj)
 {
 	((UStatlineComponent*)Obj)->bIsSprinting = 1;
@@ -793,10 +829,10 @@ struct Z_CompiledInDeferFile_FID_DeadTrail_Source_DeadTrail_Public_Components_St
 		{ FStatline::StaticStruct, Z_Construct_UScriptStruct_FStatline_Statics::NewStructOps, TEXT("Statline"), &Z_Registration_Info_UScriptStruct_Statline, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FStatline), 2616569430U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UStatlineComponent, UStatlineComponent::StaticClass, TEXT("UStatlineComponent"), &Z_Registration_Info_UClass_UStatlineComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UStatlineComponent), 3255013631U) },
+		{ Z_Construct_UClass_UStatlineComponent, UStatlineComponent::StaticClass, TEXT("UStatlineComponent"), &Z_Registration_Info_UClass_UStatlineComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UStatlineComponent), 1188778322U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_DeadTrail_Source_DeadTrail_Public_Components_StatlineComponent_h_1199342732(TEXT("/Script/DeadTrail"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_DeadTrail_Source_DeadTrail_Public_Components_StatlineComponent_h_1997259447(TEXT("/Script/DeadTrail"),
 	Z_CompiledInDeferFile_FID_DeadTrail_Source_DeadTrail_Public_Components_StatlineComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_DeadTrail_Source_DeadTrail_Public_Components_StatlineComponent_h_Statics::ClassInfo),
 	Z_CompiledInDeferFile_FID_DeadTrail_Source_DeadTrail_Public_Components_StatlineComponent_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_DeadTrail_Source_DeadTrail_Public_Components_StatlineComponent_h_Statics::ScriptStructInfo),
 	Z_CompiledInDeferFile_FID_DeadTrail_Source_DeadTrail_Public_Components_StatlineComponent_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_DeadTrail_Source_DeadTrail_Public_Components_StatlineComponent_h_Statics::EnumInfo));

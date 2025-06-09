@@ -15,7 +15,6 @@
     <None Include="..\..\.gitignore" />
     <None Include="..\..\.vsconfig" />
     <None Include="..\..\LICENSE.txt" />
-    <None Include="..\..\MAWI Online Documentation.url" />
     <None Include="..\..\README.md" />
     <Filter Include="Config">
       <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
@@ -50,6 +49,9 @@
     <ClCompile Include="..\..\Source\DeadTrail\Private\DTUtils.cpp">
       <Filter>Source\DeadTrail\Private</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\DeadTrail\Private\Logger.cpp">
+      <Filter>Source\DeadTrail\Private</Filter>
+    </ClCompile>
     <Filter Include="Source\DeadTrail\Private\Characters">
       <UniqueIdentifier>{3AF22DA2-207A-3E7F-B379-C393389B9C3D}</UniqueIdentifier>
     </Filter>
@@ -80,9 +82,21 @@
     <ClCompile Include="..\..\Source\DeadTrail\Private\Game\DTSaveGame.cpp">
       <Filter>Source\DeadTrail\Private\Game</Filter>
     </ClCompile>
+    <Filter Include="Source\DeadTrail\Private\Interaction">
+      <UniqueIdentifier>{2A982010-1C36-3A83-A861-D942746BE98A}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\DeadTrail\Private\Interaction\DTBaseActor.cpp">
+      <Filter>Source\DeadTrail\Private\Interaction</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DeadTrail\Private\Interaction\DTDoorBase.cpp">
+      <Filter>Source\DeadTrail\Private\Interaction</Filter>
+    </ClCompile>
     <Filter Include="Source\DeadTrail\Private\Interface">
       <UniqueIdentifier>{B08104E3-ABD3-35E7-B822-62723B2917FC}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\DeadTrail\Private\Interface\DTInteractionInterface.cpp">
+      <Filter>Source\DeadTrail\Private\Interface</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\DeadTrail\Private\Interface\SaveDTActorInterface.cpp">
       <Filter>Source\DeadTrail\Private\Interface</Filter>
     </ClCompile>
@@ -90,6 +104,9 @@
       <UniqueIdentifier>{AAE3BDF6-5A40-392D-9376-6C59A77E8405}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\DeadTrail\Public\DTUtils.h">
+      <Filter>Source\DeadTrail\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DeadTrail\Public\Logger.h">
       <Filter>Source\DeadTrail\Public</Filter>
     </ClCompile>
     <Filter Include="Source\DeadTrail\Public\Characters">
@@ -122,9 +139,21 @@
     <ClCompile Include="..\..\Source\DeadTrail\Public\Game\DTSaveGame.h">
       <Filter>Source\DeadTrail\Public\Game</Filter>
     </ClCompile>
+    <Filter Include="Source\DeadTrail\Public\Interaction">
+      <UniqueIdentifier>{2ECD835A-1C12-3DF0-9EAF-C99CE3D8FBC6}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\DeadTrail\Public\Interaction\DTBaseActor.h">
+      <Filter>Source\DeadTrail\Public\Interaction</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DeadTrail\Public\Interaction\DTDoorBase.h">
+      <Filter>Source\DeadTrail\Public\Interaction</Filter>
+    </ClCompile>
     <Filter Include="Source\DeadTrail\Public\Interface">
       <UniqueIdentifier>{49B37565-4EFB-3453-BC28-E3730936E633}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\DeadTrail\Public\Interface\DTInteractionInterface.h">
+      <Filter>Source\DeadTrail\Public\Interface</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\DeadTrail\Public\Interface\SaveDTActorInterface.h">
       <Filter>Source\DeadTrail\Public\Interface</Filter>
     </ClCompile>
