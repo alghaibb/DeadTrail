@@ -1,0 +1,32 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.2",
+	"FriendlyName": "Easy Footstep Plugin",
+	"Description": "Easy Footstep Plugin is a C++ plugin for Unreal Engine, which contains a system that allows you to work with footstep sounds depending on the footstep type, surface type and shoe type of the character. Allows you to customize the sounds and visual effects for any type of footstep and any type of surface.",
+	"Category": "Audio",
+	"CreatedBy": "Easy Systems",
+	"CreatedByURL": "https://www.unrealengine.com/marketplace/profile/Easy+Systems",
+	"DocsURL": "",
+	"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/product/bd40b18077e043d4851db8fd1866b765",
+	"SupportURL": "https://discord.gg/cWYcmgTRuH",
+	"EngineVersion": "5.5.0",
+	"CanContainContent": true,
+	"Installed": true,
+	"Modules": [
+		{
+			"Name": "EasyFootstepPlugin",
+			"Type": "Runtime",
+			"LoadingPhase": "PreLoadingScreen",
+			"PlatformAllowList": [
+				"Win64"
+			]
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "Niagara",
+			"Enabled": true
+		}
+	]
+}

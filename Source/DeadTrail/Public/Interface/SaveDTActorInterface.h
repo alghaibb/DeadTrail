@@ -60,6 +60,9 @@ public:
 	FSaveDTActorData GetSaveData();
 	virtual FSaveDTActorData GetSaveData_Implementation();
 	UFUNCTION(BlueprintNativeEvent)
+	void UpdateFromSave();
+	virtual void UpdateFromSave_Implementation();
+	UFUNCTION(BlueprintNativeEvent)
 	FSaveComponentData GetSaveComponentData();
 	virtual FSaveComponentData GetSaveComponentData_Implementation();
 	UFUNCTION(BlueprintNativeEvent)

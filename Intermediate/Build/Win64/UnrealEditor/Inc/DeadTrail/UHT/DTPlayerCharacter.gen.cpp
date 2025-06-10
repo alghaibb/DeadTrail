@@ -504,10 +504,10 @@ ADTPlayerCharacter::~ADTPlayerCharacter() {}
 struct Z_CompiledInDeferFile_FID_DeadTrail_Source_DeadTrail_Public_Characters_DTPlayerCharacter_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ADTPlayerCharacter, ADTPlayerCharacter::StaticClass, TEXT("ADTPlayerCharacter"), &Z_Registration_Info_UClass_ADTPlayerCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ADTPlayerCharacter), 2979850955U) },
+		{ Z_Construct_UClass_ADTPlayerCharacter, ADTPlayerCharacter::StaticClass, TEXT("ADTPlayerCharacter"), &Z_Registration_Info_UClass_ADTPlayerCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ADTPlayerCharacter), 222292050U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_DeadTrail_Source_DeadTrail_Public_Characters_DTPlayerCharacter_h_1149765717(TEXT("/Script/DeadTrail"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_DeadTrail_Source_DeadTrail_Public_Characters_DTPlayerCharacter_h_3055257766(TEXT("/Script/DeadTrail"),
 	Z_CompiledInDeferFile_FID_DeadTrail_Source_DeadTrail_Public_Characters_DTPlayerCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_DeadTrail_Source_DeadTrail_Public_Characters_DTPlayerCharacter_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

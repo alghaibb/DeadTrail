@@ -1,6 +1,7 @@
 {
 	"SourceFiles": [
 		"A:\\Unreal Projects\\DeadTrail\\Source\\DeadTrail\\DeadTrail.Build.cs",
+		"A:\\Unreal Projects\\DeadTrail\\Plugins\\EasyFoot93f49355fcf2V9\\Source\\EasyFootstepPlugin\\EasyFootstepPlugin.Build.cs",
 		"A:\\Unreal Projects\\DeadTrail\\Source\\DeadTrail.Target.cs",
 		"A:\\Unreal Projects\\DeadTrail\\Source\\DeadTrailEditor.Target.cs"
 	],

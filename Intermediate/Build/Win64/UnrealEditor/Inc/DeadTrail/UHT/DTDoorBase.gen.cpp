@@ -101,10 +101,10 @@ ADTDoorBase::~ADTDoorBase() {}
 struct Z_CompiledInDeferFile_FID_DeadTrail_Source_DeadTrail_Public_Interaction_DTDoorBase_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ADTDoorBase, ADTDoorBase::StaticClass, TEXT("ADTDoorBase"), &Z_Registration_Info_UClass_ADTDoorBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ADTDoorBase), 4183350858U) },
+		{ Z_Construct_UClass_ADTDoorBase, ADTDoorBase::StaticClass, TEXT("ADTDoorBase"), &Z_Registration_Info_UClass_ADTDoorBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ADTDoorBase), 242368036U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_DeadTrail_Source_DeadTrail_Public_Interaction_DTDoorBase_h_797933020(TEXT("/Script/DeadTrail"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_DeadTrail_Source_DeadTrail_Public_Interaction_DTDoorBase_h_13540969(TEXT("/Script/DeadTrail"),
 	Z_CompiledInDeferFile_FID_DeadTrail_Source_DeadTrail_Public_Interaction_DTDoorBase_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_DeadTrail_Source_DeadTrail_Public_Interaction_DTDoorBase_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

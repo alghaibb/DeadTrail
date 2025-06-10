@@ -29,7 +29,7 @@ ADTPlayerCharacter::ADTPlayerCharacter()
 	Movement->RotationRate = FRotator(0.0f, 500.0f, 0.0f);
 	Movement->JumpZVelocity = 550.f;
 	Movement->AirControl = 0.2f;
-	Movement->MaxWalkSpeed = 500.f;
+	Movement->MaxWalkSpeed = 335.f;
 	Movement->MinAnalogWalkSpeed = 20.f;
 	Movement->BrakingDecelerationWalking = 2000.f;
 	Movement->BrakingDecelerationFalling = 2500.0f;

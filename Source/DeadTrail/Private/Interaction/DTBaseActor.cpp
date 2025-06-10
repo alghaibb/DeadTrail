@@ -38,6 +38,16 @@ void ADTBaseActor::SetActorGUID_Implementation(const FGuid& NewGUID)
 
 FSaveDTActorData ADTBaseActor::GetSaveData_Implementation()
 {
-	return FSaveDTActorData();
+	FSaveDTActorData Ret;
+	Ret.ActorTransform = this->GetActorTransform();
+	Ret.ActorClass = this->GetClass();
+	Ret.WasSpawned = bWasSpawned;
+	return Ret;
+}
+
+void ADTBaseActor::UpdateFromSave_Implementation()
+{
+	//UpdateFromSave();
+	Execute_UpdateFromSave(this);
 }
 

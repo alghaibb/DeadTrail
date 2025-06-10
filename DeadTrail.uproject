@@ -102,6 +102,11 @@
 		{
 			"Name": "InterchangeAssets",
 			"Enabled": false
+		},
+		{
+			"Name": "EasyFootstepPlugin",
+			"Enabled": true,
+			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/product/bd40b18077e043d4851db8fd1866b765"
 		}
 	]
 }

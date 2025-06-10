@@ -526,6 +526,54 @@ DEFINE_FUNCTION(ISaveDTActorInterface::execSetSaveComponentData)
 }
 // End Interface USaveDTActorInterface Function SetSaveComponentData
 
+// Begin Interface USaveDTActorInterface Function UpdateFromSave
+void ISaveDTActorInterface::UpdateFromSave()
+{
+	check(0 && "Do not directly call Event functions in Interfaces. Call Execute_UpdateFromSave instead.");
+}
+static FName NAME_USaveDTActorInterface_UpdateFromSave = FName(TEXT("UpdateFromSave"));
+void ISaveDTActorInterface::Execute_UpdateFromSave(UObject* O)
+{
+	check(O != NULL);
+	check(O->GetClass()->ImplementsInterface(USaveDTActorInterface::StaticClass()));
+	UFunction* const Func = O->FindFunction(NAME_USaveDTActorInterface_UpdateFromSave);
+	if (Func)
+	{
+		O->ProcessEvent(Func, NULL);
+	}
+	else if (auto I = (ISaveDTActorInterface*)(O->GetNativeInterfaceAddress(USaveDTActorInterface::StaticClass())))
+	{
+		I->UpdateFromSave_Implementation();
+	}
+}
+struct Z_Construct_UFunction_USaveDTActorInterface_UpdateFromSave_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/Interface/SaveDTActorInterface.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_USaveDTActorInterface_UpdateFromSave_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USaveDTActorInterface, nullptr, "UpdateFromSave", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020C00, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_USaveDTActorInterface_UpdateFromSave_Statics::Function_MetaDataParams), Z_Construct_UFunction_USaveDTActorInterface_UpdateFromSave_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_USaveDTActorInterface_UpdateFromSave()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_USaveDTActorInterface_UpdateFromSave_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(ISaveDTActorInterface::execUpdateFromSave)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->UpdateFromSave_Implementation();
+	P_NATIVE_END;
+}
+// End Interface USaveDTActorInterface Function UpdateFromSave
+
 // Begin Interface USaveDTActorInterface
 void USaveDTActorInterface::StaticRegisterNativesUSaveDTActorInterface()
 {
@@ -536,6 +584,7 @@ void USaveDTActorInterface::StaticRegisterNativesUSaveDTActorInterface()
 		{ "GetSaveData", &ISaveDTActorInterface::execGetSaveData },
 		{ "SetActorGUID", &ISaveDTActorInterface::execSetActorGUID },
 		{ "SetSaveComponentData", &ISaveDTActorInterface::execSetSaveComponentData },
+		{ "UpdateFromSave", &ISaveDTActorInterface::execUpdateFromSave },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
@@ -558,6 +607,7 @@ struct Z_Construct_UClass_USaveDTActorInterface_Statics
 		{ &Z_Construct_UFunction_USaveDTActorInterface_GetSaveData, "GetSaveData" }, // 299534004
 		{ &Z_Construct_UFunction_USaveDTActorInterface_SetActorGUID, "SetActorGUID" }, // 25971569
 		{ &Z_Construct_UFunction_USaveDTActorInterface_SetSaveComponentData, "SetSaveComponentData" }, // 4244614957
+		{ &Z_Construct_UFunction_USaveDTActorInterface_UpdateFromSave, "UpdateFromSave" }, // 2834860502
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -610,10 +660,10 @@ struct Z_CompiledInDeferFile_FID_DeadTrail_Source_DeadTrail_Public_Interface_Sav
 		{ FSaveDTActorData::StaticStruct, Z_Construct_UScriptStruct_FSaveDTActorData_Statics::NewStructOps, TEXT("SaveDTActorData"), &Z_Registration_Info_UScriptStruct_SaveDTActorData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FSaveDTActorData), 506164995U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_USaveDTActorInterface, USaveDTActorInterface::StaticClass, TEXT("USaveDTActorInterface"), &Z_Registration_Info_UClass_USaveDTActorInterface, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USaveDTActorInterface), 4155347415U) },
+		{ Z_Construct_UClass_USaveDTActorInterface, USaveDTActorInterface::StaticClass, TEXT("USaveDTActorInterface"), &Z_Registration_Info_UClass_USaveDTActorInterface, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USaveDTActorInterface), 2565776885U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_DeadTrail_Source_DeadTrail_Public_Interface_SaveDTActorInterface_h_659848017(TEXT("/Script/DeadTrail"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_DeadTrail_Source_DeadTrail_Public_Interface_SaveDTActorInterface_h_1223283387(TEXT("/Script/DeadTrail"),
 	Z_CompiledInDeferFile_FID_DeadTrail_Source_DeadTrail_Public_Interface_SaveDTActorInterface_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_DeadTrail_Source_DeadTrail_Public_Interface_SaveDTActorInterface_h_Statics::ClassInfo),
 	Z_CompiledInDeferFile_FID_DeadTrail_Source_DeadTrail_Public_Interface_SaveDTActorInterface_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_DeadTrail_Source_DeadTrail_Public_Interface_SaveDTActorInterface_h_Statics::ScriptStructInfo),
 	nullptr, 0);

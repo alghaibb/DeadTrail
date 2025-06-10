@@ -23,6 +23,11 @@ FSaveDTActorData ISaveDTActorInterface::GetSaveData_Implementation()
 	return FSaveDTActorData();
 }
 
+void ISaveDTActorInterface::UpdateFromSave_Implementation()
+{
+	UpdateFromSave();
+}
+
 // === Component Save Data ===
 
 FSaveComponentData ISaveDTActorInterface::GetSaveComponentData_Implementation()

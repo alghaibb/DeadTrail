@@ -17,7 +17,7 @@ void EmptyLinkFunctionForGeneratedCodeDeadTrail_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0xC2A1BFC6,
+				0x2BA9F41D,
 				0x7946402E,
 				METADATA_PARAMS(0, nullptr)
 			};
@@ -25,5 +25,5 @@ void EmptyLinkFunctionForGeneratedCodeDeadTrail_init() {}
 		}
 		return Z_Registration_Info_UPackage__Script_DeadTrail.OuterSingleton;
 	}
-	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_DeadTrail(Z_Construct_UPackage__Script_DeadTrail, TEXT("/Script/DeadTrail"), Z_Registration_Info_UPackage__Script_DeadTrail, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0xC2A1BFC6, 0x7946402E));
+	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_DeadTrail(Z_Construct_UPackage__Script_DeadTrail, TEXT("/Script/DeadTrail"), Z_Registration_Info_UPackage__Script_DeadTrail, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x2BA9F41D, 0x7946402E));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

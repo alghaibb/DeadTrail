@@ -96,7 +96,7 @@ UObject* (*const Z_Construct_UClass_ADTBaseCharacter_Statics::DependentSingleton
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ADTBaseCharacter_Statics::DependentSingletons) < 16);
 const UECodeGen_Private::FImplementedInterfaceParams Z_Construct_UClass_ADTBaseCharacter_Statics::InterfaceParams[] = {
-	{ Z_Construct_UClass_USaveDTActorInterface_NoRegister, (int32)VTABLE_OFFSET(ADTBaseCharacter, ISaveDTActorInterface), false },  // 4155347415
+	{ Z_Construct_UClass_USaveDTActorInterface_NoRegister, (int32)VTABLE_OFFSET(ADTBaseCharacter, ISaveDTActorInterface), false },  // 2565776885
 };
 const UECodeGen_Private::FClassParams Z_Construct_UClass_ADTBaseCharacter_Statics::ClassParams = {
 	&ADTBaseCharacter::StaticClass,
@@ -133,10 +133,10 @@ ADTBaseCharacter::~ADTBaseCharacter() {}
 struct Z_CompiledInDeferFile_FID_DeadTrail_Source_DeadTrail_Public_Characters_DTBaseCharacter_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ADTBaseCharacter, ADTBaseCharacter::StaticClass, TEXT("ADTBaseCharacter"), &Z_Registration_Info_UClass_ADTBaseCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ADTBaseCharacter), 1109460688U) },
+		{ Z_Construct_UClass_ADTBaseCharacter, ADTBaseCharacter::StaticClass, TEXT("ADTBaseCharacter"), &Z_Registration_Info_UClass_ADTBaseCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ADTBaseCharacter), 289256768U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_DeadTrail_Source_DeadTrail_Public_Characters_DTBaseCharacter_h_223002713(TEXT("/Script/DeadTrail"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_DeadTrail_Source_DeadTrail_Public_Characters_DTBaseCharacter_h_2355411882(TEXT("/Script/DeadTrail"),
 	Z_CompiledInDeferFile_FID_DeadTrail_Source_DeadTrail_Public_Characters_DTBaseCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_DeadTrail_Source_DeadTrail_Public_Characters_DTBaseCharacter_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

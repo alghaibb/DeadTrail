@@ -34,6 +34,18 @@
 			"Type": "RequiredResource"
 		},
 		{
+			"Path": "$(ProjectDir)/Plugins/EasyFoot93f49355fcf2V9/Binaries/Win64/UnrealEditor-EasyFootstepPlugin.dll",
+			"Type": "DynamicLibrary"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/EasyFoot93f49355fcf2V9/Binaries/Win64/UnrealEditor-EasyFootstepPlugin.pdb",
+			"Type": "SymbolFile"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/EasyFoot93f49355fcf2V9/Binaries/Win64/UnrealEditor.modules",
+			"Type": "RequiredResource"
+		},
+		{
 			"Path": "$(EngineDir)/Binaries/Win64/AgentInterface.dll",
 			"Type": "DynamicLibrary"
 		},
@@ -3817,6 +3829,10 @@
 	"RuntimeDependencies": [
 		{
 			"Path": "$(ProjectDir)/DeadTrail.uproject",
+			"Type": "UFS"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/EasyFoot93f49355fcf2V9/EasyFootstepPlugin.uplugin",
 			"Type": "UFS"
 		},
 		{
@@ -25897,6 +25913,7 @@
 		"DatasmithContent",
 		"DeformerGraph",
 		"DumpGPUServices",
+		"EasyFootstepPlugin",
 		"EditorDataStorage",
 		"EditorDebugTools",
 		"EditorPerformance",
